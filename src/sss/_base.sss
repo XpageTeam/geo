@@ -1,0 +1,709 @@
+@import "_vars.sss"
+
+*::selection
+	color: #fff
+	background: #969696
+
+html
+	font-size: 100%
+
+	&.bx-touch
+
+		.filter__select-label
+			margin-bottom: 15px
+			display: block
+
+input, a, button, textarea, select
+	outline: none
+
+input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]), textarea, select, input[type="submit"], button
+	-webkit-appearance: none
+	appearance: none
+	border-radius: 0
+
+
+*::-webkit-input-placeholder
+	color: #4a4a4a
+	opacity: 1
+
+*:-moz-placeholder
+	color: #4a4a4a
+	opacity: 1
+
+*::-moz-placeholder
+	color: #4a4a4a
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #4a4a4a
+	opacity: 1
+
+
+input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]), textarea
+
+	&:not(.comment-form__text):not(.search-form__input)
+	
+		&::-webkit-input-placeholder
+			color: #fff
+			opacity: 1
+
+		&:-moz-placeholder
+			color: #fff
+			opacity: 1
+
+		&::-moz-placeholder
+			color: #fff
+			opacity: 1
+
+		&:-ms-input-placeholder
+			color: #fff
+			opacity: 1
+
+*, *:after, *:before
+	box-sizing: border-box
+
+*[v-cloak]
+	display: none
+
+
+address
+	font-weight: inherit
+
+.bx-touch
+
+	.slider-desc__btns
+
+		.labelTools
+			display: none !important
+
+body
+	min-width: 320px
+	line-height: 1.2
+	font-family: var(--default-font)
+	font-weight: 400
+	font-size: 16px
+	background: var(--main-bgc)
+	color: #fff
+	position: relative
+	min-height: 100vh
+	display: flex
+	flex-direction: column
+	overflow-x: hidden
+	overflow-y: scroll
+
+	&.main
+
+		.main-menu
+
+			&__link
+
+				&[href*="reportage"]
+
+					&:hover, &:focus
+						color: var(--report-color)
+
+				&[href*="event"]
+
+					&:hover, &:focus
+						color: var(--events-color)
+
+				&[href*="exclusive"]
+
+					&:hover, &:focus
+						color: var(--articles-color)
+
+				&[href*="city"]
+
+					&:hover, &:focus
+						color: var(--city-color)
+
+	&[class*="dir-search"]
+
+		#content
+			overflow: visible
+
+	&:not(.head-menu)
+
+		.head__switcher
+			display: none !important
+
+	&:not(.white-color)
+
+		.swiper-scrollbar
+			background: #252525
+
+			&-drag
+				background: #6c6a6a
+
+	&[class*="dir-personal-reportage-add"]
+		
+		.selectize-dropdown.city-select__select
+			background: #333 !important
+
+	&[class*="dir-city"]
+
+		.text-page blockquote
+			border-color: var(--city-color)
+
+		.ui-widget 
+
+			.ui-slider
+
+				&-range, &-handle
+					background: var(--city-color)
+
+				&-handle
+					border: 1px solid var(--city-color)
+
+					&:after
+						background: var(--city-color)
+
+		.z-item__arrow
+
+			&:hover, &:focus
+				background: var(--city-color)
+
+				&:after, &:before
+					color: #000
+
+		.main-menu__link.active, .city-event:hover .city-event__title, 
+		.city-event:focus .city-event__title
+			color: var(--city-color)
+
+		.zavedeniya-one .rating, .btn, .ya-share2__link:hover, .buy-btn,
+		.filter-reset:hover, .comment-form__submit:hover,
+		.video:after, .balloonContent, .ui-datepicker table td .ui-state-active, .ya-share2__hide:hover
+			background-color: var(--city-color) !important
+
+		.comment-form__submit:hover
+			color: #000
+
+		.zavedeniya-one__slider-nav .slick-current img
+			border-color: var(--city-color)
+
+	
+
+	&[class*="dir-exclusive"]
+
+		.text-page blockquote
+			border-color: var(--articles-color)
+
+		.ui-widget 
+
+			.ui-slider
+
+				&-range, &-handle
+					background: var(--articles-color)
+
+				&-handle
+					border: 1px solid var(--articles-color)
+
+					&:after
+						background: var(--articles-color)
+
+		.z-item__arrow
+
+			&:hover, &:focus
+				background: var(--articles-color)
+
+				&:after, &:before
+					color: #000
+
+		.main-menu__link.active, .city-event:hover .city-event__title, 
+		.city-event:focus .city-event__title
+			color: var(--articles-color)
+
+		.zavedeniya-one .rating, .btn, .ya-share2__link:hover, .buy-btn,
+		.filter-reset:hover, .comment-form__submit:hover,
+		.video:after, .balloonContent, .ui-datepicker table td .ui-state-active, .ya-share2__hide:hover
+			background-color: var(--articles-color) !important
+
+		.comment-form__submit:hover
+			color: #000
+
+		.zavedeniya-one__slider-nav .slick-current img
+			border-color: var(--articles-color)
+
+
+
+
+	&[class*="dir-event"]
+
+		.text-page blockquote
+			border-color: var(--events-color)
+
+		.ui-widget 
+
+			.ui-slider
+
+				&-range, &-handle
+					background: var(--events-color)
+
+				&-handle
+					border: 1px solid var(--events-color)
+
+					&:after
+						background: var(--events-color)
+
+		.z-item__arrow
+
+			&:hover, &:focus
+				background: var(--events-color)
+
+				&:after, &:before
+					color: #000
+
+		.main-menu__link.active
+			color: var(--events-color)
+
+		.zavedeniya-one .rating, .btn, .ya-share2__link:hover, .filter-reset:hover, .comment-form__submit:hover,
+		.video:after, .balloonContent, .buy-btn, .ui-datepicker table td .ui-state-active, .ya-share2__hide:hover
+			background-color: var(--events-color) !important
+
+		.zavedeniya-one__slider-nav .slick-current img
+			border-color: var(--events-color)
+
+	&[class*="dir-reportage"]
+
+		.text-page blockquote
+			border-color: var(--report-color)
+
+		.ui-widget 
+
+			.ui-slider
+
+				&-range, &-handle
+					background: var(--report-color)
+
+				&-handle
+					border: 1px solid var(--report-color)
+
+					&:after
+						background: var(--report-color)
+
+		.z-item__arrow
+
+			&:hover, &:focus
+				background: var(--report-color)
+
+				&:after, &:before
+					color: #000
+
+		.main-menu__link.active
+			color: var(--report-color)
+
+		.zavedeniya-one .rating, .btn, .ya-share2__link:hover, .filter-reset:hover, .comment-form__submit:hover,
+		.video:after, .balloonContent, .buy-btn, .ui-datepicker table td .ui-state-active, .ya-share2__hide:hover
+			background-color: var(--report-color) !important
+
+		.zavedeniya-one__slider-nav .slick-current img
+			border-color: var(--report-color)
+
+	.head
+
+		&__nav
+			display: none
+
+	.head
+
+		&__nav
+			display: none
+
+		&__logo, &__soc, &__burger, &__nav
+			pointer-events: all
+
+	&:not(.head-menu)
+
+		.head
+			pointer-events: none
+
+	&.head-menu
+		padding: rem(232) 0 0
+
+		.inner-content
+			margin: 3rem 0 0
+			flex: 1 1 auto
+
+	&.head-menu
+
+		.head
+			background: var(--main-bgc)
+			transform: translate3d(0, 0, 0) !important
+
+			&:before, &__wrap:after
+				content: ""
+				position: absolute
+				bottom: 0
+				left: 0
+				right: 0
+
+			&__photoset
+				margin-right: 0
+				margin-left: 2.625rem
+
+			&.js__scrolled 
+
+				.head__nav
+					margin-right: 0 
+
+			&__soc
+				display: none
+
+			&__nav
+				display: block
+				flex: 1 1 auto
+
+			&__logo
+				margin-right: 4vw
+
+			&__wrap
+				align-items: center
+				justify-content: center
+				z-index: 5
+
+				&:after
+					size: 100% 1px
+					max-width: 1705px
+					margin: 0 auto
+					background: #282828
+
+		.main-nav
+
+			&__search
+				order: 2
+
+			&__lc
+				order: 3
+
+			&__search, &__lc
+				margin: 0
+
+				&:not(:last-child)
+					margin-right: rem(42)
+
+			&__menu
+				margin-right: vw(60)
+
+			.main-menu
+
+				li
+
+					&:not(:last-child)
+						margin-right: 1.8vw
+
+#filters
+	display: none
+
+#content
+	flex: 1 0 auto
+	display: flex
+	flex-direction: column
+
+	> .wrapper
+		align-self: center
+
+select
+	-webkit-appearance: none
+	/* for FF */
+	-moz-appearance: none
+	text-indent: 0.01px
+	text-overflow: ''
+	/* for IE */
+	-ms-appearance: none
+	appearance: none !important
+
+	&::-ms-expand 
+		display: none
+	
+.head,
+.footer
+	flex: none
+
+a
+	color: #fff
+	font-weight: inherit
+	text-decoration: none
+
+	&[href^="tel"], &[href^="mail"]
+		white-space: nowrap
+
+	&:not([class]), &.animated
+		border-bottom: 1px solid #fff
+
+		&:hover, &:focus
+			border-color: transparent
+
+input[type="submit"], button
+	cursor: pointer
+
+img, svg
+	max-width: 100%
+
+li
+	list-style: none
+
+.soc
+	display: flex
+	align-items: flex-end
+	
+	&__link
+		border-radius: 50%
+		padding: 10px
+		margin: -10px
+		min-height: 32px
+
+		&:not(:last-child)
+			margin-right: 34px
+
+	img, svg
+		display: block
+
+.soc-list
+	display: flex
+	
+	&__one
+
+		a
+			color: #000
+			text-decoration: none
+			font-weight: 400
+			font-size: 14px
+
+		&:not(:last-child)
+			margin-right: vw(48)
+
+.table-wrap
+	overflow: auto
+
+.radio
+	position: relative
+
+	&:hover, .radio__input:focus +
+
+		.radio
+
+			&__label
+				color: var(--main-color)
+
+				&:before
+					border-color: var(--main-color)
+	
+	&__input
+		position: absolute
+		top: 0
+		left: 0
+		opacity: 0
+		width: 0
+		height: 0
+
+		&:checked
+
+			+ label
+
+				&:after
+					opacity: 1
+
+	&__label
+		position: relative
+		min-height: 26px
+		display: flex
+		align-items: center
+		cursor: pointer
+		padding-left: 40px
+		user-select: none
+		transition: color .3s ease
+
+		&:before, &:after
+			content: ""
+			position: absolute
+			border-radius: 50%
+
+		&:before
+			top: 0
+			left: 0
+			background: var(--second-color)
+			width: 26px
+			height: 26px
+			transition: border-color .3s ease
+		
+		&:after
+			top: 9px
+			left: 9px
+			width: 8px
+			height: 8px
+			transition: opacity .3s ease
+			opacity: 0
+			z-index: 1
+			background: var(--main-color)
+
+.checkbox
+	position: relative
+
+	&:hover, .checkbox__input:focus +
+
+		.checkbox
+
+			&__label
+				color: var(--main-color)
+
+				&:before
+					border-color: var(--main-color)
+	
+	&__input
+		position: absolute
+		top: 0
+		left: 0
+		opacity: 0
+		width: 0
+		height: 0
+
+		&:checked
+
+			+ label
+				
+				&:after
+					opacity: 1
+
+	&__label
+		position: relative
+		padding-left: 32px
+		cursor: pointer
+		min-height: 18px
+		display: flex
+		align-items: center
+		transition: color .3s ease
+
+		&:before, &:after
+			position: absolute
+			content: ""
+
+		&:before
+			background: #fff
+			width: 18px
+			height: 18px
+			left: 0
+			top: 2px
+			top: 0
+			border: 1px solid var(--border-color)
+			transition: border-color .3s ease
+
+		&:after
+			transition: opacity .3s ease
+			width: 11px
+			height: 6px
+			left: 4px
+			top: 8px
+			top: 6px
+			background: url("../img/ico-check.png") no-repeat
+			opacity: 0
+
+.bordered-btn
+	display: inline-block
+	text-align: center
+	color: #fff
+	font-weight: 300
+	padding: 14px 27px 16px
+	border: 1px solid rgba(#e2e2e2, .2)
+	border-radius: 30px
+	// letter-spacing: -.02em
+
+.multi .selectize-input>div
+
+.selectize-input
+
+	&:before
+		display: none !important
+
+.selectize-dropdown
+	transition: opacity .3s ease
+	opacity: 0
+	height: auto !important
+	border: 1px solid #000 !important
+
+	&[style*="display: block;"]
+		transition-delay: .1s
+		opacity: 1
+
+	&-content
+		background: #333333 !important
+		padding: 19px 0
+
+	.active
+		background: rgba(#000, .14) !important
+
+.selectize-control
+
+	&.multi
+
+		.selectize
+
+			&-input
+				position: relative
+
+				&:after
+					content: ""
+					position: absolute
+					border-right: 1px solid #fdffff
+					border-bottom: 1px solid #fdffff
+					size: 5px
+					top: calc(50% - 11px)
+					right: 5px
+					transform: rotate(45deg)
+
+				> div.item
+					border: none
+					color: #fff
+					background: #323232
+
+					&:after
+						display: none
+
+img[data-lazy]
+	background: url("../img/ico-loader.svg") center no-repeat, #000
+	min-width: 70px
+	min-height: 70px
+	
+.form-group
+
+	&:last-of-type
+		margin-bottom: 25px
+
+	.selectize-dropdown-content
+		background: none !important
+
+.custom-select.selectize-control
+	padding: 0
+
+.fancybox-is-open .fancybox-bg
+	opacity: 1 !important
+	background: #000 !important
+
+.selectize-control.multi .selectize-input > div.item
+	border: none !important
+	color: #fff !important
+	background: #323232 !important
+
+.ui-slider-horizontal .ui-slider-handle
+	margin-left: -8px
+
+.swiper-scrollbar-drag
+	cursor: pointer
+
+.iframe-wrap
+	position: relative
+	padding: 40% 0 0
+	max-width: 100%
+	display: inline-block
+
+	iframe
+		position: absolute
+		width: 100% !important
+		height: 100% !important
+		top: 0
+		left: 0
+
+.default-btn
+	display: inline-block
+	background: #323232
+	padding: 14px 20px 17px
+	line-height: 1

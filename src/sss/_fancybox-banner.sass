@@ -1,0 +1,29 @@
+.fancybox-slide
+
+	&__banner
+		position: absolute
+		right: 50px
+		top: 50%
+		transform: translateY(-50%)
+
+		img
+			max-height: calc(100vh - 100px)
+
+		&:not(.js__visible)
+			display: none
+
+@media (max-width: 660px) and (orientation: portrait)
+	.fancybox-slide
+
+		&__banner
+			top: auto
+			transform: translateX(-50%)
+			left: 50%
+			bottom: 10px
+			right: auto
+			max-width: none
+			text-align: center
+
+			img
+				max-width: calc(100vw - 30px)
+				height: 100%

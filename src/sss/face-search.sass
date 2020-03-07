@@ -1,0 +1,793 @@
+@import "bourbon"
+@import "vars"
+
+body
+
+	&:after
+		content: ""
+		position: fixed
+		top: 0
+		bottom: 0
+		right: 0
+		left: 0
+		background: url("../img/loading.gif") center no-repeat, rgba(#000, .5)
+		z-index: 999
+		transition: opacity .3s ease
+		opacity: 0
+		pointer-events: none
+
+	&.face-loading:after
+		opacity: 1
+		pointer-events: auto
+
+	&[class*="facesearch"]
+		overflow: visible !important
+		margin-right: 0 !important
+
+		#content
+			overflow: visible
+
+	&.white-color
+
+		.face-form__img-label
+			color: #fff
+
+		.face-inputs .selectize-input .item
+			color: #000
+
+		.selectize-input
+			box-shadow: none
+
+#photo-order
+	max-width: 400px
+
+.face-search
+
+	&__title
+		font-size: 2rem
+		grid-area: title
+
+	&__top
+		display: grid
+		grid-template-areas: "img title" "img text"
+		grid-template-columns: 358px 1fr
+		grid-template-rows: auto 1fr
+		grid-gap: 40px 
+
+	&__text
+		font-size: 1rem
+		line-height: calc(23 / 16)
+		max-width: 725px
+		grid-area: text
+
+	&__form
+		// margin: 80px 0 0
+		grid-area: img
+
+	&__results
+		margin: 50px 0 0
+
+		&-btn
+			margin: 30px 0
+			text-align: center
+
+	&__slider
+		margin: 80px 0 0
+		padding: 0 0 40px
+		position: sticky
+		bottom: 0
+		z-index: 1
+		background: #000
+
+	&__itog
+		margin: 45px 0 0
+
+.fs-itog
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+	&__left
+		margin-right: 30px
+
+		&-text, &-btn, &-itog
+
+			&:not(:first-child)
+				margin: 12px 0 0
+
+		&-itog
+			font-size: rem(18)
+
+	&__right
+		flex: none
+
+.face-form
+	display: flex
+
+	&__inputs
+		flex: 1 1 auto
+
+	&__img
+		flex: none
+		+size(358px)
+		background: #222
+		position: relative
+		overflow: hidden
+		margin-right: 72px
+		border-radius: 10px
+
+		img, &-label
+			+size(100%)
+			border-radius: inherit
+			transition: opacity .3s ease
+
+		img
+			object:
+				fit: cover
+				position: center
+
+			&:not(.loaded), &.loaded ~ label
+				opacity: 0
+
+				&:after
+					content: ""
+					position: absolute
+					top: 0
+					right: 0
+					bottom: 0
+					left: 0
+					background: rgba(0,0,0, .3)
+
+				span, &:before
+					position: relative
+					z-index: 1
+
+		&-input, &-label
+			position: absolute
+			top: 0
+			left: 0
+
+		&-input
+			opacity: 0
+			pointer-events: none
+
+		&-label
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			cursor: pointer
+			font-size: 1rem
+			z-index: 1
+
+			&:hover, &:focus
+				opacity: 1 !important
+
+			&:before
+				content: ""
+				border-radius: 50%
+				background: url("../img/ico-plus.svg") center no-repeat, #fff
+				flex: none
+				+size(60px)
+				margin: 0 0 2rem
+
+
+.face-inputs
+	display: grid
+	grid-template-columns: repeat(7, 1fr)
+	grid-template-areas: "city city year venue venue venue venue" "event event event submit submit submit submit"
+	grid-gap: 53px 60px
+
+	&__select
+
+		select:not(.selectized)
+			border-radius: 0
+			background: url("../img/ico-select-arrow.png") right top 10px no-repeat !important
+			border: none
+			border-bottom: 1px solid #323232
+			padding: 0 0 25px !important
+			display: block !important
+			font-weight: 400
+			font-size: rem(15)
+			width: 100%
+			color: #fff
+
+		&:first-child
+			grid-area: city
+
+		&:nth-child(2)
+			grid-area: year
+
+		&:nth-child(3)
+			grid-area: venue
+
+		&:nth-child(4)
+			grid-area: event
+
+	&__submit
+		grid-area: submit
+
+		.btn
+			background: #222222
+			color: #fff
+
+	.selectize
+
+		&-input
+			border-radius: 0
+			background: none !important
+			border: none
+			border-bottom: 1px solid #323232
+			padding: 0 0 25px !important
+			display: block !important
+			font-weight: 400
+			font-size: rem(15)
+
+			&:after
+				display: none !important
+
+			.item
+				width: 100%
+
+			input
+
+				&:first-child
+					font: inherit !important
+					width: 100% !important
+					background: url("../img/ico-select-arrow.png") right bottom 4px no-repeat !important
+
+				&:not(:first-child)
+					display: none !important
+
+		&-dropdown
+
+			&-content
+
+				.option
+					color: #fff
+
+
+
+
+
+.face-search__results-title
+	margin: 0 0 40px
+
+.fsr-title
+	display: flex
+
+	&__year
+		flex: 1 1 auto
+		border-bottom: 1px solid #323232
+		font-size: rem(22)
+		padding-top: 5px
+		// display: flex
+		// align-items: center
+		// padding-bottom: 10px
+
+	&__btn
+		margin-left: 32px
+
+.fsr-list
+
+	&__title
+		font-size: rem(22)
+		margin: 0 0 2rem
+
+	&:not(:first-child)
+		margin: 60px 0 0
+
+.face-results
+	display: grid
+	grid-template-columns: repeat(4, 1fr)
+	grid-gap: 34px 32px
+
+	&__item
+
+		&--vert
+			grid-row: span 2
+
+.face-result
+	position: relative
+
+	&--blured img
+		filter: blur(5px)
+
+	&__input
+		pointer-events: none
+		position: absolute
+		top: 0
+		right: 0
+		opacity: 0
+		+size(10px)
+
+		&:checked
+			
+			+ label
+
+				&:after
+					opacity: 1
+
+	&__label
+		display: block
+		cursor: pointer
+		position: relative
+
+		&:not(.img-loaded)
+
+			&:before, &:after
+				display: none
+
+		&:before, &:after
+			position: absolute
+			content: ""
+			+size(30px)
+			top: 24px
+			right: 24px
+			border-radius: 5px
+			z-index: 1
+		
+		&:before
+			background: #fff
+
+		&:after
+			background: url("../img/ico-face-check.svg") center no-repeat
+			opacity: 0
+
+		img
+			display: block
+
+html
+
+	&.bx
+
+		&-touch, &-mac, &-ios
+
+			.face-slider
+
+				&:after, &:before
+					width: 100vw
+
+					
+
+.face-slider
+	position: relative
+	padding: 17px 0
+	z-index: 1
+	
+
+	&:after, &:before
+		content: ""
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 50%
+		width: calc(100vw - 17px)
+		transform: translateX(-50%)
+
+	&:after
+		background: #000000
+
+	&:before
+		background: rgba(34,34,34, .4)
+		border-top: 1px solid #323232
+		border-bottom: 1px solid #323232
+		z-index: 1
+
+	.swiper
+
+		&-slide
+			flex: none
+			+size(auto)
+			display: flex
+			flex-direction: column
+
+			&:not(:last-child)
+				margin-right: 16px
+
+	&__img
+		position: relative
+
+		img
+			display: block
+			max-height: 128px
+
+	&__remove
+		position: absolute
+		+size(30px)
+		top: 0
+		right: 0
+		z-index: 1
+		background: rgba(0,0,0, .3)
+		color: #fff
+
+		svg
+			display: block
+			overflow: visible
+			position: relative
+			shape-rendering: geometricPrecision
+
+		path
+			fill: transparent;
+			stroke: currentColor;
+			stroke-linejoin: round;
+			stroke-width: 3;
+
+	&__placeholder
+		border: 1px solid #323232
+		position: relative
+		flex: 1 1 auto
+		min-width: 188px
+
+		&:before, &:after
+			position: absolute
+			content: ""
+			background: #323232
+
+		&:before
+			+size(1px 45px)
+			top: calc(50% - 23px)
+			left: calc(50% - 1px)
+
+		&:after
+			+size(45px 1px)
+			top: calc(50% - 1px)
+			left: calc(50% - 23px)
+
+
+
+.sales-popup
+	display: none
+	background: #323232
+	padding: 0
+	max-width: 100%
+	text-align: center
+
+	&--first
+		width: 575px
+
+	&--second
+		width: 723px
+
+	&__title
+		font-size: rem(30)
+		border-bottom: 1px solid #5B5B5B
+		padding: 40px 60px
+
+	&__content
+		padding: 35px 60px 60px
+
+.sales-list
+	display: inline-grid
+	grid-gap: 15px
+	grid-template-columns: repeat(3, 94px)
+	gap: 15px
+
+	&__item
+		border: 1px solid #B7D7E4
+		text-align: center
+
+		&-perc
+			font-size: rem(36)
+			padding: 10px 10px 12px
+
+			span
+				font-size: rem(18)
+
+		&-text
+			background: #B7D7E4
+			color: #000
+			font-size: 12px
+			padding: 8px 10px
+
+.sales-big-list
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	grid-gap: 15px
+	gap: 15px
+	text-align: left
+
+	&__item
+		display: flex
+		align-items: center
+		background: #414141
+
+		&-perc
+			font-size: rem(36)
+			padding: 10px 
+			text-align: center
+			background: #3C3C3C
+			width: 94px
+			flex: none
+
+			span
+				font-size: rem(18)
+
+		&-text
+			display: flex
+			align-items: center
+			justify-content: center
+			font-size: 14px
+			flex: 1 1 auto
+
+			&:before
+				content: ""
+				background: url("../img/ico-sales-photo.svg") no-repeat
+				display: inline-block
+				+size(14px)
+				margin-right: 8px
+				margin-bottom: 2px
+
+.sales-table
+	display: flex
+	
+	&__column
+		width: 50%
+		flex: none
+		position: relative
+
+		&:after
+			content: ""
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 0
+			height: 1px
+			background-color: #323232
+
+	&__item
+		border-bottom: 1px solid #252525
+		padding: 26px 0
+
+.mp-list
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	gap: 73px 35px
+
+	&__item
+
+		&--vert
+			grid-row: span 2
+
+.mp-item
+
+	&__img
+		position: relative
+
+		img
+			display: block
+			width: 100%
+
+		&-year
+			background-color: #000
+			position: absolute
+			top: 15px
+			right: 15px
+			font-size: 12px
+			line-height: 1
+			padding: 11px 19px
+
+	&__actions
+		margin: 33px 0 0
+
+.hide-btn
+	display: block
+	padding: 16px 28px 17px
+
+.mp-list__item
+	
+	&:not(&--added)
+
+		.hide-btn
+			border: 1px solid transparent
+			background: #333
+			transition: background .3s ease, color .3s ease, border-color .3s ease
+
+			&:hover, &:focus
+				background: #decbd7
+				color: #000
+
+	&--added
+
+		.hide-btn
+			border: 1px solid #222
+
+.mp-actions
+	display: flex
+
+	&__dl, &__hidden, &__share
+
+		&:not(:last-child)
+			margin-right: 16px
+
+	&__share
+		position: relative
+
+
+
+.face-search__slider
+
+	&:not(.js__opened)
+		position: static
+	
+	&:not(.js__opened) &-cart
+		position: fixed
+		bottom: 47px
+		right: 120px
+		z-index: 12
+
+	&.js__opened &-cart
+		position: absolute
+		bottom: calc(100% + 20px)
+		right: 20px
+
+.face-slider__img--blured
+
+	img
+		filter: blur(5px)
+
+.face-cart
+	border-radius: 25px
+	color: #fff
+	background: url("../img/ico-cart.svg") left 15px top 5px no-repeat, #333
+	padding: 10px 15px 10px 46px
+	display: flex
+	align-items: center
+	line-height: 1
+	cursor: pointer
+
+.fs-message
+	text-align: center
+	width: auto
+
+	.default-btn
+		background-color: #000
+		transition: background-color .3s ease, color .3s ease
+
+		&:hover
+			background-color: $report-color
+			color: #000
+
+.sales-popup
+
+	&__content
+
+		&-text
+			font-size: rem(17)
+
+		&-btn
+			margin: 25px 0 0
+
+
+
+
+
+
+
+@media (max-width: 1300px) and (min-width: 660px)
+	.face-form
+
+		&__img
+			margin-right: 20px
+			+size(280px)
+
+	.face-inputs
+		grid-gap: 30px
+
+@media (max-width: 1100px) and (min-width: 660px)
+	.mp-list
+		grid-template-columns: repeat(2, 1fr)
+
+@media (max-width: 1000px) and (min-width: 660px)
+	.face-inputs
+		grid-template-columns: repeat(2,1fr)
+		grid-template-areas: "city year" "venue event" "submit submit"
+
+	.face-results
+		grid-gap: 20px
+		grid-template-columns: repeat(3, 1fr)
+
+
+@media (max-width: 660px)
+	.face-search
+		
+		&__title
+			font-size: 24px
+
+	.fs-itog
+		flex-direction: column-reverse
+		align-items: stretch
+
+		&__left, &__right
+
+			&:not(:last-child)
+				margin-top: 30px
+
+	.face-search
+
+		&__top
+			grid-template-areas: "title" "text" "img"
+			grid-template-columns: 100%
+			grid-gap: 30px
+
+		&__title
+			margin: 0
+
+	.fsr-title
+		display: block
+
+		&__btn
+			margin: 30px 0
+
+		&__year
+			padding: 20px 0
+
+	.face-results
+		grid-gap: 20px
+		grid-template-columns: 1fr 1fr
+
+	.face-inputs
+		grid-template-columns: 1fr
+		grid-template-areas: "city" "year" "venue" "event" "submit"
+		grid-gap: 40px
+
+		&__select
+
+			&[data-placeholder]
+
+				&:before
+					content: attr(data-placeholder)
+					display: block
+					width: 100%
+					margin: 0 0 10px
+
+		&__submit
+			text-align: center
+
+			.btn
+				width: 180px
+
+	.face-form
+		display: block
+
+		&__inputs
+			margin: 35px 0 0
+
+
+		&__img
+			width: calc(100vw - 36px)
+			height: calc(100vw - 36px)
+			margin: 0 
+
+	.mp-list
+		grid-template-columns: 1fr
+
+		&__item
+			
+			&--vert
+				grid-row: span 1
+
+	.sales-popup
+
+		&__title
+			padding: 20px
+			font-size: 18px
+		
+		&__content
+			padding: 20px
+			
+	.sales-list
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+
+	.sales-big-list
+		grid-template-columns: repeat(2, 1fr)
+		
+		&__item
+			
+			&-perc
+				width: 80px
+
+@media (max-width: 360px)
+	.sales-big-list
+		grid-template-columns: repeat(1, 1fr)

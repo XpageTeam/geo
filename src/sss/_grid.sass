@@ -1,0 +1,31 @@
+@import "vars"
+@import "functions"
+
+@supports (display: grid)
+	.events
+		display: grid
+		margin: 0 !important
+		grid-template-columns: repeat(3, 1fr)
+		grid-gap: rem(32) rem(30)
+
+		&__one
+			width: auto !important
+			margin: 0 !important
+
+			&--big
+				grid-row: span 2
+				grid-column: span 2
+
+	.imgs
+		margin: 0 !important
+		width: auto !important
+		display: grid
+		grid-gap: calc(2rem - 2px)
+		grid-template-columns: repeat(3, 1fr)
+
+		&__one
+			width: auto !important
+			margin: 0 !important
+
+			&.vertical-span
+				grid-row: span 2

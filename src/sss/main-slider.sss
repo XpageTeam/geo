@@ -1,0 +1,417 @@
+.main-slider
+	overflow: hidden
+
+	&.js__have-slides, &.js__have-slides a.main-slider__slide-desc
+		cursor: none
+
+	&__arrows
+		
+		.swiper
+
+			&-button
+				size: 28px
+				border-top: 2px solid #fff
+				border-right: 2px solid #fff
+				background: none
+				position: absolute
+				cursor: none
+				z-index: 4
+				margin: 0
+
+				&-next
+					transform: rotate(45deg)
+
+				&-prev
+					transform: rotate(-135deg)
+
+	&:not(&--dotted)
+
+		.swiper-pagination
+			display: none
+
+	&--dotted
+
+		.swiper-pagination
+			position: absolute
+			bottom: 75px
+			left: 0
+			right: 0
+			display: flex
+			justify-content: center
+
+			&-bullet
+				size: 6px
+				transition: transform .3s ease
+				border-radius: 50%
+				opacity: 1
+				background: #fff
+
+				&-active
+					transform: scale(1.7)
+
+				&:not(:last-child)
+					margin-right: 27px
+
+
+	&.slider-loaded
+
+		.swiper
+
+			&-slide
+
+				&-active
+
+					&:first-child
+
+						.main-slider
+
+							&__slide
+
+								&-title, &-text
+									opacity: 1
+									transform: translate3d(0, 0, 0)
+
+								&-img
+
+									img, picture
+										opacity: 1
+										transform: scale3d(1, 1, 1)
+										user-select: none
+
+		img, picture
+			transition-delay: .2s
+			opacity: 1
+
+		.main-slider
+
+			&__slide-desc
+				opacity: 1
+
+	&:not(.swiper-container-initialized)
+		opacity: 0
+
+	&__cont
+		position: relative
+		background: #000
+
+	&__slide-desc
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+
+		.wrapper
+			width: 100%
+
+	&__slide-desc
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		transition: opacity .3s ease
+		opacity: 0
+
+	.swiper
+
+		&-slide-active
+
+			.main-slider__slide
+
+				&-title, &-text
+					opacity: 1
+					transform: translate3d(0, 0, 0)
+
+				&-img
+
+					img, picture
+						opacity: 1
+						transform: scale3d(1, 1, 1)
+						user-select: none
+
+		&-slide
+			flex: none
+			height: auto
+			display: flex 
+			flex-direction: column
+			overflow: hidden
+
+	&__slide
+		text-align: center
+		font-weight: 400
+		position: relative
+		display: flex 
+		flex: 1 1 auto
+		flex-direction: column
+
+		&:not(:first-child)
+			display: none
+
+		&-video
+			overflow: hidden
+
+			video
+				width: 100%
+				display: block
+				max-height: calc(100vh - 100px)
+				object-fit: cover
+				object-position: center
+
+			+ .main-slider__slide-img
+				display: none
+
+		@media (max-width: 1000px)
+			&-video
+
+				video
+					height: calc(100vh - 75px)
+					max-height: none
+
+				&:not(:last-child)
+					display: none
+
+					+ .main-slider__slide-img
+						display: block
+
+		&-img
+			position: relative
+			flex: 1 1 auto
+			flex-direction: column
+			display: flex
+
+			&:after
+				content: ""
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				background: rgba(0,0,0, .5)
+
+			img, picture
+				display: block
+				transition: opacity 1s ease, transform 1s ease
+				opacity: 0
+				transform: scale3d(1.2, 1.2, 1.2)
+				width: 100%
+				flex: 1 1 auto
+				// max-height: calc(100vh - 120px)
+
+			picture
+				display: flex 
+				flex-direction: column
+
+			img
+				object-fit: cover
+				object-position: center
+
+		&-desc
+			z-index: 1
+			bottom: 48px
+			padding-top: rem(40)
+			font-family: "Formular"
+
+		&-title, &-text
+			transition: opacity 1s ease, transform 1s ease
+			opacity: 0
+			max-width: 650px
+			margin-inline: auto
+
+		&-title
+			font-size: rem(24)
+			margin-top: 16px
+			letter-spacing: .02em
+			transform: translate3d(-50px, 0, 0)
+
+		&-text
+			font-size: rem(34)
+			letter-spacing: .03em
+			transform: translate3d(50px, 0, 0)
+			font-weight: 700
+
+a.main-slider__slide-desc
+
+	.main-slider__slide-text
+		cursor: pointer
+		display: block
+		padding-bottom: 3px
+		line-height: lh(52, 34)
+
+		&:hover
+
+			span
+				border-bottom: 1px solid currentColor
+
+
+@media (max-width: 1280px)
+	.main-slider
+
+		&__arrows, &__slide-desc
+
+			.wrapper
+				box-sizing: border-box
+
+@media (max-width: 1200px) and (min-width: 1000px)
+	.main-slider
+		height: 535px
+		min-height: 0
+
+		.swiper
+
+			&-slide, &-slide > div
+				height: 100%
+
+		&__slide, &__slide-img, picture, &__slide-video,
+		&__slide-video video
+			height: 100%
+
+		&__slide
+
+			img
+				height: 100%
+
+@media (max-width: 1000px)
+	.main-slider
+
+		&__cont
+
+			.day-night
+				display: none
+
+		&.js__have-slides, &.js__have-slides a.main-slider__slide-desc
+			cursor: default
+
+		&__arrows
+			display: none
+
+	.main-slider
+
+		&__slide
+
+			&-text
+				font-size: rem(22)
+
+			&-title
+				font-size: rem(18)
+
+@media (max-width: 660px)
+	.main-slider__slide-title
+		display: none
+
+	.main-slider
+
+		&__slide-img 
+
+			img, picture
+				max-height: calc(100vh - 40px)
+
+		.swiper
+			
+			&-pagination
+				bottom: 20px
+
+	.main-slider
+
+		&.slick-dotted
+
+			.main-slider
+
+				&__slide
+
+					&-desc
+						bottom: rem(80) !important
+
+		.slick
+
+			&-dots
+				position: absolute
+				left: 0
+				bottom: 38px
+				width: 100%
+				z-index: 4
+				display: flex
+				padding: 0 36px
+				// justify-content: center
+
+				.slick-active
+
+					button
+
+						&:after
+							opacity: 1
+
+				li
+					display: block
+					flex: none
+
+					&:not(:last-child)
+						margin-right: 10px
+
+				button
+					font-size: 0
+					border-radius: 50%
+					size: 7px
+					background: #fff
+					display: block
+					border: none
+					padding: 0
+					position: relative
+
+					&:after
+						content: ""
+						position: absolute
+						size: 12px
+						border-radius: 50%
+						top: calc(50% - 6px)
+						left: calc(50% - 6px)
+						background: #fff
+						transition: opacity .3s ease
+						opacity: 0
+
+		&__cont
+
+			&:after
+				height: 180px
+				bottom: 0
+				top: auto
+				background-position: top center !important
+
+		&__slide
+
+			&-desc
+				bottom: 1.2rem !important
+
+				.wrapper
+					padding: 0 rem(36)
+
+			&-text
+				font-size: rem(26) !important
+				// margin: 0 2rem
+
+				br
+					display: none
+
+			&-title
+				margin: 3px 0 9px
+				font-weight: 300
+				font-size: rem(20) !important
+
+
+
+@media (max-width: 660px) and (orientation: portrait)
+	.main-slider
+		height: calc(100vh - 75px)
+
+		&__slide
+
+			&-desc
+				padding-top: 6.5rem
+				bottom: 25px
+				justify-content: flex-end
+				text-align: left
+			
+			&-text
+				margin: 0 0 10px
+				font-size: 1.75rem
+
+			&-title
+				font-size: 1.45rem

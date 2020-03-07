@@ -1,0 +1,640 @@
+.head
+	padding: 4.125rem 2rem 3.0625rem
+	top: 0
+	left: 0
+	position: absolute
+	right: 0
+	z-index: 15
+	// background: $main-bgc !important
+	font-family: "Formular"
+
+	&__logo
+		max-width: 119px
+
+	&__language
+		margin-left: 25px
+		pointer-events: all
+		margin-top: -8px
+
+	.wrapper
+		padding: 0
+		max-width: calc(1200px + 4rem)
+		position: relative
+
+	&__photoset
+		margin: 0 2rem 0 auto
+		pointer-events: all
+
+	&__switcher
+		flex: none
+
+		.day-night
+			position: relative
+			transform: none
+			top: auto
+			left: auto
+			bottom: auto
+			right: auto
+
+			&__btn
+				transform: none
+
+	&.js__scrolled
+		position: fixed
+		background: #121212 !important
+		padding: 1.5rem 2rem
+		pointer-events: all !important
+		// border-bottom: 1px solid #333
+		transform: translate3d(0, -100%, 0)
+		z-index: 99
+
+		&.js__show
+			transition: transform .5s ease
+			transform: translate3d(0, 0, 0)
+
+		.head__wrap
+			align-items: center
+
+			&:after
+				display: none
+
+		.head__logo
+			display: flex
+			align-items: center
+			max-width: none
+
+			.logo
+				width: 54px
+
+			svg, .logo
+				height: auto
+
+			&-city
+				margin-left: 15px
+				// opacity: 0
+				// display: none
+				// pointer-events: none
+
+		.head
+
+			&__nav
+				display: block
+				// margin-left: auto
+				flex: 1 1 auto
+				// margin-right: auto
+
+			&__soc
+				display: none
+
+			&__photoset
+				margin-right: 0
+				margin-left: 2rem
+
+				.photoset-link
+					+size(22px)
+
+		.main-nav
+
+			&__search
+				order: 1
+
+			&__lc
+				order: 2
+
+			&__search, &__lc
+				margin: 0
+
+				&:not(:last-child)
+					margin-right: rem(42)
+
+			&__menu
+				margin: 0 auto
+
+			.main-menu
+				justify-content: center
+
+				&__link
+					font-size: rem(14)
+
+					&:before, &:after
+						top: calc(100% + 7px)
+
+					&:after
+						width: 22px
+						height: 4px
+
+					&:before
+						+size(5px 7px)
+
+					&.active
+
+				li
+					flex: none
+
+					&:not(:last-child)
+						margin-right: vw(57)
+
+	&__wrap
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+
+	&__logo
+		max-width: 107px
+
+		&-city
+			transition: opacity .3s ease
+
+			.selectize-input
+				box-shadow: none !important
+				border-radius: 0
+				border: none
+				overflow: visible !important
+				padding: 9px 8px 7px
+				background: none !important
+
+				input[type="text"]
+					display: none !important
+
+				&:after
+					display: none !important
+
+				.item
+					white-space: nowrap
+
+			.selectize-dropdown
+				border: none !important
+				background: #323232 !important
+				background: transparent !important
+				width: auto !important
+				margin: 5px 0 0
+
+				display: block !important
+				opacity: 0
+				transition: opacity .3s ease
+				pointer-events: none
+
+				&[style*="block"]
+					opacity: 1
+					pointer-events: all
+
+				&-content, .active
+					background: none !important
+					color: #fff !important
+
+				.active
+					background: rgba(0, 0, 0, 0.8) !important
+
+				&-content
+					padding: 0 0 12px
+					font-weight: 400
+					height: 400px !important
+					max-height: calc(100vh - 160px) !important
+					font-size: rem(15)
+					background: rgba(68, 64, 64, 0.5411764705882353) !important
+
+					.option
+						padding: 7px 21px 7px 8px
+
+.language-link
+	display: block
+	background: #323232
+	border-radius: 50px
+	line-height: 1
+	padding: 7px 14px
+
+.search-link
+	background: url("../img/ico-search.svg") no-repeat
+	+size(15px 20px)
+
+.lc-link
+	+size(21px 20px)
+	background: url("../img/ico-lc.svg") no-repeat
+	position: relative
+
+	&:before
+		pointer-events: none
+		content: "18+"
+		padding: 8px 10px
+		font-size: 12px
+		position: absolute
+		bottom: calc(100% - 8px)
+		right: calc(100% + 2px)
+		border-radius: 13px
+		border: 1px solid rgba(#fff, .19)
+
+.head__nav
+
+	.lc-link
+
+		&:before
+			transform: scale(.7)
+			right: 100%
+
+.main-nav
+	display: flex
+	justify-content: space-between
+	font-family: "Formular"
+	position: relative
+	align-items: center
+
+	&__search, &__lc
+		flex: none
+
+	&__menu
+		flex: 1 1 auto
+
+	&__search
+		margin: 0 rem(115) 0 0
+		display: flex
+
+	&__lc
+		margin: 0 0 0 rem(102)
+
+.main-menu
+	display: flex
+	align-items: center
+
+	li
+		text-align: center
+		flex: 1 1 auto
+
+	&__link
+		color: #fff
+		text-decoration: none
+		font-weight: 400
+		font-size: rem(16)
+		position: relative
+		text-transform: uppercase
+		transition: color .3s ease
+
+		&:after, &:before
+			content: ""
+			color: inherit
+			position: absolute
+			left: 0
+			background: currentColor
+			top: calc(100% + 10px)
+
+		&:after
+			+size(38px 5px)
+			transform-origin: right
+			transform: scale3d(0, 1, 1)
+			// transition-delay: .1s
+
+		&:before
+			+size(12px)
+			transform-origin: top
+			transform: scale3d(1, 0, 1)
+
+		&.active, &:hover
+			// color: inherit
+
+			&:before, &:after
+				transform: scale3d(1, 1, 1)
+				transition: transform .1s ease
+
+			&:after
+				transition-delay: 0s
+
+			&:before
+				transition-delay: .1s
+
+@media (min-width: 1000px)
+	.head
+
+		&__burger
+			display: none
+
+	.mobile-menu
+		display: none
+
+@media (max-width: 1000px)
+	body, html
+		overflow-x: hidden
+		width: 100%
+
+	body
+		position: relative
+
+	body.js__menu-opened
+		overflow: hidden
+		position: fixed
+		top: 0
+		left: 0
+		bottom: 0
+
+		header.head, #content, .footer, .mobile-menu
+			transform: translate3d(-270px, 0, 0) !important
+
+
+	.mobile-menu
+		position: fixed
+		width: 270px
+		left: 100%
+		top: 0
+		bottom: 0
+		// min-height: 100%
+		// border-left: 1px solid #333333
+		font-weight: 300
+		background: #0a0a0a
+		padding: 20px 0
+		display: flex
+		flex-direction: column
+		overflow-y: auto
+		-webkit-overflow-scrolling: touch
+
+		&__language
+			margin: auto 0 0
+			padding: 20px 0 0
+			display: flex
+			justify-content: center
+
+		&__footer
+			padding: 30px 0 0
+			display: flex
+			flex-direction: column
+			align-items: center
+
+			.day-night
+				position: relative
+				top: auto
+				right: auto
+				bottom: auto
+				left: auto
+				margin: 30px 0 0
+
+			.f-soc
+
+				&__link
+					border-color: #333333
+
+					img
+						opacity: 1
+						transition: none
+
+		&__submenu
+			display: none
+
+		&__lc
+			border-bottom: 1px solid #333333
+
+		&__list
+			margin: 20px 0 0
+
+		&__city
+
+			.city-select
+				height: auto
+
+				&__select
+					font-size: rem(16) !important
+					padding: 12px 40px 14px 17px !important
+					+size(100% 40px)
+					background: url("../img/ico-select-arrow-white.svg") center right 15px no-repeat, #151515
+					background-size: 8px auto !important
+
+			select.city-select
+
+			.selectize
+
+				&-input
+					background: none !important
+					border-radius: 0
+					border: none
+					padding: 0
+
+					&:after
+						display: none !important
+
+				&-control
+					display: block
+
+		&__link, &__sub-title, &__city, 
+		&__search, &__footer, &__personal
+			padding: 
+				left: 36px !important
+				right: 36px !important
+
+		&__search
+			margin: 15px 0 0
+
+			iframe[style*="width:0px"]
+				display: none
+
+			.search-form
+				position: static
+				display: block
+
+		&__sub-title
+			padding-right: 35px
+			position: relative
+
+			&:before
+				content: ""
+				position: absolute
+				+size(8px)
+				border:
+					bottom: 1px solid #333333
+					right: 1px solid #333333
+				right: 15px
+				top: calc(50% - 5px)
+				transform: rotate(45deg)
+				transition: transform .3s ease
+
+		&__link
+			color: #fff
+			padding: 10px 0
+			display: block
+
+			&.active
+				background: #333333
+
+		&__personal
+			margin: 30px 0 0
+
+		&__soc
+			margin: 0 auto
+
+			.f-soc
+
+				&__link
+					border: none
+					background:
+						color: #151515
+
+					&:not(:last-child)
+						margin-right: 2px
+
+	.submenu
+
+		.mobile-menu
+
+			&__link
+				padding: 6px 15px 6px 25px
+
+	.mobile-search
+		position: relative
+		
+		&__input
+			font-size: rem(16) !important
+			padding: 12px 40px 14px 17px !important
+			+size(100% 40px)
+			background: #151515
+			border: none
+			color: #fff
+
+		&__submit
+			position: absolute
+			top: 0
+			right: 0
+			+size(40px)
+			text-indent: -9999px
+			overflow: hidden
+			padding: 0
+			border: none
+			background: url("../img/ico-search.svg") center no-repeat
+			background-size: 30% !important
+
+	.mobile-pers
+
+		&__login, &__reg, &__order-photographer
+
+			&:not(:first-child)
+				margin: 9px 0 0
+
+		&__login
+
+			a
+
+				&:before
+					background-image: url("../img/ico-lc.svg")
+					background-size: 50% !important
+
+		&__reg
+
+			a
+
+				&:before
+					background:
+						image: url("../img/ico-reset-white.svg")
+						size: 40% !important
+						color: transparent !important
+					transform: rotate(-45deg)
+					z-index: 2
+
+				&:after
+					content: ""
+					position: absolute
+					background: #151515
+					+size(25px)
+					left: 0
+					top: 0
+
+		&__order-photographer
+
+			a
+
+				&:before
+					background-image: url("../img/ico-dol.svg")
+					background-size: 34% !important
+
+		a
+			display: flex
+			align-items: center
+			position: relative
+			border: none
+
+			&:before
+				content: ""
+				+size(25px)
+				margin: 0 20px 0 0
+				background: 
+					color: #151515
+					position: center
+					repeat: no-repeat
+
+	// body[class*="dir-reportage"]
+
+	// 	.mobile-pers__order-photographer a:before
+	// 		background-image: url("../img/ico-$.svg")
+	// 		background-size: 31% !important
+
+	.lc-mobile
+		color: #fff
+		display: block
+		padding: 10px 15px 10px 40px
+		background: url("../img/ico-lc.svg") left 15px center no-repeat
+		background-size: 15px 14px
+
+	.burger
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		+size(30px 20px)
+		border: none
+		background: none
+		padding: 0
+		transition: width .3s ease
+
+		span, &:after, &:before
+			+size(100% 2px)
+			display: block
+			background: #fff
+
+		span
+			transition: opacity .3s ease
+
+		&:before, &:after
+			content: ""
+			transition: transform .3s ease
+			transform-origin: left
+
+		&.js__active
+			width: 25px
+
+			span
+				opacity: 0
+
+			$angle: 45deg
+
+			&:before
+				transform: rotate($angle)
+
+			&:after
+				transform: rotate(-$angle)
+
+	// почему то класс .js__active стал ставиться на блок выше, я переписал стили немного
+
+	.head__burger.js__active
+		.burger
+			width: 25px
+
+			span
+				opacity: 0
+
+			$angle: 45deg
+
+			&:before
+				transform: rotate($angle)
+
+			&:after
+				transform: rotate(-$angle)
+
+
+
+	body.head-menu 
+		.head__nav
+			display: none
+
+		.head__wrap
+			padding: 0 0 2rem 0
+
+	.head__wrap
+		padding: 0
+
+	.head, #content, .footer, .mobile-menu
+		transition: transform .3s ease
+
+		&__burger
+			flex: none

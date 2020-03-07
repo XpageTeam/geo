@@ -1,0 +1,49 @@
+@font-face {
+  font-family: Formular;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url("./fonts/Formular/formular-bold-webfont.woff2") format("woff2"), "../fonts/Formular/formular-bold-webfont.woff" format("woff");
+}
+
+@font-face {
+  font-family: Formular;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url("./fonts/Formular/formular-webfont.woff2") format("woff2"), url("../fonts/Formular/formular-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: Formular;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300;
+  src: url("./fonts/Formular/formular-light-webfont.woff2") format("woff2"), url("../fonts/Formular/formular-light-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300;
+  src: url("./fonts/Proxima-nova/light/proxima_nova_light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  font-style: italic;
+  font-display: swap;
+  font-weight: 300;
+  src: url("./fonts/Proxima-nova/light-italic/proxima_nova_light_italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url("./fonts/Proxima-nova/regular/proxima_nova_regular.woff2") format("woff2"), url("../fonts/Proxima-nova/regular/proxima_nova_regular.woff") format("woff");
+}
+
+/*# sourceMappingURL=fonts.css.map */

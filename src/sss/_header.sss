@@ -1,0 +1,285 @@
+body.head-menu 
+
+	.main-nav 
+
+		.main-menu 
+
+			li
+
+				&:nth-last-child(6)
+
+					&:first-child
+						margin-right: 0.9vw
+
+						~ li
+							margin-right: 0.9vw
+
+.head__burger, .mobile-menu
+	display: none
+
+.photoset-link
+	display: block
+	size: 20px 15px
+	background-size: contain !important
+
+body:not(.head-menu)
+
+	.photoset-link
+		height: 16px
+
+.logo
+	max-width: 118px
+	display: block
+	height: 70px
+	color: #fff
+
+	img, svg
+		display: block
+		width: 100%
+
+	svg
+
+		path	
+			fill: currentColor
+
+.head
+
+	&__wrap
+		padding: 0 2rem
+		box-sizing: content-box
+		margin: 0 auto
+		max-width: 1703px
+
+	&.js__scrolled
+
+		.photoset-link
+			display: block
+			background: url("../img/ico-photoset-new.svg") no-repeat center
+			background-size: contain !important
+
+		.head__language
+			margin-top: 3px
+
+
+.compensate-for-scrollbar
+
+	.head
+		right: 17px
+
+.head-menu
+
+	.head
+
+		.selectize-dropdown-content
+			background: #000 !important
+
+.language-link
+	display: block
+	background: #323232
+	line-height: 1
+	padding: 7px
+
+
+.head
+	padding: 4.125rem 2rem 3.0625rem
+	top: 0
+	left: 0
+	position: absolute
+	right: 0
+	z-index: 15
+	font-family: "Formular"
+
+	&__language
+		margin-left: 25px
+		pointer-events: all
+		margin-top: -8px
+
+	.wrapper
+		padding: 0
+		max-width: calc(1200px + 4rem)
+		position: relative
+
+	&__photoset
+		margin: 0 2rem 0 auto
+		pointer-events: all
+
+	&__switcher
+		flex: none
+
+		.day-night
+			position: relative
+			transform: none
+			top: auto
+			left: auto
+			bottom: auto
+			right: auto
+
+			&__btn
+				transform: none
+
+	&.js__scrolled
+		position: fixed
+		background: #121212 !important
+		padding: 1.5rem 2rem
+		pointer-events: all !important
+		transform: translate3d(0, -100%, 0)
+		z-index: 99
+
+		&.js__show
+			transition: transform .5s ease
+			transform: translate3d(0, 0, 0)
+
+		.head__wrap
+			align-items: center
+
+			&:after
+				display: none
+
+		.head__logo
+			display: flex
+			align-items: center
+			max-width: none
+
+			.logo
+				width: 54px
+
+			svg, .logo
+				height: auto
+
+			&-city
+				margin-left: 15px
+
+		.head
+
+			&__nav
+				display: block
+				flex: 1 1 auto
+
+			&__soc
+				display: none
+
+			&__photoset
+				margin-right: 0
+				margin-left: 2rem
+
+		.main-nav
+
+			&__search
+				order: 1
+
+			&__lc
+				order: 2
+
+			&__search, &__lc
+				margin: 0
+
+				&:not(:last-child)
+					margin-right: rem(42)
+
+			&__menu
+				margin: 0 auto
+
+			.main-menu
+				justify-content: center
+
+				&__link
+					font-size: rem(14)
+
+					&:before, &:after
+						top: calc(100% + 7px)
+
+					&:after
+						width: 22px
+						height: 4px
+
+					&:before
+						+size(5px 7px)
+
+					&.active
+
+				li
+					flex: none
+
+					&:not(:last-child)
+						margin-right: vw(30)
+
+	&__wrap
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+
+	&__logo
+		max-width: 107px
+
+		&-city
+			transition: opacity .3s ease
+
+			.selectize-input
+				box-shadow: none !important
+				border-radius: 0
+				border: none
+				overflow: visible !important
+				padding: 9px 8px 7px
+				background: none !important
+
+				input[type="text"]
+					display: none !important
+
+				&:after
+					display: none !important
+
+				.item
+					white-space: nowrap
+					color: #fff
+
+			.selectize-dropdown
+				border: none !important
+				background: #323232 !important
+				background: transparent !important
+				width: auto !important
+				margin: 5px 0 0
+
+				display: block !important
+				opacity: 0
+				transition: opacity .3s ease
+				pointer-events: none
+
+				&[style*="block"]
+					opacity: 1
+					pointer-events: all
+
+				&-content, .active
+					background: none !important
+					color: #fff !important
+
+				.active
+					background: rgba(0, 0, 0, 0.8) !important
+
+				&-content
+					padding: 0 0 12px
+					font-weight: 400
+					height: 400px !important
+					max-height: calc(100vh - 160px) !important
+					font-size: rem(15)
+					background: rgba(68, 64, 64, 0.5411764705882353) !important
+
+					.option
+						padding: 7px 21px 7px 8px
+
+.city-select
+	height: 47px
+
+	&__select
+		margin: 9px 0 0 -6px
+		display: inline-block
+		letter-spacing: .01em
+		width: 100%
+
+select.city-select__select
+	border: none
+	color: #fff
+	padding-right: 15px
+	padding: 8px
+	font-size: 0.875rem
+	height: 34px
+	background: none

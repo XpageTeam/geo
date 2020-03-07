@@ -1,0 +1,158 @@
+.new-city
+
+	&__top
+		display: flex
+		justify-content: space-between
+		align-items: center
+		border-bottom: 1px solid #323232
+		padding: 0 0 60px
+
+		&-title
+			font-size: 2rem
+			line-height: calc(39 / 32)
+			max-width: 347px
+
+	&__list
+		margin: 70px 0 0
+
+		.city-list
+
+			&__one
+				width: calc((100% - 36px * 5) / 5)
+
+		.city-event
+
+			img
+				width: 100%
+
+			&__desc
+				display: flex
+				flex-direction: column
+				padding: 20px
+
+				&:before
+					background: linear-gradient(0deg, #000000 0%, rgba(63, 63, 63, 0.753122) 47.92%, rgba(93, 93, 93, 0.635417) 99.99%, rgba(255, 255, 255, 0) 100%)
+
+				&-bot
+					flex: 1 1 auto
+					display: flex
+					flex-direction: column
+
+			&__bot
+				flex: 1 1 auto
+				flex-direction: column-reverse
+				align-items: flex-start
+
+				&-phone
+					margin: 0 !important
+
+			&__rating
+				background-color: rgba(#fff, .6)
+
+.city-title
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+	&__title
+		margin-right: 20px
+
+.city-list
+
+	&__row
+
+		&:not(:first-child)
+			margin: 72px 0 0
+
+		&-list
+			margin: 28px 0 0
+
+.all-venues
+	display: inline-block
+	border: 1px solid #323232
+	padding: 16px 24px
+
+.city-btn
+	white-space: nowrap
+	padding: 16px 50px 16px 65px
+	line-height: 1
+	transition: background-color .3s ease
+	display: inline-block
+
+	&:not(:last-child)
+		margin-right: 36px
+
+	&--eat
+		background: url("../img/ico-eat.svg") left 20px center no-repeat, #B2D5B1
+
+		&:hover, &:focus
+			background-color: lighten(#B2D5B1, 3)
+
+	&--drink
+		background: url("../img/ico-drink.svg") left 24px center no-repeat, #DECBD7
+
+		&:hover, &:focus
+			background-color: lighten(#DECBD7, 3)
+
+	&--hear
+		background: url("../img/ico-hear.svg") left 26px center no-repeat, #ADC1E1
+
+		&:hover, &:focus
+			background-color: lighten(#ADC1E1, 3)
+
+.hidden-img
+	display: none !important
+
+
+@media (max-width: 1300px) and (min-width: 1000px)
+	.new-city
+
+		&__list
+
+			.city-list
+
+				&__one
+					width: calc((100% - 36px * 3) / 3)
+
+@media (max-width: 1000px) and (min-width: 660px)
+	.new-city
+
+		&__list
+
+			.city-list
+
+				&__one
+					width: calc((100% - 36px * 2) / 2)
+
+
+@media (max-width: 660px)
+	.new-city
+
+		&__list
+
+			.city-list
+
+				&__one
+					width: 100%
+
+		&__top
+			flex-direction: column
+
+			&-title
+				text-align: center
+				font-size: 24px
+				line-height: 1.1
+				max-width: 250px
+				margin: 0 0 35px
+
+			&-btns
+				display: flex
+				width: 100%
+				align-self: flex-start
+				overflow-x: auto
+				scroll-snap-type: x mandatory
+				scroll-padding: 50%
+				-webkit-overflow-scrolling: touch
+
+				.city-btn
+					scroll-snap-align: center

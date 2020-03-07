@@ -1,0 +1,422 @@
+body[class*="dir-promo-"]
+	opacity: 1
+	transition: opacity .5s ease
+
+	#content
+		overflow: visible
+
+	&.loading
+		.gastrolery-banner__cont
+			opacity: 0
+			transform: translate3d(0,50px,0)
+
+	&.loaded
+
+		.gastrolery-banner__cont
+			opacity: 1
+			transform: translate3d(0,0,0)
+
+
+.dir-promo-gastrolery
+	.head__wrap
+		position: relative
+
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			left: 50%
+			top: 100%
+			transform: translate3d(-50%,0,0)
+			background-image: url('../img/gastrolery-logo.png') 
+			background-repeat: no-repeat
+			background-position: center
+			background-size: contain
+			width: 472px
+			height: 103px
+			transition: transform .5s ease
+
+	.section-row__text
+		.text-page
+			font-weight: bold
+			font-size: rem(32)
+			line-height: 1.6
+
+	.head.js__scrolled.js__show
+
+		.head__wrap:before
+			transform: translate3d(-50%,24px,0)
+			// top: calc(100% + 23px)
+
+
+
+
+
+
+
+.animat
+	transition:  transform 2s ease, opacity .2s ease
+	transform: translateY(50px)
+	opacity: 0
+	will-change: transform, opacity
+
+	&.js__animated
+		transform: translateY(0)
+		opacity: 1
+		animation-duration: 2s !important
+
+.gastrolery
+	&-banner
+		position: relative
+		display: flex
+		justify-content: space-between
+		margin: 115px -55px 0
+		padding-top: 125px
+
+
+
+		&__label
+			position: absolute
+			top: 0
+			left: 50%
+			transform: translate3d(-50%,0,0)
+			z-index: 15
+
+		&__el
+			position: relative
+
+			img
+				position: relative
+				z-index: 10
+
+			&:first-child
+				.circle
+					left: 0
+
+			&:last-child
+				.circle	
+					right: 0
+
+		.circle
+			position: absolute
+			top: -80px
+			z-index: 5
+
+			&-left
+				animation: line1 3s ease infinite
+				transform-origin: 50% 50%
+
+			&-right
+				animation: line2 3s ease infinite
+			
+
+
+		&__title
+			position: absolute
+			z-index: 15
+			top: 50%
+			left: 50%
+			transform: translate3d(-50%,-50%,0)
+
+
+@keyframes line1
+	0%
+		transform: translate3d(0,0,0) rotate(0deg)
+
+	50%
+		transform: translate3d(-30px,-10px,10px) rotate(10deg)
+
+	100%
+		transform: translate3d(0,0,0) rotate(0deg)
+
+@keyframes line2
+	0%
+		transform: translate3d(0,0,0)
+
+	50%
+		transform: translate3d(10px,10px,-10px)
+
+	100%
+		transform: translate3d(0,0,0)
+    
+
+
+
+.section-row-video
+
+	.section-row-el
+		position: relative
+
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			left: calc(50% - 35px)
+			top: calc(50% - 35px)
+			+size(70px)
+			border-radius: 50%
+			background-color: var(--background-color)
+			background-image: url('../img/ico-treangle.svg')
+			background-repeat: no-repeat
+			background-position: 44% 50%
+			cursor: pointer
+			pointer-events: none
+
+
+	.section-row
+		justify-content: space-between
+		margin-left: -48px		
+
+	.section-row-el
+		margin-left: 48px		
+
+
+.section-row-cont-gastrolery
+	.wrapper
+		position: relative
+
+	.column
+		position: absolute
+
+		img
+			position: relative
+			z-index: 10
+
+		span
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			border: 1px solid #fff
+			border-radius: 50%
+			z-index: 5
+			animation: pulse 3s ease infinite
+
+			&:before, &:after
+				content: ''
+				display: block
+				position: absolute
+				border: 1px solid #fff
+				border-radius: 50%
+
+			&:before
+				top: 50%
+				left: 50%
+				transform: translate3d(-50%,-50%,0)
+				width: calc(100% - 60%)
+				height: calc(100% - 60%)
+
+			&:after
+				top: 50%
+				left: 50%
+				transform: translate3d(-50%,-50%,0)
+				width: calc(100% - 30%)
+				height: calc(100% - 30%)
+				background: rgba(255, 255, 255, 0.1)
+
+
+		&--left
+			left: -180px
+			bottom: -150px
+			transform: rotate(31.46deg)
+			display: flex
+			justify-content: center
+			flex-direction: column
+			align-items: center
+			+size(287px)
+			// left: -100px
+			// bottom: -150px
+			// transform: rotate(42deg)
+
+		&--right
+			// right: -125px
+			// top: 50%
+			// transform: translate3d(0,-50%,0) rotate(-30deg)
+
+			display: flex
+			justify-content: center
+			flex-direction: column
+			align-items: center
+			+size(287px)
+			right: -150px
+			top: 30%
+			transform: translate3d(0,-50%,0) rotate(-45deg)
+
+
+
+.section-row-events
+	position: relative
+	// overflow: hidden
+
+	.column-big
+		position: absolute
+
+		img
+			position: relative
+			z-index: 10
+
+		span
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			border: 1px solid #fff
+			border-radius: 50%
+			z-index: 5
+			animation: pulse 3s ease infinite
+
+			&:before, &:after
+				content: ''
+				display: block
+				position: absolute
+				border: 1px solid #fff
+				border-radius: 50%
+
+			&:before
+				top: 50%
+				left: 50%
+				transform: translate3d(-50%,-50%,0)
+				width: calc(100% - 60%)
+				height: calc(100% - 60%)
+
+			&:after
+				top: 50%
+				left: 50%
+				transform: translate3d(-50%,-50%,0)
+				width: calc(100% - 30%)
+				height: calc(100% - 30%)
+				background: rgba(255, 255, 255, 0.1)
+
+
+		&--left
+			display: flex
+			justify-content: center
+			flex-direction: column
+			align-items: center
+			+size(537px)
+			left: -10%
+			bottom: -150px
+			transform: rotate(42deg)
+
+		&--right
+			display: flex
+			justify-content: center
+			flex-direction: column
+			align-items: center
+			+size(537px)
+			right: -10%
+			top: 0
+			transform: translate3d(0,-50%,0) rotate(-45deg)
+
+
+@keyframes pulse
+	0%
+		transform: scale3d(1, 1, 1)
+		opacity: .3
+
+	50%
+		transform: scale3d(1.1, 1.1, 1.1)
+		opacity: .8
+
+	100%
+		transform: scale3d(1, 1, 1)
+		opacity: .3
+
+
+.section-row__title
+	display: flex
+	justify-content: center
+	margin-bottom: 75px
+
+
+@media screen and (max-width: 1600px)
+	
+	.section-row-events .column-big--right
+		right: -22%
+
+	.section-row-events .column-big--left
+		left: -23%
+
+
+@media screen and (max-width: 1500px)
+	
+	.gastrolery-banner__el img 
+		max-width: 445px
+
+	.section-row__title
+		margin-bottom: 30px
+
+
+@media screen and (max-width: 1400px)
+	
+	.section-row-events .column-big--right
+		right: -29%
+
+
+@media screen and (max-width: 1300px)
+	
+	.column
+		display: none !important
+
+		&-big
+			display: none !important
+
+	.gastrolery-banner
+		margin: 190px 0 0 0 
+
+
+@media screen and (max-width: 1000px)
+	
+	.gastrolery-banner__el img
+		max-width: 320px
+
+	.circle
+		img
+			max-height: 240px
+
+	.gastrolery-banner
+		margin: 135px 0 0 0
+
+
+@media screen and (max-width: 667px)
+
+	.dir-promo-gastrolery .head__wrap:before
+		width: 260px
+		height: 55px
+	
+	.gastrolery-banner
+		margin: 115px 0 0 0
+		padding-top: 70px
+
+		&__el img
+			max-width: 100%
+
+
+	.section-row-cont-gastrolery
+		.text-page
+			font-size: 1.6rem !important
+			
+			h2
+				font-size: 1.6rem !important
+
+			br
+				display: none
+
+	.section-row-video 
+		.section-row-el
+			margin-left: 0
+
+		.section-row
+			margin-left: 0
+
+.section-row-poll
+	display: flex
+	justify-content: center
+	max-width: 100%
+	padding: 0 20px
+
+	.pool
+		margin-left: auto
+		margin-right: auto

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Заведения
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading.head-menu
+		include inc/header.pug
+		include inc/mobileMenu.pug
+		main#content
+			.inner-content
+				.wrapper
+					.zavediniya
+						each title, i in ["Double Craft pub", "Ресторан Barbaresco", "Solaris sessions", "Бар Boris Bar", "Отель Гранд Отель Видгоф", "Napoleonit Russia", ]
+							if (i != 1)
+								.zavediniya__one
+									.z-item
+										.z-item__rating
+											.rating
+												.rating__star
+													.star
+												.rating__number 4.75
+										a.z-item__title-cont(href="#")
+											.z-item__title=title
+											.z-item__arrow
+										a.z-item__img(href="#")
+											img(src="img/photos/z-"+i+".jpg")
+							else
+								.zavediniya__one
+									.z-item
+										.z-item__rating
+											.rating
+												.rating__star
+													.star
+												.rating__number 4.75
+										a.z-item__title-cont(href="#")
+											.z-item__title Ресторан Barbaresco
+											.z-item__arrow
+										.z-item__contacts
+											.z-contacts
+												address.z-contacts__one
+													.z-contacts__one-title Телефон:
+													.z-contacts__one-text
+														a(href="tel: ") +7 (351) 250-09-50
+												address.z-contacts__one
+													.z-contacts__one-title Адрес:
+													.z-contacts__one-text Челябинск, <br />Елькина, 45а (бизнес-центр «Випр», 1 этаж)
+												address.z-contacts__one
+													.z-contacts__one-title Время работы:
+													.z-contacts__one-text пн-пт 09.00 - 20.00 <br />сб 09.00 - 18.00, вс выходной
+					.main-content__btn
+						a.download-more(href="#") Загрузить ещё
+					.main-content__banner
+						a.main-banner(href="#")
+							picture
+								source(media="screen and (min-width: 1000px)" srcset="img/photos/main-banner.jpg" data-main="")
+								source(media="screen and (max-width: 1000px) and (min-width: 660px)" srcset="img/photos/main-banner-tab.jpg")
+								source(media="screen and (max-width: 660px)" srcset="img/photos/main-banner-mobile.jpg")
+								img
+		include inc/footer.pug
+		include inc/scripts.pug

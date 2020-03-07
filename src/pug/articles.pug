@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Статьи
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug
+		include inc/mobileMenu.pug
+		main#content
+			.main-slider__cont
+				.main-slider
+					- for (let i = 0; i < 3; i++)
+						.main-slider__slide
+							figure.main-slider__slide-img
+								picture
+									<!-- Большая картинка -->
+									source(data-main="" media="screen and (orientation: landscape)" srcset="img/photos/articles-banner.jpg")
+										
+									<!-- Картинка для телефонов -->
+									source(media="screen and (orientation: portrait)" srcset="img/photos/adaptive-banner.jpg")
+									img
+								.slide-decor(style="color: #f8f6f5")
+							.main-slider__slide-desc
+								.wrapper
+									.main-slider__slide-text Вряд ли Боги соблаговолят нам, Есть подозрение, что им приятно, когда нам больно
+									.main-slider__slide-title Noize Mc о новом никому не нужном альбоме 
+				.main-slider__arrows
+					.wrapper
+			.main__nav
+				.wrapper
+					.main-nav
+						.main-nav__search
+							a.search-link(href="#" title="Поиск")
+						nav.main-nav__menu
+							ul.main-menu
+								each title in ["Репортажи", "События", "Эксклюзив", "Заведения", "Музыка"]
+									li
+										a.main-menu__link(href="#")=title
+						.main-nav__lc
+							a.lc-link(href="#" title="Личный кабинет")
+			.inner-content
+				.wrapper
+					.articles
+						each article, i in [{title: "Интервью: NOIZE MC", text: "В декабре группа Noize MC презентует новую пластинку «Царь горы». По просьбе Geometria.ru лидер коллектива Иван Алексеев ..."}, {title: "350 квадратов искусства!", text: "Уже совсем скоро список лучших фотостудий в Челябинске пополнится новым именем. 25 марта откроется творческое ..."}, {title: "Клубная хроника города. Из первых уст", text: "Интервью людей, повлиявших на клубную хронику города, о совместной, долгой и плодотворной работе — самые ..."}, {title: "Голос провинции", text: "Чемпионат Мира по футболу в России – очень значимое событие для страны и мира в целом. Для одних – это долгожданный ..."}, {title: "Интервью: БАСТА", text: "Главный артист России Василий Вакуленко о челябинских дорогах, уходе Тати с лейбла Gazgolder, школьной поре..."}, ]
+							.articles__one
+								article.article
+									.article__desc
+										.article__title=article.title
+										.article__text
+											.text-page=article.text
+										.article__desc-bot
+											a.article__arrow(href="#")
+											.article__counters
+												.article-counters
+													.article-counters__comments
+														.comments 12
+													.article-counters__likes
+														.likes 30
+									.article__img
+										img(src="img/photos/articles-"+i+".jpg")
+					.main-content__btn
+						a.download-more(href="#") Загрузить ещё
+					.main-content__banner
+						a.main-banner(href="#")
+							picture
+								source(media="screen and (min-width: 1000px)" srcset="img/photos/main-banner.jpg" data-main="")
+								source(media="screen and (max-width: 1000px) and (min-width: 660px)" srcset="img/photos/main-banner-tab.jpg")
+								source(media="screen and (max-width: 660px)" srcset="img/photos/main-banner-mobile.jpg")
+								img
+		include inc/footer.pug
+		include inc/scripts.pug

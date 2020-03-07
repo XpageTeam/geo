@@ -1,0 +1,5599 @@
+@import "bourbon"
+@import "vars"
+@import "base"
+@import "functions"
+
+
+@import "../css/slider"
+@import "../css/slick"
+@import "../css/datepicker"
+@import "../css/theme"
+@import "../css/swiper"
+@import "../css/jquery.fancybox"
+@import "../css/animate"
+@import "../css/selectize"
+
+@import "main-banner"
+@import "live-slider"
+@import "_gastreet"
+@import "venue"
+@import "construction"
+@import "_gastrolery.sass"
+@import "face-search.sass"
+@import "city.sass"
+@import "fancybox-banner.sass"
+
+body[class*="dir-tv"] 
+
+	.reportaj__titles-one
+
+		&:nth-child(3)
+			opacity: 0
+
+.fancybox-is-zoomable
+
+	.fancybox-toolbar
+		opacity: 1
+		visibility: visible
+
+		// так было нужно
+	.fancybox-navigation .fancybox-button
+		opacity: 1
+		visibility: visible !important
+
+
+
+
+
+// Вадим сказал скрыть
+.zavedeniya-one__slider__list
+	.item__btn
+		display: none !important
+
+.headphone-play
+	.item-porsche
+		a 
+			font-size: 0
+
+.head.js__scrolled
+	// display: none
+
+.imageBanner
+	display: none
+
+.item-promo-section
+	display: flex
+	justify-content: center
+	// display: none
+
+	.main-menu__link
+		background-position: center
+		background-repeat: no-repeat
+		// background-color: #6f4165
+		padding: 0 5px
+		height: 30px
+		line-height: 30px
+		display: inline-block
+		color: #fff
+
+		&:before, &:after
+			background: #fff
+
+.item-porsche
+	display: flex
+	justify-content: center
+	display: none
+
+	.main-menu__link
+		background-image: url('../img/ico-parshe-btn.png')
+		background-position: center
+		background-repeat: no-repeat
+		background-color: #fff
+		padding: 10px 28px
+		font-size: 0 !important
+		width: 155px
+		height: 30px
+		display: inline-block
+
+.main-video-banner
+	position: relative
+
+	.main-slider__slide-desc
+		opacity: 1
+
+	.main-slider__slide-title, .main-slider__slide-text
+		transition: opacity 1s ease, transform 1s ease
+		opacity: 1
+		transform: none
+		text-align: center
+.report-slider__slide.vertical-span
+	position: relative
+
+	.report-slider__banner
+		left: initial
+		right: 0
+		display: block !important
+		z-index: 1
+
+
+.wrapper, #mskBan, .stream
+	max-width: $base-width + px
+	padding: 0 2rem
+	margin: 0 auto
+	box-sizing: content-box
+
+#mskBan, .stream
+	position: relative
+	// padding: 35% 0 0
+	width: calc(100% - 4rem)
+	max-width: calc(1200px - 4rem)
+	margin-top: 130px
+	height: 675px
+
+	+ .main-content__cont
+		margin-top: 40px
+
+	iframe
+		position: absolute
+		top: 0
+		left: 0
+		+size(100%)
+
+.stream
+
+	&_header
+		margin: 0
+		position: absolute
+		top: -50px
+		left: 35px
+		padding-left: 30px
+
+		&:before
+			content: ''
+			display: block
+			width: 49px
+			height: 49px
+			position: absolute
+			left: -33px
+			top: -16px
+			background: url(../img/live.png) no-repeat
+			background-size: 100% auto
+
+*[v-cloak]
+	display: none
+
+.dir-order-photographer, 
+body[class*="dir-reportage-"], 
+body[class*="dir-event-"], 
+body[class*="dir-exclusive-"],
+body[class*="dir-city-"],
+.dir-personal, 
+.dir-search
+	.photoset-link
+		// background: url(../img/ico-photoset-new.svg) no-repeat center
+
+body.white-color
+	.comment-active_scroll
+		background: #f3f3f3 !important
+
+	.filter__select 
+		.selectize-dropdown
+			&-content
+				background: #ccc !important
+
+			.option
+				color: #000 !important
+
+		.selectize-input.has-items .item:after
+			background: url("../img/ico-reset-black.svg") center no-repeat, #ccc !important
+			background-size: 10px !important
+
+	.selectize-control.multi 
+		.selectize-input 
+			> div.item
+				background: #ccc !important
+				color: #000 !important
+
+
+
+	&.dir-personal
+
+		.head .main-menu__link
+			color: #000 !important
+
+			&:hover, .active
+				color: #000 !important
+
+	.head 
+		.main-menu__link
+			color: #000 !important
+
+			&:hover, &.active
+				color: #000 !important
+
+	.search__form input[type="text"]
+		color: #000
+
+
+
+.js__scroll
+	.search-form
+		transform: translate3d(0,-100%,0)
+		position: fixed;
+		top: -10px
+		padding: 20px;
+		background: #121212 !important
+		// opacity: 0
+
+		form
+			max-width: 1200px
+			margin: 0 auto
+
+	.js__search-block.search-form
+		display: block !important
+
+.js__search-open
+
+	.search-form
+		transform: translate3d(0,100%,0)
+		opacity: 1
+		// transform: translate3d(0,100%,0)
+		// position: fixed;
+
+// body:not(.js__search-open)
+// 	transition-delay: opacit .3s ease
+	// .js__scrolled
+	// 	~ .search-form
+	// 		transform: translate3d(0,0,0)
+
+
+
+
+
+.head__burger, .mobile-menu
+	display: none
+	
+.footer__soc
+	.day-night.day-night--night
+		display: none
+
+.soc__link
+	flex: none
+
+.animated
+	animation-duration: 2s !important
+
+button, input, select, textarea
+	font-family: inherit
+
+	&:focus
+
+		&::-webkit-input-placeholder
+			color: #fff
+			opacity: 0
+
+		&:-moz-placeholder
+			color: #fff
+			opacity: 0
+
+		&::-moz-placeholder
+			color: #fff
+			opacity: 0
+
+		&:-ms-input-placeholder
+			color: #fff
+			opacity: 0
+
+.rub
+	font-style: normal
+	font-size: inherit
+	font-weight: inherit
+	font-family: "Roboto"
+
+.photoset-link
+	display: block
+	+size(20px 15px)
+	// background: url("../img/ico-photoset-new.svg") no-repeat center
+	background-size: contain !important
+
+body:not(.head-menu)
+
+	.photoset-link
+		height: 16px
+
+.head.js__scrolled
+	.photoset-link
+		display: block
+		background: url("../img/ico-photoset-new.svg") no-repeat center
+		background-size: contain !important
+
+	.head__language
+		margin-top: 3px
+
+// body[class*="dir-reportage"]
+
+// 	.photoset-link
+// 		margin-top: -6px
+// 		background: url("../img/ico-$.svg") no-repeat
+// 		width: 9px
+// 		height: 20px
+
+.logo
+	max-width: 118px
+	display: block
+	height: 70px
+	color: #fff
+
+	img, svg
+		display: block
+		width: 100%
+
+	svg
+
+		path	
+			fill: currentColor
+
+.slick-arrow
+	text-indent: -9999px
+	overflow: hidden
+	border: none
+
+.head, .footer
+
+	&__wrap
+		padding: 0 2rem
+		box-sizing: content-box
+		margin: 0 auto
+		max-width: 1703px
+
+.compensate-for-scrollbar
+
+	.head
+		right: 17px
+
+.head-menu
+
+	.head
+
+		.selectize-dropdown-content
+			background: #000 !important
+
+.language-link
+	display: block
+	background: #323232
+	// border-radius: 50px
+	line-height: 1
+	padding: 7px
+
+.head
+	padding: 4.125rem 2rem 3.0625rem
+	top: 0
+	left: 0
+	position: absolute
+	right: 0
+	z-index: 15
+	// background: $main-bgc !important
+	font-family: "Formular"
+
+	&__language
+		margin-left: 25px
+		pointer-events: all
+		margin-top: -8px
+
+	.wrapper
+		padding: 0
+		max-width: calc(1200px + 4rem)
+		position: relative
+
+	&__photoset
+		margin: 0 2rem 0 auto
+		pointer-events: all
+
+	&__switcher
+		flex: none
+
+		.day-night
+			position: relative
+			transform: none
+			top: auto
+			left: auto
+			bottom: auto
+			right: auto
+
+			&__btn
+				transform: none
+
+	&.js__scrolled
+		position: fixed
+		background: #121212 !important
+		padding: 1.5rem 2rem
+		pointer-events: all !important
+		// border-bottom: 1px solid #333
+		transform: translate3d(0, -100%, 0)
+		z-index: 99
+
+		&.js__show
+			transition: transform .5s ease
+			transform: translate3d(0, 0, 0)
+
+		.head__wrap
+			align-items: center
+
+			&:after
+				display: none
+
+		.head__logo
+			display: flex
+			align-items: center
+			max-width: none
+
+			.logo
+				width: 54px
+
+			svg, .logo
+				height: auto
+
+			&-city
+				margin-left: 15px
+				// opacity: 0
+				// display: none
+				// pointer-events: none
+
+		.head
+
+			&__nav
+				display: block
+				// margin-left: auto
+				flex: 1 1 auto
+				// margin-right: auto
+
+			&__soc
+				display: none
+
+			&__photoset
+				margin-right: 0
+				margin-left: 2rem
+
+				// .photoset-link
+				// 	+size(22px)
+
+		.main-nav
+
+			&__search
+				order: 1
+
+			&__lc
+				order: 2
+
+			&__search, &__lc
+				margin: 0
+
+				&:not(:last-child)
+					margin-right: rem(42)
+
+			&__menu
+				margin: 0 auto
+
+			.main-menu
+				justify-content: center
+
+				&__link
+					font-size: rem(14)
+
+					&:before, &:after
+						top: calc(100% + 7px)
+
+					&:after
+						width: 22px
+						height: 4px
+
+					&:before
+						+size(5px 7px)
+
+					&.active
+
+				li
+					flex: none
+
+					&:not(:last-child)
+						margin-right: vw(30)
+
+	&__wrap
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+
+	&__logo
+		max-width: 107px
+
+		&-city
+			transition: opacity .3s ease
+
+			.selectize-input
+				box-shadow: none !important
+				border-radius: 0
+				border: none
+				overflow: visible !important
+				padding: 9px 8px 7px
+				background: none !important
+
+				input[type="text"]
+					display: none !important
+
+				&:after
+					display: none !important
+
+				.item
+					white-space: nowrap
+
+			.selectize-dropdown
+				border: none !important
+				background: #323232 !important
+				background: transparent !important
+				width: auto !important
+				margin: 5px 0 0
+
+				display: block !important
+				opacity: 0
+				transition: opacity .3s ease
+				pointer-events: none
+
+				&[style*="block"]
+					opacity: 1
+					pointer-events: all
+
+				&-content, .active
+					background: none !important
+					color: #fff !important
+
+				.active
+					background: rgba(0, 0, 0, 0.8) !important
+
+				&-content
+					padding: 0 0 12px
+					font-weight: 400
+					height: 400px !important
+					max-height: calc(100vh - 160px) !important
+					font-size: rem(15)
+					background: rgba(68, 64, 64, 0.5411764705882353) !important
+
+					.option
+						padding: 7px 21px 7px 8px
+
+#content
+	overflow-x: hidden
+	width: 100%
+
+.right-block
+	position: absolute
+	left: 100%
+	top: 0
+	height: 100vh
+	z-index: 10
+	width: 0
+
+	&.moved
+		transition: transform .3s ease
+
+	&__draggable
+		color: #f8f6f5
+		background-color: currentColor
+		position: absolute
+		right: 100%
+		top: 28vw
+		width: vw(247)
+		height: vh(30)
+		z-index: 4
+		// cursor: -webkit-grab
+
+		&:after
+			content: ""
+			position: absolute
+			left: 0
+			top: 100%
+			background: currentColor
+			width: vw(77)
+			height: vh(45)
+
+		&.moving
+			// cursor: -webkit-grabbing
+
+.main-slider
+	// height: vh(857)
+	// min-height: 660px
+
+	&.js__have-slides, &.js__have-slides a.main-slider__slide-desc
+		cursor: none
+
+	&--dotted
+
+		.slick-dots
+			position: absolute
+			bottom: 75px
+			left: 0
+			right: 0
+			display: flex
+			justify-content: center
+
+			button
+				text-indent: -9999px
+				overflow: hidden
+				border: none
+				padding: 0
+				+size(6px)
+				transition: transform .3s ease
+				border-radius: 50%
+
+			.slick-active
+
+				button
+					transform: scale(1.7)
+
+			li
+
+				&:not(:last-child)
+					margin-right: 27px
+
+
+	&.slider-loaded
+
+		.slick-slide.slick-active
+
+			&:first-child
+
+				.main-slider
+
+					&__slide
+
+						&-title, &-text
+							opacity: 1
+							transform: translate3d(0, 0, 0)
+
+						&-img
+
+							img, picture
+								opacity: 1
+								transform: scale3d(1, 1, 1)
+								user-select: none
+
+		img, picture
+			transition-delay: .2s
+			// transform: scale3d(1.2, 1.2, 1.2)
+			opacity: 1
+
+		.main-slider
+
+			&__slide-desc
+				opacity: 1
+
+	&:not(.slick-initialized)
+		opacity: 0
+		
+		// .main-slider
+
+		// 	&__slide-desc
+		// 		opacity: 0
+
+	&__cont
+		position: relative
+		background: #000
+
+		// &:after
+		// 	content: ""
+		// 	position: absolute
+		// 	left: 0
+		// 	top: calc(100% - 243px)
+		// 	background: url("../img/main-slider-shadow.png") center repeat-x
+		// 	+size(100% 485px)
+		// 	pointer-events: none
+
+	&__slide-desc
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+
+		.wrapper
+			width: 100%
+
+	&__slide-desc
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		transition: opacity .3s ease
+		opacity: 0
+
+	// &__arrows
+	// 	z-index: 2
+	// 	// pointer-events: none
+	// 	bottom: rem(115)
+	// 	// z-index: 50
+	// 	cursor: none
+	// 	display: flex
+	// 	flex-direction: column
+
+	.slick
+
+		&-arrow
+			// pointer-events: all
+			+size(28px)
+			border: 
+				top: 2px solid #fff
+				right: 2px solid #fff
+			background: none
+			position: absolute
+			// transition: opacity .3s ease
+			// opacity: 0
+			cursor: none
+			z-index: 4
+
+		&-next
+			transform: rotate(45deg)
+
+		&-prev
+			transform: rotate(-135deg)
+
+		// .wrapper
+		// 	// display: flex
+		// 	// justify-content: space-between
+		// 	// align-items: center
+		// 	position: relative
+		// 	cursor: none
+		// 	flex: 1 1 auto
+
+	.slick
+
+		&-track
+			display: flex
+
+		&-slide
+			flex: none
+			height: auto !important
+			display: flex !important
+			flex-direction: column
+
+			> div
+				height: auto
+				flex: 1 1 auto
+				display: flex
+				flex-direction: column
+
+		&-list, &-track, &-slide, &-slide > div
+			height: 100%
+			max-height: 100%
+
+		&-active
+
+			// &:not(:first-child)
+
+			.main-slider__slide
+
+				&-title, &-text
+					opacity: 1
+					transform: translate3d(0, 0, 0)
+
+				&-img
+
+					img, picture
+						opacity: 1
+						transform: scale3d(1, 1, 1)
+						user-select: none
+
+	&__slide
+		text-align: center
+		font-weight: 400
+		position: relative
+		display: flex !important
+		// height: 100%
+		// max-height: 100%
+		flex: 1 1 auto
+		flex-direction: column
+
+		&:not(:first-child)
+			display: none
+
+		&-video
+			overflow: hidden
+
+			video
+				width: 100%
+				display: block
+				max-height: calc(100vh - 100px)
+				// margin: vh(-120) 0
+				max-height: calc(100vh - 100px)
+				object-fit: cover
+				object-position: center
+
+			+ .main-slider__slide-img
+				display: none
+
+		@media (max-width: 1000px)
+			&-video
+
+				video
+					height: calc(100vh - 75px)
+					max-height: none
+
+				&:not(:last-child)
+					display: none
+
+					+ .main-slider__slide-img
+						display: block
+
+		&-img
+			position: relative
+			// overflow: hidden
+			// height: 100%
+			// max-height: 100%
+			flex: 1 1 auto
+			flex-direction: column
+			display: flex
+
+			&:after
+				content: ""
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				background: rgba(#000, .5)
+
+			img, picture
+				display: block
+				transition: opacity 1s ease, transform 1s ease
+				opacity: 0
+				transform: scale3d(1.2, 1.2, 1.2)
+				width: 100%
+				flex: 1 1 auto
+				max-height: calc(100vh - 120px)
+
+			picture
+				display: flex 
+				flex-direction: column
+
+			img
+				object:
+					fit: cover
+					position: center
+
+		&-desc
+			z-index: 1
+			bottom: 48px
+			padding-top: rem(40)
+			font-family: "Formular"
+
+		&-title, &-text
+			transition: opacity 1s ease, transform 1s ease
+			opacity: 0
+			max-width: 650px
+			margin: 
+				left: auto
+				right: auto
+
+		&-title
+			font-size: rem(24)
+			margin-top: 16px
+			letter-spacing: .02em
+			transform: translate3d(-50px, 0, 0)
+
+		&-text
+			font-size: rem(34)
+			letter-spacing: .03em
+			transform: translate3d(50px, 0, 0)
+			font-weight: 700
+
+a.main-slider__slide-desc
+
+	.main-slider__slide-text
+		cursor: pointer
+		display: block
+		padding-bottom: 3px
+		line-height: lh(52, 34)
+
+		&:hover
+
+			span
+				border-bottom: 1px solid currentColor
+			// text-decoration: underline
+
+.main__nav
+	position: relative
+	z-index: 6
+	padding-top: 20px
+	margin-top: -75px
+
+	&:first-child
+		display: none
+
+.search-form
+	position: absolute
+	top: calc(100% + 35px)
+	left: 0
+	right: 0
+	display: none
+	transition: transform 1s ease
+	trans
+
+	&__wrap
+		display: flex
+
+		&:before
+			position: absolute
+			content: ""
+			+triangle(9px, #323232, down-left)
+			left: 0
+			bottom: 100%
+
+	&__input
+		width: 100%
+		flex: 1 1 auto
+		border: none
+		padding: 0 25px
+		color: #fff
+		background: #323232
+
+	.z-item__arrow
+		flex: none
+
+.right-block
+
+	+ .main__nav
+		display: none
+
+.search, .lc
+
+	&-link
+		display: block
+
+.search-link
+	// background: url("../img/ico-search.svg") no-repeat
+	+size(15px 20px)
+
+	svg
+		path
+			stroke: #fff
+
+.lc-link
+	+size(21px 20px)
+	background: none !important
+	// background: url("../img/ico-lc.svg") no-repeat
+	position: relative
+	svg
+		path
+			stroke: #fff
+
+	&:before
+		pointer-events: none
+		content: "18+"
+		padding: 5px 3px
+		font-size: 12px
+		position: absolute
+		bottom: 100%
+		right: calc(100% + 2px)
+		// border-radius: 13px
+		border: 1px solid #fff
+
+.head__nav
+
+	.lc-link
+
+		&:before
+			transform: scale(.7)
+			right: 100%
+
+.main-nav
+	display: flex
+	justify-content: space-between
+	font-family: "Formular"
+	position: relative
+	align-items: center
+
+	&__search, &__lc
+		flex: none
+
+	&__menu
+		flex: 1 1 auto
+
+	&__search
+		margin: 0 rem(115) 0 0
+		display: flex
+
+	&__lc
+		margin: 0 0 0 rem(102)
+
+.main-menu
+	display: flex
+	align-items: center
+
+	li
+		text-align: center
+		flex: 1 1 auto
+
+	&__link
+		color: #fff
+		text-decoration: none
+		font-weight: 400
+		font-size: rem(16)
+		position: relative
+		white-space: nowrap
+		text-transform: uppercase
+		transition: color .3s ease
+
+		&:after, &:before
+			content: ""
+			color: inherit
+			position: absolute
+			left: 0
+			background: currentColor
+			top: calc(100% + 10px)
+
+		&:after
+			+size(38px 5px)
+			transform-origin: right
+			transform: scale3d(0, 1, 1)
+			// transition-delay: .1s
+
+		&:before
+			+size(12px)
+			transform-origin: top
+			transform: scale3d(1, 0, 1)
+
+		&.active, &:hover
+			// color: inherit
+
+			&:before, &:after
+				transform: scale3d(1, 1, 1)
+				transition: transform .1s ease
+
+			&:after
+				transition-delay: 0s
+
+			&:before
+				transition-delay: .1s
+
+.sort-block
+	background: #fff
+	color: #000
+	width: 100%
+	height: 100%
+
+	&__title
+		padding: 10px 15px
+		border-bottom: 1px solid #000
+		user-select: none
+		height: 40px
+
+	&__list
+		height: calc(100% - 40px)
+		overflow-y: auto
+
+		&::-webkit-scrollbar
+			width: 9px
+			background: #fff
+
+			&-thumb
+				border-radius: 3px
+				background: #323232
+
+.controls-view
+
+	&__checkbox
+		display: none
+
+		&:checked
+
+			+ label
+				opacity: 1
+
+	&__label
+		background: url("../img/ico-eye.svg") no-repeat
+		background-size: contain !important
+		display: block
+		+size(25px)
+		cursor: pointer
+		transition: opacity .3s ease
+		opacity: .3
+
+.sort-list
+
+	&__row
+
+
+
+	tr
+		&.sortable
+
+			&-chosen
+				// opacity: 0
+				// display: block
+				// height: 2px
+				// overflow: hidden
+				// border:
+				// 	top: 1px solid blue
+				// 	bottom: 1px solid blue
+
+			&-ghost
+				opacity: 0 !important
+		
+		&:hover
+
+			td
+				background: #dbdbdb
+
+	td
+		padding: 15px 10px
+		vertical-align: middle
+		transition: background .3s ease
+
+.controls, .contol-form
+	display: flex
+	align-items: center
+
+.contol-form
+
+	&__one
+
+		&:not(:last-child)
+			margin-right: 8px
+
+		&-input
+			display: none
+
+			&:checked
+
+				+ label
+					background: #323232
+
+		&-label
+			display: block
+			transition: background .3s ease
+			border: 1px solid #323232
+			cursor: pointer
+
+			&--row
+				+size(10px 20px)
+
+			&--col
+				+size(20px 10px)
+
+			&--box
+				+size(10px)
+
+.controls
+
+	&__form
+		margin-left: 10px
+
+
+
+.buy-btn
+	display: inline-block
+	padding: 13px 22px 12px
+	font-size: rem(12)
+	border-radius: 0
+	overflow: hidden
+	height: 44px
+	width: auto
+	font-weight: 400
+	color: #fff
+	font-size: 1rem;
+	background: url("../img/ico-ticket-white.svg") left 24px center no-repeat, #333
+
+	&:hover
+		background-image: url("../img/ico-ticket.svg")
+		background-color: $events-color
+		color: #000
+
+	&:not(:empty)
+		// background-position: center !important
+		padding-left: 73px
+		width: auto
+
+	&:empty
+		width: 59px
+		background-position: center !important
+
+body[class*=dir-reportage] .item__event
+	right: 32px
+	left: auto
+
+
+
+.main-banner
+	display: block
+
+	img
+		display: block
+		width: 100%
+
+	&:not(:first-child)
+		margin: 1.5rem 0 0
+
+
+
+.inner-content
+	margin: rem(130) 0 0
+	width: 100%
+	overflow: hidden
+
+.zavediniya
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	padding-bottom: rem(140)
+	margin-bottom: rem(-105)
+
+	&__one
+		width: persent(495)
+		margin-bottom: rem(105)
+		display: flex
+		flex-direction: column
+
+		&:nth-child(even)
+			transform: translateY(140px)
+
+.star
+	background: url("../img/ico-star.png") no-repeat
+	+size(12px 11px)
+	display: inline-block
+
+.z-item
+	width: 100%
+	flex: 1 1 auto
+	display: flex
+	flex-direction: column
+
+	&__rating, &__title-cont
+		flex: none
+
+	&__rating
+		margin-bottom: rem(45)
+
+	&__title
+		text-decoration: none
+		font-weight: bold
+		font-size: rem(44)
+		line-height: lh(47, 44)
+		max-width: 340px
+
+		&-cont
+			display: flex
+			justify-content: space-between
+			align-items: flex-end
+			color: #fff
+			margin-bottom: rem(35)
+
+	&__arrow
+		// border-radius: 50%
+		position: relative
+		background: #333
+		+size(53px)
+		flex: none
+		margin-left: 20px
+		transition: background .3s ease
+
+		&:before, &:after
+			content: ""
+			position: absolute
+			color: #fff
+			transition: color .3s ease
+
+		&:before
+			border: 
+				right: 1px solid currentColor
+				bottom: 1px solid currentColor
+			+size(13px)
+			top: calc(50% - 7px)
+			left: calc(50% - 7px)
+			transform: rotate(-45deg)
+
+		&:after
+			+size(19px 1px)
+			background: currentColor
+			top: calc(50% - 1px)
+			left: calc(50% - 11px)
+
+	&__contacts
+		background: #aec2e4
+		flex: 1 1 auto
+		padding: 2rem rem(70)
+		display: flex
+		align-items: center
+
+.z-contacts
+
+	a
+		color: #fff !important
+
+	&__one
+
+		&:not(:first-child)
+			margin: 15px 0 0
+
+		&-title
+			color: #6c7e9c
+			margin-bottom: 3px
+
+.rating
+	white-space: nowrap
+
+	&__star, &__number
+		display: inline-block
+		// vertical-align: middle
+
+.download-more
+	color: #fff
+	text-decoration: none
+	display: inline-block
+	border: none
+	// border-radius: 35px
+	background: #333
+	padding: 16px 70px 18px 37px
+	position: relative
+	cursor: pointer
+	white-space: nowrap
+	user-select: none
+
+	&:before, &:after
+		content: ""
+		position: absolute
+		background: #fff
+		+size(13px 1px)
+		top: calc(50% - 1px)
+		right: 36px
+
+	&:before
+		transform: rotate(90deg)
+
+	&--loading
+		cursor: wait
+		padding-right: 37px
+
+		&:before, &:after
+			display: none
+
+.filter
+
+	&__cont
+		margin: 21px 0 rem(95)
+
+	&__inputs
+		display: flex
+		justify-content: space-between
+		margin: 0 0 0 rem(-82)
+		align-items: flex-end
+
+	&__select
+		// flex: 1 1 auto
+		width: calc((100% - 5.125rem * 3) / 3)
+		margin: 0 0 0 rem(82)
+		position: relative
+
+		.selectize-input
+			border-radius: 0 !important
+			box-shadow: none !important
+			background: $main-bgc
+			border: none
+			border-bottom: 1px solid #333333
+			padding-left: 0 !important
+			overflow: visible
+			padding-bottom: 26px !important
+
+			&:not(.has-items)
+				// padding: 0 8px 12px !important
+
+			&:not(.focus)
+
+				&.has-items
+					// padding-top: 25px !important
+					padding-bottom: 4px !important
+
+			&.focus
+				// padding-top: 26px !important
+
+				&.has-items
+					// padding-top: 25px !important
+					// margin-top: -2px
+					// padding-top: 2px !important
+
+			&.has-items
+				padding: 0 8px 4px 0 !important
+				margin: -10px 0 0
+
+				.item
+					padding: 7px 30px 7px 16px
+					margin: 0 9px 11px 0
+					position: relative
+					pointer-events: none
+
+					&:after
+						pointer-events: all
+						content: "" 
+						position: absolute
+						display: block !important
+						top: 0
+						right: 11px
+						+size(17px 100%)
+						transform: none !important
+						border: none !important
+						background: url("../img/ico-reset-white.svg") center no-repeat, #323232 !important
+						background-size: 8px auto !important
+
+			input[type="text"]
+				color: #fff
+				font-size: rem(16)
+
+		.selectize-dropdown
+			border: none !important
+
+			.option
+				font-size: rem(16)
+				line-height: 1
+				color: #fff !important
+				padding: 10px 28px 11px
+
+		select
+			+size(100% 65px)
+			border: none
+			border-bottom: 1px solid #333333
+			background: none
+			color: #fff
+			opacity: 0
+
+		&:nth-last-child(3):first-child
+			width: 442px
+
+	&__submit
+		flex: none
+		display: flex
+		margin-left: rem(60)
+
+	&-submit
+		position: absolute
+		top: 0
+		left: 0
+		text-indent: -9999px
+		overflow: hidden
+		opacity: 0
+		+size(100%)
+
+	&__range
+		display: flex
+		align-items: center
+		margin-bottom: 20px
+
+		&-label
+			font-weight: 300
+			margin-right: rem(72)
+			margin: 0 rem(72) 0 0
+
+		.range
+
+			&__cont
+				flex: none
+				width: 280px
+
+.filter-reset
+	background:
+		image: url("../img/ico-reset-white.svg")
+		color: #333
+		position: center
+		repeat: no-repeat
+	display: block
+	height: 53px;
+	width: 53px;
+	flex: none;
+	margin-left: .2rem
+	position: relative
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	padding: 19px 20px 19px 19px
+	text-indent: -9999px
+	overflow: hidden
+	
+	&:hover, &:focus
+		background-image: url("../img/ico-reset-black.svg")
+
+	span
+		display: none
+
+.filter-input
+	border: none
+	border-bottom: 1px solid #333333
+	background: $main-bgc
+	color: #fff
+	width: 100%
+	min-height: 35px
+	font-size: rem(14)
+	cursor: pointer
+
+	&.invisible-input
+		opacity: 0
+		position: absolute
+		pointer-events: none
+		top: 100%
+		height: 0
+		min-height: 0
+		overflow: hidden
+		width: 100%
+		left: 0
+
+.multi-date
+	display: flex
+	position: relative
+
+	&:after
+		content: "";
+		position: absolute;
+		border-right: 1px solid #fdffff;
+		border-bottom: 1px solid #fdffff;
+		height: 5px;
+		width: 5px;
+		top: calc(50% - 11px);
+		right: 5px;
+		transform: rotate(45deg);
+
+	&__content
+		flex: none
+		// width: 100%
+		max-width: 100%
+		padding: 0 8px 4px 0
+		margin: -10px 0 0
+
+	&__placeholder
+		flex: none
+		padding: 8px 8px 26px 0
+		align-self: flex-end
+		color: #fff
+		font-size: rem(16)
+
+	&__date
+		display: inline-block
+		background: #323232
+		color: #fff
+		vertical-align: baseline
+		padding: 8px 30px 7px 16px
+		// padding: 8px 16px 7px
+		margin: 0 9px 11px 0
+		pointer-events: none
+		font-weight: 300
+		position: relative
+
+		&:after
+			pointer-events: all
+			content: "" 
+			position: absolute
+			display: block !important
+			top: 0
+			right: 11px
+			+size(17px 100%)
+			transform: none !important
+			border: none !important
+			background: url("../img/ico-reset-white.svg") center no-repeat, #323232 !important
+			background-size: 8px auto !important
+
+.range
+	position: relative
+	font-style: normal
+	border: none !important
+	background: rgba(#fff, .2) !important
+
+	span
+
+		&:before
+			content: attr(data-value)
+			position: absolute
+			top: calc(100% + 25px)
+			color: rgba(#fff, .55)
+			left: 50%
+			transform: translateX(-50%)
+
+.ui
+
+	&-datepicker
+		// z-index: 15 !important
+		height: auto
+		width: auto 
+		background: #333333 !important
+		border: none !important
+		// box-shadow: 0 0 10px 0 rgba(#000, .7)
+		border-radius: 0 !important
+		padding: 0 !important
+		box-shadow: 0px 0px 4px rgba(#000, .2)
+
+		&-unselectable
+			opacity: 1 !important
+			color: #fff !important
+
+			span
+				background: #777 !important
+				border: none !important
+
+		&-header
+			border: none !important
+			border-radius: 0 !important
+			color: #fff !important
+			border-bottom: 1px solid #252424 !important
+			background: none !important
+			padding: 0 !important
+			font-weight: 300
+
+		&-title
+			display: flex
+			justify-content: center
+			height: 55px
+			// overflow: hidden
+
+		&-prev, &-next
+			display: none !important
+
+		&-month, &-year
+			margin: 0 !important
+			border: none
+			color: #fff
+			width: auto
+			height: 49px
+			font-size: rem(16)
+
+			&:not(.selectize-control), .item
+				background: url("../img/ico-select-arrow.png") center right 3px no-repeat
+
+			.item
+				background-position: top 7px right 3px
+
+			&.selectize-control
+				height: auto
+				width: 45%
+
+			&:not(:last-child)
+				margin: 0 rem(30) 0 0 !important
+
+			.selectize-input
+				padding: 16px 0 12px
+				background: none !important
+				border-radius: 0
+				box-shadow: none
+				border: none !important
+
+				&:after
+					display: none !important
+
+				.item
+					font-size: rem(16)
+					width: 100%
+					text-align: left
+					color: #fff
+
+					&:after
+						display: none !important
+
+				input
+					display: none !important
+
+			.selectize-dropdown
+
+				.option
+					color: #fff
+
+		&-calendar
+
+		table
+			width: auto
+			color: #fff
+			margin: 0 17px 27px
+			text-align: center
+			font-weight: 300
+			border-collapse: separate
+			border-spacing: 8px
+
+			th, td
+				font-weight: inherit
+
+			td
+				padding: 0
+
+				a
+					border: none !important
+					padding: 6px
+					font-weight: inherit !important
+					background: none !important
+
+				.ui-state
+
+					&-default, &-highlight
+						color: inherit
+
+					&-highlight
+						background: #000 !important
+
+					&-active
+						background: #fef99e !important
+						color: #000
+
+
+.ui-widget
+
+	&-content
+		background: rgba(#fff, .2)
+
+	.ui-slider
+
+		&-range
+			background: #adc1e1
+
+		&-handle
+			border: 1px solid #adc1e1
+			background: #adc1e1
+			transition: background .3s ease, border-color .3s ease
+			+size(16px)
+
+			&:after
+				background: #adc1e1
+				border-radius: 50%
+				+size(6px)
+				margin: 0
+				top: calc(50% - 3px)
+				left: calc(50% - 3px)
+
+			&:hover, &:focus
+				background: #adc1e1
+				border-color: #adc1e1
+
+.sort-handle
+	display: block
+	+size(20px)
+	background: #000
+	cursor: all-scroll
+
+.offer-event
+	text-align: right
+	margin: 0 0 30px
+
+	.download-more
+		padding: 11px 20px 13px
+
+		&:after, &:before
+			display: none
+
+.events
+	display: flex
+	flex-wrap: wrap
+	margin: 0 0 rem(-32) rem(-62)
+
+	&__one
+		width: calc((100% - 3.875rem * 3) / 3)
+		margin: 0 0 rem(32) rem(62)
+		display: flex
+		flex-direction: column
+
+		&--big
+			width: calc((100% - 3.875rem * 1.5) / 1.5)
+
+			.buy-btn
+				text-indent: 0 !important
+				background-position: left 24px center !important
+				padding-left: 73px !important
+				color: #000
+				font-weight: 300
+				text-transform: none
+				font-size: 1rem
+				width: auto !important
+				height: auto !important
+
+			.item
+
+				&__desc
+
+					&-title
+						max-width: 400px
+						font-size: rem(26)
+						line-height: lh(32, 26)
+
+		.item
+			flex: 1 1 auto
+			display: flex
+			flex-direction: column
+
+			&__event
+				background: #000
+				z-index: 3
+				text-transform: uppercase
+				line-height: 1
+				padding: 10px 17px
+				font-size: rem(16)
+
+			&__img
+				display: flex
+				position: relative
+
+				&:after
+					content: ""
+					position: absolute
+					bottom: -1px
+					left: -1px
+					right: -1px
+					top: 30%
+					width: auto
+					background: linear-gradient(to top, rgba(#000, .7), transparent)
+
+			&__desc
+				display: flex
+				flex-direction: column
+				padding-right: 6rem
+
+				&-top
+					order: 1
+					margin: 23px 0 0
+
+					&__date
+						position: static
+						background: none
+						// text-transform: none
+						padding: 0
+
+			&__btn
+
+				.buy-btn
+					border-radius: 0
+					text-indent: -9999px
+					overflow: hidden
+					padding-left: 0
+					+size(59px 41px)
+					background: url("../img/ico-ticket.svg") center no-repeat, #adc1e1
+
+.canvas-shadow
+	filter: blur(30px)
+	transform: scale3d(1, 1, 1)
+	opacity: 0
+	transition: opacity .3s ease, transform .3s ease
+	position: absolute
+	top: 0
+	left: 0
+	+size(100%)
+	pointer-events: none
+
+.city-map
+
+	&--hidden
+		display: none
+
+ymaps
+
+	&[class*="-balloon "]
+		padding: 0 !important
+		box-shadow: none !important
+		left: 50% !important
+		transform: translateX(-50%)
+
+	&[class*="balloon__tail"]
+		display: none !important
+
+	&[class*="-balloon__content"]
+		margin-right: 0 !important
+		padding: 0 !important
+		background: none !important
+		font: inherit !important
+
+.balloonContent
+	padding: rem(30) rem(39) rem(45)
+	min-width: 284px
+	max-width: 300px
+
+	&-rating
+		position: relative
+		color: #9f8763
+		font-weight: 300
+		padding-left: 20px
+		margin-bottom: 10px
+
+		&:before
+			content: ""
+			position: absolute
+			left: 0
+			top: 4px
+			background: url("../img/ico-gold-star.svg") no-repeat
+			+size(12px)
+
+	&-title
+		font-size: rem(20)
+		line-height: lh(26, 20)
+		font-weight: 400
+		margin-bottom: rem(8)
+
+		a
+			color: inherit
+
+			&:hover
+				border-bottom: 1px solid currentColor
+
+	&-phone, &-address, &-time
+		line-height: lh(24, 16)
+
+		&:not(:last-child)
+			margin: 0 0 rem(15)
+
+	&-phone
+
+		a
+			color: #000
+
+			&:hover
+				border-bottom: 1px solid currentColor
+	
+.city
+
+	&__list
+		margin: rem(63) 0 0
+
+	&__map
+
+		&-toggle
+			font-weight: 300
+			// margin-bottom: 
+			display: flex
+			align-items: center
+			justify-content: space-between
+			padding: 17px 25px 19px 
+			cursor: pointer
+			user-select: none
+			// border-bottom: 1px solid #333333
+			background: #323232
+
+			&.opened
+
+				&:after
+					transform: rotate(-45deg) translate(-50%, 0%)
+
+			&:after
+				content: ""
+				display: inline-block
+				+size(14px)
+				border: 
+					right: 1px solid #fff
+					top: 1px solid #fff
+				transition: transform .3s ease
+				transform: rotate(135deg) translate(0%, 50%)
+
+.city-list
+	display: flex
+	// justify-content: space-between
+	flex-wrap: wrap
+	margin: 0 0 -28px -34px
+
+	&__one
+		display: flex
+		flex-direction: column
+		margin: 0 0 28px 34px
+		width: calc((100% - 34px * 3) / 3)
+		position: relative
+
+.city-event
+	flex: 1 1 auto
+	display: block
+	position: relative
+	color: #fff
+
+	&:hover, &:focus
+		
+		.city-event
+
+			&__img
+
+				img
+					transform: scale3d(1.1, 1.1, 1.1)
+
+	&__img
+		position: relative
+		overflow: hidden
+
+		&:after
+			// content: ""
+			position: absolute
+			top: -1px
+			left: -1px
+			right: -1px
+			bottom: -1px
+			background: rgba(#000, .2)
+
+		img
+			display: block
+			transition: transform 5s ease
+			background: #fff
+
+	&__desc
+		position: absolute
+		top: 0
+		left: 0
+		+size(100%)
+		padding: rem(28) rem(32)
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+
+		display: none
+		// Дима
+
+		&:before
+			content: ''
+			position: absolute
+			top: -1px
+			left: -1px
+			right: -1px
+			bottom: -1px
+			background: linear-gradient(to top, #000, transparent)
+	
+	&__title
+		font-size: rem(28)
+		transition: color .3s ease
+		font-family: "Formular"
+	
+	&__bot
+		display: flex
+		justify-content: space-between
+		align-items: flex-end
+		position: relative
+		z-index: 2
+
+		&-left
+			line-height: lh(24, 16)
+			max-width: 250px
+
+		&-phone
+
+			&:not(:first-child)
+				margin: 20px 0 0
+
+	&__rating
+		background: url("../img/ico-white-star.svg") center left 10px no-repeat, rgba(#fff, .29)
+		padding: 10px 12px 9px 39px
+
+.articles
+	// margin: 3rem 0
+
+	&__one
+
+		&:not(:first-child)
+			margin: rem(66) 0 0
+
+.article
+	display: flex
+	flex-direction: column
+	position: relative
+
+	&:hover
+
+		.article
+
+			&__title
+				border-color: #fff
+
+			&__img
+
+				img
+					transform: scale3d(1.1, 1.1, 1.1)
+
+	&:before
+		content: ""
+		position: absolute
+		left: 0
+		top: 0
+		+size(100%)
+		z-index: 2
+		background: linear-gradient(to right, rgba(#000, .6), transparent)
+	
+	&__img
+		flex: none
+		overflow: hidden
+
+		img
+			display: block
+			transition: transform 2s ease
+
+	&__desc
+		// flex: 1 1 auto
+		// display: flex
+		// flex-direction: column
+		// align-items: flex-start
+		z-index: 3
+		position: absolute
+		left: 0
+		top: 0
+		+size(100%)
+		padding: rem(60) rem(50) rem(46)
+		max-width: 700px
+
+
+		&-bot
+			margin-top: auto
+			padding-top: 15px
+			display: flex
+			justify-content: space-between
+			align-items: flex-end
+
+			display: none !important
+
+	&__title
+		font-weight: bold
+		font-size: rem(44)
+		line-height: lh(47, 44)
+		// margin-bottom: rem(35)
+		max-width: 600px
+		font-family: "Formular"
+		border-bottom: 1px solid transparent
+		transition: border-color .3s ease
+
+		display: inline
+
+	&__text
+		max-width: 570px
+		font-size: 1rem
+		line-height: lh(26, 16)
+		display: flex
+		flex-direction: column
+		margin-top: rem(35)
+
+		.text-page
+			flex: 0 1 auto
+			overflow: hidden
+			text-overflow: ellipsis
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+
+	&__counters
+		margin: rem(39) 0 0
+
+.reportaj
+
+	.share-soc__hide-btns
+		top: 100%
+		padding-top: 1px
+
+	&__titles
+		display: flex
+		align-items: flex-end
+		justify-content: space-between
+		margin: 0 0 3rem
+
+		&-one
+
+			&:first-child
+				max-width: persent(450)
+
+			&:nth-child(3):last-child
+				width: persent(380)
+
+	&__slider
+
+		&-desc
+			margin: rem(52) 0 0
+
+		&.js__photo-removed
+
+			.slider-desc__btns
+				opacity: 0
+				pointer-events: none
+
+			.swiper-slide-active
+
+				.photoLabel
+					position: relative
+
+					&:after
+						content: "Фотография была удалена"
+						position: absolute
+						background: rgba(#000, .5)
+						top: 0
+						right: 0
+						bottom: 0
+						left: 0
+						display: flex
+						justify-content: center
+						align-items: center
+						text-align: center
+						color: #fff
+						padding: 2rem
+						z-index: 3
+
+	&__small-slider
+		margin: rem(91) 0 0
+
+	&__desc
+		margin: rem(100) 0 0
+
+	&__comments
+		margin: rem(120) 0 0
+
+	&--all
+
+		.reportaj
+
+			&__titles
+				border-bottom: 1px solid rgba(#4a4a4a, .5)
+				padding-bottom: 3rem
+
+			&__desc
+				margin-top: 0
+
+				.report-desc
+					align-items: flex-end
+
+					&__text
+
+						&-tags
+							margin: rem(55) 0 0
+
+	&__imgs
+		margin: 3rem 0 0
+
+.tags
+	margin-bottom: -9px
+
+	&__link
+		vertical-align: top
+		border-radius: 6px
+		background: #515151
+		color: #fff
+		text-transform: lowercase
+		line-height: lh(22, 16)
+		padding: 10px 15px
+		display: inline-block
+		margin-bottom: 9px
+
+		&:not(:last-child)
+			margin-right: 9px
+
+.titles
+
+	&__subtitle
+		text-transform: uppercase
+		margin: 0 0 rem(8)
+		font-size: rem(12)
+
+	&__subtitle, &__date, &__title
+		font-weight: 300
+
+	&__title
+		font-family: "Formular"
+		// font-weight: 400
+
+		a
+			color: inherit
+
+			&:hover
+				border-bottom: 1px solid currentColor
+
+	&__title, &__date
+		line-height: lh(34, 28)
+		font-size: rem(28)
+
+	// &__title, &__date
+
+	&__date
+		white-space: nowrap
+
+.white-color
+
+	.finish-slide
+		color: #fff
+
+.finish-slide
+	position: absolute
+	top: 0
+	left: 0
+	+size(100%)
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	z-index: 5
+	background: rgba(#000, .6)
+	font-family: "Formular"
+	font-weight: 300
+
+	&__banner
+		margin: 0 0 25px
+		max-height: 40%
+
+		img
+			max-height: 100%
+
+	&__subtitle, &__place
+		text-transform: uppercase
+		font-size: rem(12)
+
+	&__subtitle
+		margin-bottom: vh(12)
+
+	&__title
+		text-align: center
+		font-size: 2rem
+		line-height: lh(36, 32)
+		font-weight: 400
+		margin: 0 0 25px
+
+	&__place
+		margin: 0 0 30px
+
+	&__center
+		margin: 0 0 30px
+		display: flex
+
+		&-right, &-left
+			border: 1px solid #454545
+			display: flex
+			align-items: center
+			padding: 2rem
+
+			&:not(:last-child)
+				margin-right: rem(28)
+
+.rating-block
+	display: flex
+	align-items: center
+	width: 100%
+
+	&__title
+		margin-right: rem(40)
+
+.repeat-btn
+	+size(80px)
+	border: none
+	border-radius: 50%
+	display: block
+	background: url("../img/ico-repeat.png") center no-repeat, #515151
+
+
+.tag_view img
+	max-width: none !important
+	height: auto !important
+
+.report-slider
+	height: 809px
+	max-height: 83.8843vh
+	margin: 0 -7px
+
+	*[id*="item-"]
+		height: 100%
+
+		.item-adv, img
+			height: 100%
+
+	&.js__all-vertical
+
+		.vertical-span
+			
+			figure
+				// position: static !important
+				// height: auto !important
+				// transform: none !important
+
+				.main-img
+					// height: auto !important
+					// max-height: vh(812)
+
+
+	.photoLabel
+		background: #000 
+
+	&.js__hide-arrows
+
+		.slick-arrow
+			display: none !important
+
+	&__cont
+		position: relative
+
+	&__finish
+		position: absolute
+		top: 0
+		left: -7px
+		bottom: 0px
+		right: -7px
+		display: flex
+		flex-direction: column
+		background: rgba(#000, .84)
+
+		opacity: 0
+		pointer-events: none
+
+		&.js__visible
+			opacity: 1
+			pointer-events: all
+			z-index: 5
+
+	// &:not(.slick-initialized)
+		// opacity: 0
+
+	&.swiper-container
+
+		&-fade
+
+			.swiper
+
+				&-wrapper
+					overflow: hidden
+
+				// &-slide
+
+				// 	&:not(.swiper-slide-active)
+				// 		opacity: 0 !important
+
+		&-horizontal
+			overflow: hidden
+
+	.swiper
+
+		&-slide
+			margin-bottom: -5px
+			flex: none
+			height: auto !important
+			display: flex
+			flex-direction: column
+
+			&:not(.swiper-slide-active)
+				// opacity: 0 !important
+
+			.photoLabel
+				flex: 1 1 auto
+				display: flex
+				flex-direction: column
+				height: 100%
+
+		&-wrapper
+			display: flex
+
+	.slick
+
+		&-arrow
+			// position: absolute
+			// border: 
+				// right: 1px solid #fff
+				// top: 1px solid #fff
+			// background: none
+			// +size(22px)
+			transition: opacity .3s ease
+
+			&.slick-disabled
+				opacity: .4
+				// cursor: default
+
+		&-next
+			right: -80px
+			// transform: rotate(45deg)
+
+		&-prev
+			left: -80px
+			// transform: rotate(-135deg)
+
+		&-slide
+
+			> div
+				text-align: center
+
+		&-list, &-track, &-slide, &-slide > div
+			// max-height: 811px
+			min-height: 300px
+
+	.slick
+
+		&-arrow
+			top: calc(50% - 50px)
+			+size(70px 100px)
+			border: none
+			transform: none
+			background: rgba(#000, .2)
+			transition: background .3s ease
+			z-index: 2
+			position: absolute
+			// display: flex
+			// justify-content: center
+			// align-items: center
+			// text-indent: -9999px
+			// overflow: hidden
+
+			&:before
+				content: ""
+				border:
+					top: 1px solid #fff
+					right: 1px solid #fff
+				+size(22px)
+				position: absolute
+				top: calc(50% - 7px)
+
+			&:hover, &:focus
+				background: rgba(#000, .6)
+
+
+		&-prev
+			// left: 0
+
+			&:before
+				transform: rotate(-135deg)
+				left: calc(50% - 3px)
+
+		&-next
+			// right: 0
+
+			&:before
+				transform: rotate(45deg)
+				left: calc(50% - 12px)
+
+	&__slide
+		display: inline-flex !important
+		justify-content: center
+		position: relative
+		// padding-top: 83vh
+		// max-height: 811px
+		// min-height: 300px
+		flex: 1 1 auto
+		width: 100%
+		height: 100%
+
+
+		&:not(.vertical-span)
+			// align-items: center
+
+		~ .labelBox, ~ .labelTools
+			display: none !important
+
+		&.vertical-span
+
+			figure
+				height: 100%
+				position: absolute !important
+				top: 0
+				left: 50%
+				transform: translateX(-50%)
+
+				.main-img
+					height: 100%
+
+		// &:not(.vertical-span)
+
+		// 	figure
+		// 		width: 100%
+
+		figure
+			// width: 100%
+			// height: 800px
+			// max-height: vh(800)
+			width: 100%
+			height: 100%
+			// position: absolute !important
+			// top: 0
+			// left: 50%
+			// transform: translateX(-50%)
+			z-index: 2
+			text-align: center
+
+			&:hover
+
+				.img-taglabel
+					opacity: 1
+					pointer-events: all
+
+				// .img-overlay
+					// opacity: .5 !important
+
+			.img-taglabel
+				transition: opacity .3s ease
+				opacity: 0
+				pointer-events: none
+
+			.imgWrap
+				height: 100%
+				width: 100%
+
+				// > img
+					// max-height: 100%
+			
+			figcaption
+				display: none
+
+			.decor
+				display: none
+
+				span
+					position: absolute
+					// background: #fff
+					color: rgba(#fff, .5)
+					font-size: 12px
+					right: 0
+					// color: #000
+					text-transform: uppercase
+					padding: 10px
+					bottom: 20%
+					width: 50px
+					white-space: nowrap
+					transform: rotate(-90deg)
+
+				&:after, &:before
+					content: ""
+					position: absolute
+					background: #fff
+					z-index: 3
+					display: none
+
+				&:after
+					right: 0
+					bottom: persent(130, 803)
+					width: persent(84, 1200)
+					height: 11px
+
+				&:before
+					bottom: persent(115, 803)
+					right: persent(58, 1200)
+					width: persent(26, 1200)
+					height: 15px
+			img
+				// height: 100%
+				// max-height: 83vh
+				max-height: 100%
+				vertical-align: middle
+				display: inline-block !important
+				// max-width: none
+
+				// &:not(.lazy-loaded)
+				// 	width: 100%
+
+			// @media screen and (min-width: 1420px)
+				// img
+					// max-width: none
+
+		&-text
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			font-weight: 300
+			padding: 20px
+			color: #fff
+			text-align: left
+
+			svg
+				width: 65px
+				height: auto
+
+.small-slider
+	// margin: 0 -16px
+	// opacity: 0
+
+	.swiper
+
+		&-scrollbar
+			bottom: -13px !important
+
+	&__container
+		// overflow: hidden
+		position: relative
+
+		&:before, &:after
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			width: vw(290)
+			height: 100%
+			z-index: 5
+			transition: opacity .3s ease
+			background: linear-gradient(to right, #000, transparent)
+			pointer-events: none
+
+		&:after
+			transform: rotate(180deg)
+			right: 0
+			left: auto
+
+		+ .wrapper
+			width: 100%
+
+	.swiper
+
+		&-slide
+			// width: auto !important
+			cursor: pointer
+			// overflow: hidden
+
+			&-active
+
+			&-thumb-active
+
+				.small-slider
+
+					&__slide
+						outline:
+							color: #decbd7
+
+
+	&.slick-initialized
+		opacity: 1
+
+	.slick
+
+		&-list
+			overflow: visible
+			padding-bottom: 4px
+
+		&-current
+
+		&-active
+
+			.small-slider
+
+				&__slide
+
+					&:before
+						opacity: 0
+
+			~ .slick-slide
+
+				&:not(.slick-active)
+
+					.small-slider
+
+						&__slide
+
+							&:before
+								transform: rotate(180deg)
+
+		&-slide
+
+			&.js__selected
+
+				.small-slider
+
+					&__slide
+						outline:
+							color: #decbd7
+
+	&__slide
+		// margin: 0 16px
+		width: auto !important
+		cursor: pointer
+		outline: 4px solid transparent
+		transition: outline .3s ease
+		position: relative
+		display: block !important
+		font-size: 0
+		// height: 252px
+		// object:
+		// 	fit: cover
+		// 	position: center
+		// padding-top: 61.4%
+		overflow: hidden
+		text-align: center
+		z-index: 10
+
+		&:not(:first-child)
+			display: none
+
+		&:before
+			// content: ""
+			position: absolute
+			top: 0
+			left: 0
+			+size(100%)
+			transition: opacity .3s ease
+			background: linear-gradient(to right, #000, transparent)
+
+		&.vertical-span
+
+			img
+				width: auto
+
+		img
+			// width: 100%
+			// min-height: 100%
+			// width: auto
+			// height: auto !important
+			max-height: 253px
+			width: auto
+			// position: absolute
+			top: 50%
+			left: 50%
+			position: static
+			// transform: translate(-50%, -50%)
+			border: 0 !important
+			// position: relative
+			// position: absolute
+
+			&:before
+				content: ""
+				position: absolute
+				z-index: 5
+				top: 0
+				bottom: 0
+				right: 0
+				left: 0
+				border: 1px solid #000
+
+.slider-desc
+	display: flex
+	justify-content: space-between
+
+	&__text
+		max-width: 650px
+		font-size: rem(15)
+		line-height: lh(26, 15)
+	
+	&__btns
+		flex: none
+		margin-left: 2rem
+		position: relative
+		display: flex
+
+		noindex
+			display: flex
+
+		.btn_public-edit a
+			padding: 17px 37px 17px 37px
+
+		&-remove, &-download, &-share, &-play, .labelTools,
+
+			&:not(:last-child)
+				margin-right: 1rem
+
+		&-download, &-share, &-play, .labelTools, &-remove a
+			height: 53px
+			color: #000
+			font-weight: 300
+			display: inline-flex
+			align-items: center
+			vertical-align: top
+			cursor: pointer 
+
+		&-remove
+			margin-left: .4rem
+
+		&-remove a
+			padding: 10px 21px
+			background: red
+			color: #fff !important
+
+		&-download
+			background: url("../img/ico-download-default.svg") center right 23px no-repeat, #decbd7
+			background-size: 17px auto !important
+			padding: 10px 59px 10px 21px
+
+			&:hover
+				background-image: url("../img/ico-download.svg")
+
+		&-share, &-play
+			width: 56px
+
+		.labelTools
+			margin-right: 0 !important
+			transition: color .3s ease, background .3s ease
+			color: #fff
+			background: #333
+
+			a
+				padding: 10px 21px
+				height: 100%
+				display: inherit
+				justify-content: inherit
+				align-items: inherit
+				color: inherit
+
+			&:hover
+				background: #decbd7
+				color: #000
+
+		&-share
+			background: url("../img/ico-share.svg") center no-repeat, #decbd7
+			background-size: 21px auto !important
+			// cursor: default
+
+			&:hover
+				background-image: url("../img/ico-share-hover.svg")
+
+			&-block
+				position: absolute
+				right: 0
+				top: 100%
+				padding-top: 10px
+				z-index: 51
+				display: none
+
+				.ya-share2
+
+					&__hide
+						display: none !important
+
+					&__item
+						display: block !important
+
+					&__list
+						display: flex
+						flex-direction: column
+
+					&__link
+						+size(56px)
+
+		&-play
+			background: url("../img/ico-play.svg") center no-repeat, #decbd7
+
+			&:hover
+				background-image: url("../img/ico-play-hover.svg")
+
+.report-desc
+	display: flex
+	justify-content: space-between
+	align-items: flex-start
+
+	&__text
+		font-size: rem(15)
+		line-height: lh(26, 15)
+		max-width: 675px
+
+		&-title
+			font-size: rem(24)
+			margin: 0 0 15px
+			display: inline-block
+			border-bottom: 1px solid transparent
+			transition: border-color .3s ease
+			line-height: 1
+
+			&:hover
+				border-color: currentColor
+
+		.text-page
+
+			> *
+
+				&:not(:first-child)
+					margin-top: 0
+
+	&__share
+		flex: none
+		border: 1px solid #decbd7
+		padding: 2rem rem(30)
+
+		&:not(:first-child)
+			margin-left: 2rem
+
+.share-block
+	display: flex
+	align-items: center
+
+	&__title
+		max-width: 150px
+		margin-right: 50px
+		line-height: lh(22, 16)
+
+.ya-share2
+
+
+	&__hide
+		cursor: pointer
+		display: block
+		+size(52px)
+		background: 
+			position: center
+			repeat: no-repeat
+			color: #323232
+		transition: background-color .3s ease
+		background-image: url("../img/ico-share.svg")	
+		background-size: 21px auto !important
+		z-index: 5	
+
+		&:hover
+			background-image: url("../img/ico-share-hover.svg")
+
+		&.open-on-hover
+
+			~ .share-soc__hide-btns
+				display: block !important
+				pointer-events: none
+				opacity: 0
+				transition: opacity .3s ease
+
+				&:hover
+					opacity: 1
+					pointer-events: all
+
+			&:hover
+
+				~ .share-soc__hide-btns
+					opacity: 1
+					pointer-events: all
+
+	&__list
+		display: flex
+
+		> .ya-share2__item
+
+			&:nth-child(n + 3)
+				display: none
+
+
+	&__item
+
+		
+
+		&_service
+
+			&_vkontakte
+
+				.ya-share2__link
+					background-image: url("../img/ico-white-vk.svg")
+
+					&:hover
+						background-image: url("../img/ico-black-vk.svg")
+
+			&_facebook
+				border: none !important
+
+				.ya-share2__link
+					background-image: url("../img/ico-white-fb.svg")
+
+					&:hover
+						background-image: url("../img/ico-black-fb.svg")
+
+			@each $soc, $ico in (gplus: gp, odnoklassniki: ok, viber: vb, whatsapp: wa, moimir: mm, twitter: twt, telegram: tel)
+				
+				&_#{$soc}
+
+					.ya-share2__link
+						background-image: url("../img/ico-#{$ico}.svg")
+
+						&:hover
+							background-image: url("../img/ico-#{$ico}-hover.svg")
+
+		&:not(:first-child)
+			border-top: 1px solid #000
+			margin: 0 !important
+
+	&__link
+		text-indent: -9999px
+		overflow: hidden
+		display: block
+		+size(52px)
+		background: 
+			position: center
+			repeat: no-repeat
+			color: #decbd7
+		transition: background-color .3s ease
+
+.share-soc
+	display: flex
+	flex-direction: row-reverse
+	position: relative
+	z-index: 5
+
+	&__hide-btns
+		position: absolute
+		bottom: 100%
+		padding-bottom: 1px
+		right: -1px
+		display: none
+
+		.ya-share2
+
+			&__item
+
+				&:not(:first-child)
+					margin: 1px 0 0
+
+	&__link
+		background: 
+			repeat: no-repeat
+			position: center
+			color: #decbd7
+		+size(52px)
+		display: inline-block
+		
+		&:not(:last-child)
+			margin-right: 1px
+
+.js__soc-bot
+	.share-soc__hide-btns
+		top: 100%
+		padding-top: 1px
+
+.comments
+
+	&__count
+		font-size: rem(22)
+
+	&__title
+		display: flex
+		justify-content: space-between
+		align-items: center
+		font-weight: 300
+
+	&__top
+		border-bottom: 1px solid #252525
+		padding-bottom: 19px
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-bottom: rem(50)
+
+	&__link
+		flex: none
+		margin-left: 2rem
+
+	&__one
+		margin: 0 -30px
+
+.write-comment-link
+	display: flex
+	align-items: center
+	color: #fff
+	font-weight: 300
+
+	&:before
+		content: ""
+		margin-right: rem(22)
+		+size(17px)
+		background: url("../img/ico-write-comment.png") no-repeat
+
+.comment
+
+	&-active
+		background: #191919
+
+	&-body
+
+		p
+			word-break: break-word
+	
+	&__body
+		padding: 
+			top: rem(35)
+			bottom: rem(31)
+
+	&__header, &__body, &__footer
+		padding: 
+			left: 30px
+			right: 30px
+		transition: background .3s ease
+
+	&__header
+		padding-top: rem(24)
+
+	&__footer
+		padding-bottom: rem(24)
+
+		&-reply
+
+			a
+				color: #fff !important
+				border-bottom: 1px solid #fff
+				padding-bottom: 1px
+
+		&-form
+			margin: 20px 0 0
+			display: none
+
+			&.visible
+				display: block
+
+	&__answer
+		margin: 0 30px 0 rem(90)
+
+	&-text
+		font-weight: 300
+		font-size: rem(15)
+		line-height: lh(26, 15)
+
+	&-like
+		display: flex
+		align-items: center
+
+		img
+			cursor: pointer
+
+			&:first-child
+				align-self: flex-end
+				margin: 0 0 3px
+
+			&:last-child
+				align-self: flex-start
+				margin: 3px 0 0
+
+		img, span
+			flex: none
+
+		span
+			display: block
+			margin: 0 12px
+
+		// 	&:after
+		// 		content: attr(data-counter)
+		// 		display: block
+		// 		padding: 4px 11px
+		// 		background: #515151
+		// 		border-radius: 6px
+		// 		transition: background .3s ease
+
+		// 	&[data-counter*="+"]
+
+		// 		&:after
+		// 			background: #55a451
+
+		// 	&[data-counter*="-"]
+
+		// 		&:after
+		// 			background: #ca444a
+
+.comment-form
+
+	&__text
+		display: block
+		min-width: 100%
+		max-width: 100%
+		min-height: 100px
+		max-height: 300px
+		background: transparent
+		border: 1px solid #252525
+		color: #fff
+		padding: 10px 15px
+
+	&__submit
+		margin: 20px 0 0
+		color: #fff;
+		text-decoration: none;
+		display: inline-block;
+		border: none;
+		background: #323232;
+		padding: 16px 37px 18px 37px;
+		position: relative;
+		cursor: pointer;
+		white-space: nowrap;
+		transition: background .3s ease, color .3s ease
+
+.c-head
+	display: flex
+	align-items: center
+
+	&__counter, &__img
+		flex: none
+
+	&__img
+		margin-right: rem(35)
+
+		img
+			display: block
+			border-radius: 50%
+			+size(52px)
+
+	&__from
+		align-self: flex-start
+		margin-left: rem(44)
+
+	&__counter
+		margin-left: auto
+		padding-left: 2rem
+		align-self: flex-start
+
+	&__name
+		font-weight: 300
+
+		&-text
+			font-size: rem(22)
+
+		&-date-time
+			font-size: rem(14)
+			color: rgba(#fff, .3)
+			margin: 12px 0 0
+
+.reply-to-link
+	border: 1px solid #252525
+	border-radius: 6px
+	color: #515151
+	padding: 5px 10px 6px 31px
+	cursor: pointer
+	background: url("../img/ico-reply-to.png") center left 8px no-repeat
+
+.comments__btn
+	text-align: center
+
+	a
+		display: inline-block
+		margin: 37px 0 0
+
+.write-comment
+	font-weight: 300
+	padding: 17px 25px 19px
+	color: #000
+	background: #decbd7
+	display: inline-block
+
+.imgs
+	display: flex
+	flex-wrap: wrap
+	margin: 0 0 rem(-34) -2rem
+
+	&__one
+		width: calc((100% - 2rem * 3) / 3)
+		margin: 0 0 rem(34) 2rem
+		// display: flex
+		position: relative
+		// padding-top: 66.5%
+
+		&.vertical-span
+			// padding-top: 150.5%
+			// padding-top: 140.8%
+			// padding-top: 158%
+
+		img
+			display: block
+			// width: 100%
+			// height: auto
+			// object:
+				// fit: cover
+				// position: center
+			transition: opacity 1s ease, transform 2s ease
+			// position: absolute
+			// top: 0
+			// left: 0
+			+size(100%)
+
+			+size(auto)
+
+			&[data-src]
+				opacity: 0
+				transform: translate3d(0, 10%, 0)
+
+
+.article-counters
+	display: flex
+	font-weight: 300
+
+	&__comments, &__likes
+		border: 1px solid #252525
+		border-radius: 7px
+		padding: 15px 15px 12px 48px
+		white-space: nowrap
+
+		&:not(:last-child)
+			margin-right: 19px
+
+	&__comments
+		background: url("../img/ico-comment.svg") center left 14px no-repeat
+
+	&__likes
+		background: url("../img/ico-likes.svg") top 14px left 14px no-repeat
+
+.report-one
+	max-width: 1120px
+
+	&__top
+		display: flex 
+		align-items: flex-start
+
+		&-info
+			display: flex 
+			// flex-direction: column
+			// align-items: flex-start
+			align-items: flex-end
+			flex-wrap: wrap
+
+	&__info
+
+		&-label, &-text
+			width: 100%
+
+		&-text
+
+			&--big
+				width: 100%
+	
+	&__sliders
+		display: flex
+		width: 600px
+		margin-right: 3rem
+		flex: none
+		overflow: hidden
+
+		@media screen and (min-width: 1100px)
+			&.no-slidernav
+				width: 450px
+
+				.report-one__slider-main
+					width: 100% !important
+
+				.blured-bg
+					display: none !important
+
+	&__slider
+
+
+		&-item
+
+			&.video
+				position: relative
+
+				&:after
+					content: ""
+					position: absolute
+					border-radius: 50%
+					top: calc(50% - 23px)
+					left: calc(50% - 23px)
+					+size(55px)
+					z-index: 5
+					background: 
+						image: url("../img/ico-play-video.png")
+						position: left 20px center
+						repeat: no-repeat
+		
+
+		&-main
+			display: flex !important
+			flex-direction: column
+			// width: 448px
+			float: left
+			// float: right
+			width: calc(100% - 150px)
+
+			.report-one__slider-item
+				position: relative
+				display: flex !important
+				justify-content: center
+				align-items: center
+				flex: 1 1 auto
+
+			.slick
+
+				&-arrow
+					position: absolute
+					top: 0
+					width: 50px
+					z-index: 2
+					height: 100%
+					background: transparent
+					font-size: 0
+					display: flex 
+					align-items: center
+					justify-content: center
+
+				&-slide
+					flex: none
+					height: auto
+					display: flex !important
+					flex-direction: column
+
+					> div
+						display: flex
+						flex: 1 1 auto
+						flex-direction: column
+				
+				&-list
+					flex-direction: column
+					align-items: flex-start
+
+				&-track, &-list
+					display: flex
+					flex: 1 1 auto
+
+				&-prev, &-next 
+					&:before 
+						content: ""
+						+size(10px)
+						display: block
+						border:
+							top: 1px solid #fff
+							right: 1px solid #fff
+						transform: rotate(45deg)
+
+				&-prev
+					left: 0
+					justify-content: flex-start
+
+					&:before
+						transform: rotate(-135deg)
+						margin-left: 1rem
+
+				&-next 
+					right: 0
+					justify-content: flex-end
+
+					&:before 
+						margin-right: 1rem
+
+
+		&-nav
+			width: 128px
+			// margin-left: auto
+			display: flex !important
+			flex-direction: column
+			margin: -10px 0 -10px auto
+			position: relative
+
+			.slick
+
+				&-arrow
+					position: absolute
+					left: 0
+					right: 0
+					width: 100%
+					height: 30px
+					z-index: 5
+					background: rgba(#000, .5)
+					display: flex
+					justify-content: center
+					align-items: center
+					font-size: 0
+
+					&:before 
+						content: ""
+						+size(10px)
+						display: block
+						border:
+							top: 1px solid #fff
+							right: 1px solid #fff
+
+				&-prev
+					top: 10px
+
+					&:before
+						transform: rotate(-45deg)
+
+				&-next
+					bottom: 10px
+
+					&:before
+						transform: rotate(135deg)
+
+			.slick-list
+				flex: 1 1 auto
+				position: relative
+
+				&:before
+					content: ""
+					position: absolute
+					top: 0
+					left: 0
+					right: 0
+					height: 15px
+					background: #000
+					z-index: 2
+
+			.slick-slide
+				border: 0 !important
+				cursor: pointer
+				margin: 10px 0
+
+				// &:not(:first-child)
+				// 	margin-top: 20px	
+			&-item 
+				display: block !important
+
+			
+
+	&__info 
+		&-label
+			color: #a3a3a3
+			font-size: rem(12)
+			line-height: 1
+			margin-bottom: 15px
+			text-transform: uppercase
+
+			&:first-child
+				font-size: rem(14)
+
+			&:not(:first-child)
+				margin-top: 56px
+
+		&-text 
+			font-size: rem(32)
+
+			&--big 
+				margin-top: 82px
+				font-family: "Formular"
+				font-size: rem(32)
+				font-weight: 300
+				margin-bottom: 1.4rem
+	
+	&__reports
+		margin: 40px 0 0
+
+	&__text
+		margin-top: 82px
+		max-width: 650px
+
+		.text-page
+			line-height: 1.7
+			font-weight: 300
+
+
+
+	.share-block
+		// flex-direction: column
+		display: inline-flex !important
+		align-items: center
+		margin-top: 78px
+
+		&__title
+			margin: 0
+			max-width: 105px
+			br 
+				display: none
+
+	.buy-btn
+		text-indent: 0 !important
+		background-position: left 24px center !important
+		padding-left: 73px !important
+		background: url(../img/ico-ticket-white.svg) center no-repeat, #adc1e1
+		background-color: #333
+		color: #fff
+		border-radius: 0 !important
+		margin-top: auto
+		color: #000
+		margin-left: calc(0.4rem + 4px)
+
+		&:hover
+			background-image: url(../img/ico-ticket.svg)
+
+	.share-soc
+
+		&__link
+			background: 
+				color: #adc1e1
+
+.event-reports
+
+	&__title
+		font-size: rem(24)
+		margin: 0 0 20px
+
+	&__list
+		display: flex
+		flex-wrap: wrap
+
+.time-weekend 
+	color: #757575 
+
+.zavedeniya-one
+	&__top
+		display: flex
+		justify-content: space-between
+		min-height: 482px
+
+		&-sliders
+			display: flex
+			width: 780px
+			flex: none
+
+		&-info
+			display: flex 
+			flex-direction: column
+			align-items: flex-start
+
+			.btn 
+				margin-top: auto
+				text-transform: none
+				font-size: rem(16)
+				
+	&__phone
+		a 
+			font-weight: 300
+			text-decoration: none 
+			color: #fff
+
+	&__address
+		font-weight: 300
+		display: block
+
+	&__contacts
+		margin: auto 0
+		padding-bottom: 20px
+
+		>  *
+			&:not(:first-child)
+				margin-top: 25px
+
+	&__time
+		> *
+			&:not(:first-child)
+				margin-top: 10px
+
+	&__report__title
+		font-size: rem(32)
+		margin-bottom: 44px
+
+
+	&__title
+		font-size: rem(32)
+		margin-bottom: 1.4rem
+		font-family: "Formular"
+
+
+	&__bot
+		display: flex
+		margin-top: 60px
+
+		.share-soc
+
+			&__link
+				// background-color: #adc1e1
+
+	&__text
+		max-width: 600px
+
+		.text-page 
+			font-size: rem(15)
+			font-weight: 300
+			line-height: 1.7
+
+	&__report
+		margin: rem(75) 0 0
+
+		.item
+
+			&__event
+				font-size: rem(13)
+				left: 1.875rem
+
+	&__slider
+		position: relative
+		margin-top: rem(120)
+
+		&-item
+			position: relative
+			display: flex !important
+			justify-content: center
+			flex: 1 1 auto
+			align-items: center
+
+			&:not(:first-child) 
+				display: none !important
+
+			&.video
+
+				&:after
+					content: ""
+					position: absolute
+					border-radius: 50%
+					top: calc(50% - 23px)
+					left: calc(50% - 23px)
+					+size(55px)
+					z-index: 5
+					background: 
+						image: url("../img/ico-play-video.png")
+						position: left 20px center
+						repeat: no-repeat
+
+		&__list
+			margin: 0 -16px
+
+			.events
+
+				&__one
+					width: auto !important
+					margin: 0 15px !important
+					display: block !important
+		
+		.slick
+			&-arrow
+				// position: absolute
+				top: 50% 
+				z-index: 2
+
+			&-slide
+				// margin: 0 16px
+
+		&-title
+			font-size: rem(32)
+			margin-bottom: 44px
+			display: flex
+			align-items: center
+			justify-content: space-between
+			
+			.slick
+
+				&-arrow
+					background: none
+					display: block
+					padding: 0
+					border: 
+						right: 2px solid #fff
+						top: 2px solid #fff
+					+size(10px)
+					flex: none
+
+				&-next
+					order: 2
+					transform: rotate(45deg)
+
+				&-prev
+					order: 1
+					margin: 0 25px 0 auto
+					transform: rotate(-135deg)
+
+		&-main, &-nav
+
+			&:not(.slick-initialized)
+				// display: none !important
+
+		&-main
+			width: calc(100% - 167px)
+			// display: flex
+			// flex: 1 1 auto
+
+			// &-list, &-track, &-slide
+			// 	display: flex
+			// 	flex: none
+			// 	height: auto
+
+			// &-list, &-slide
+			// 	flex-direction: column
+			// 	flex: 1 1 auto
+		
+			.slick
+
+				&-arrow
+					position: absolute
+					top: 0
+					width: 50px
+					z-index: 2
+					height: 100%
+					background: transparent
+					font-size: 0
+					display: flex 
+					align-items: center
+					justify-content: center
+
+				&-prev, &-next 
+
+					&:before 
+						content: ""
+						+size(10px)
+						display: block
+						border:
+							top: 1px solid #fff
+							right: 1px solid #fff
+						transform: rotate(45deg)
+
+				&-prev
+					left: 0
+					justify-content: flex-start
+
+					&:before
+						transform: rotate(-135deg)
+						margin-left: 1rem
+
+				&-next 
+					right: 0
+					justify-content: flex-end
+
+					&:before 
+						margin-right: 1rem
+
+				&-slide
+					flex: none
+					height: auto
+					display: flex
+					flex-direction: column
+
+					> div
+						display: flex
+						flex: 1 1 auto
+						flex-direction: column
+
+				&-track
+					display: flex
+
+		&-nav
+			width: 132px
+			margin-left: auto
+			display: flex !important
+			flex-direction: column
+			// margin-bottom: -20px
+			margin: -20px 0 0 auto
+			position: relative
+			position: relative
+
+			&:after
+				bottom: 0
+				left: 0
+				right: 0
+				height: 20px
+				position: absolute
+				content: ""
+				background: #000
+
+			.slick
+
+				&-arrow
+					position: absolute
+					left: 0
+					right: 0
+					width: 100%
+					height: 30px
+					z-index: 5
+					background: rgba(#000, .5)
+					display: flex
+					justify-content: center
+					align-items: center
+
+					&:before 
+						content: ""
+						+size(10px)
+						display: block
+						border:
+							top: 1px solid #fff
+							right: 1px solid #fff
+
+				&-prev
+					top: 20px
+
+					&:before
+						transform: rotate(-45deg)
+
+				&-next
+					bottom: 20px
+
+					&:before
+						transform: rotate(135deg)
+
+			.slick-list
+				flex: 1 1 auto
+
+
+			.slick-slide
+				border: 0 !important
+				margin: 20px 0
+
+			&-item 
+				display: block !important
+				cursor: pointer
+
+
+				&:not(:first-child)
+					display: none !important
+
+				img
+					height: 132px
+					width: 100%
+					border: 2px solid transparent
+					transition: border-color .3s ease
+					object:
+						fit: cover
+						position: center
+
+	.rating 
+		background: #adc1e1
+		padding: 10px 14px
+		margin-bottom: 30px
+
+		&__number
+			color: #000
+
+		&__star
+
+			.star
+				background: url("../img/ico-white-star.svg") no-repeat
+
+	.share-block
+		flex: none
+		margin-left: auto
+		border: 1px solid #454545
+		align-self: flex-start
+		padding: 27px 38px
+		margin-top: 20px
+
+		.ya-share2__link
+			background-color: #adc1e1
+
+.btn
+	display: inline-block
+	text-transform: uppercase
+	background: #adc1e1
+	padding: 19px 30px
+	font-size: rem(12)
+	text-decoration: none 
+	color: #000
+	border: none
+	vertical-align: top
+
+.section-comments
+
+	.container
+		width: 100%
+		max-width: none
+		padding: 0
+
+		> .row
+			margin: 
+				left: 0
+				right: 0
+
+			&:not(:last-child)
+				border-bottom: 1px solid #333333
+
+	.text-muted
+		color: #696969
+
+.badge
+	display: inline-block;
+	padding: 7px 10px
+	line-height: 1;
+	font-weight: 300
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	border-radius: .25rem;
+	color: #fff;
+
+.badge-danger
+	background-color: #dc3545;
+
+.badge-success 
+	background-color: #28a745;
+
+.badge-light
+	background: #333333
+
+.article-anons
+
+	&__titles
+		display: flex
+		justify-content: space-between
+
+		&-left, &-right
+			display: flex
+			flex-direction: column
+
+.article-titles
+	font-weight: 300
+	flex: 1 1 auto
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+
+	&__type
+		font-size: rem(24)
+		line-height: lh(47, 24)
+
+	&__title
+		margin: 10px 0 0
+
+		h1
+			font-weight: bold
+			font-size: rem(44)
+			line-height: lh(47, 44)
+			font-family: "Formular"
+
+	&__date, &__desc, &__title h1
+		text-transform: uppercase
+
+	&__desc
+
+		span
+			display: block
+
+			&:not(:first-child)
+				margin: 10px 0 0
+
+	&__date, &__desc
+		font-size: rem(12)
+
+.article-anons
+
+	&__text
+		margin: rem(100) auto 0
+		max-width: 880px
+
+.article-one
+
+	&__anons, &__detail
+
+		img[class]
+			visibility: hidden
+
+.anons
+
+	&__title, &__text, &__img
+		text-align: center
+
+	&__title
+		margin: rem(115) 0 0
+
+	&__text
+		margin: rem(45) 0 0
+		font-size: rem(14)
+		line-height: lh(35, 20)
+
+.article-one__detail
+	margin: rem(115) 0 0
+
+.article-detail
+	color: #fff
+	font-size: rem(14)
+	line-height: lh(26, 16)
+
+	td
+		padding: 0 !important
+
+.small-size
+	max-width: 960px
+	width: 100%
+
+	&__content-wrap
+		max-width: 780px
+
+
+	img
+		margin: 0 -4px -4px 0 !important
+
+.full-size
+	width: 100%
+
+.right-offset
+	margin-left: rem(-110)
+
+.left-offset
+	margin-left: rem(110)
+
+.center
+	margin: 0 auto
+
+.small-text
+	max-width: 740px
+
+.img-for-title-wrap
+	display: inline-block
+
+	// &[align="right"]
+		// float: right
+
+	// &[align="left"]
+		// float: left
+
+
+.img__title
+	font-size: rem(12)
+	color: rgba(#fff, .3)
+	text-transform: uppercase
+	text-align: left
+
+.article__repost
+	display: flex
+	justify-content: center
+	margin: rem(95) 0 0
+
+	.share-block
+		border: 1px solid #454545
+		padding: 29px 39px
+
+		.share-soc
+
+			&__link
+				background-color: #fae2c4
+
+	.rating-block
+		border: 1px solid #252525
+		padding: 29px 39px
+		width: auto
+
+		&:not(:first-child)
+			margin-left: 2rem
+
+@media screen and (max-width: 660px)
+	.article__repost
+		flex-direction: column
+
+		.rating-block
+
+			&:not(:first-child)
+				margin: 2rem 0 0 0
+
+.article
+
+	&__controls, &__comments
+		margin: rem(104) 0 0
+
+.article-controls
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+	&__title
+		text-align: center
+		margin: 0 2rem
+		font-weight: bold
+		font-size: rem(44)
+		line-height: lh(47, 44)
+		max-width: 450px
+
+	&__prev, &__next
+		color: #757575
+		display: flex
+		white-space: nowrap
+		align-items: center
+
+		&[href="javascript:;"]
+			opacity: 0
+			pointer-eventes: none
+			cursor: default
+
+	&__prev
+
+		&:after
+			content: ""
+			+size(77px 19px)
+			background: url("../img/ico-long-arrow.svg") no-repeat
+			transform: rotate(180deg)
+			margin-left: rem(55)
+
+	&__next
+
+		&:before
+			content: ""
+			+size(77px 19px)
+			margin-right: rem(55)
+			background: url("../img/ico-long-arrow.svg") no-repeat
+
+.f-logo
+
+	img
+		max-width: 51px
+
+ymaps[class*="ymaps-2"][class*="-ground-pane"]
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+    /* Firefox 3.5+ */
+    filter: grayscale(50%);
+    /* Chrome 19+ & Safari 6+ */
+
+.h4
+	font-size: rem(26)
+	line-height: lh(30, 26)
+
+#photo-order, #offer-event
+	// display: none 
+	min-width: 600px
+	margin: 3.25rem 0 0
+
+	.form-btns
+		margin: 20px 0 0
+		text-align: center
+
+	.form
+
+		&-group
+			display: flex
+			flex-direction: column-reverse
+
+			&:not(:first-child)
+				margin: 30px 0 0
+
+		&-control
+
+			&:not(.selectize-dropdown):not(textarea)
+				height: 31px !important
+
+			&__label
+				margin-bottom: 5px
+
+			&[required]
+
+				~ label
+
+					&:after
+						content: "*"
+						display: inline-block
+
+textarea
+	max-width: 100%
+	width: 100%
+
+.forms-user, #photo-order
+	color: #fff
+	background: #323232 !important
+	padding: 0 !important
+	width: 100%
+
+	.fancybox-close-small
+		+size(110px 106px)
+		display: flex
+		justify-content: center
+		align-items: center
+
+		svg
+			+size(35px)
+			fill: #fff
+			color: #fff
+			opacity: 1
+
+	a
+
+		&:not([class])
+			color: #696969
+			// border-bottom: 1px solid currentColor
+
+	.alert
+		margin-bottom: 20px
+
+	.h4
+		border-bottom: 1px solid rgba(#fff, .2)
+		font-family: "Formular"
+		font-size: rem(26)
+		line-height: lh(32, 26)
+		padding: rem(36) rem(105) rem(38) rem(53)
+
+	.h5
+		font-weight: 300
+
+	.form-cont
+		padding: rem(35) rem(53)
+
+	hr
+		display: none
+
+	.text-mute
+		line-height: lh(24, 16)
+
+.alert
+	font-size: rem(16)
+	font-weight: 300
+
+	&-warning
+		// color: #fff
+
+.form-login
+
+	&_container
+
+		.form-group
+			display: flex
+			flex-direction: column
+
+			&:not(:first-child)
+				margin: 20px 0 0
+
+		.form-control
+			border: none
+			border-bottom: 1px solid #5b5b5b
+			+size(100% 70px)
+			padding: 0
+			font-weight: 300
+			color: #fff !important
+			background: transparent !important
+
+			&:-webkit-autofill
+				box-shadow: 0 0 0px 1000px #323232 inset;
+				-webkit-text-fill-color: #fff
+				text-fill-color: #fff
+
+			.selectize-dropdown
+				background: #333 !important
+				border: 1px solid #5b5b5b !important
+
+				&-content
+					padding: 0 !important
+
+					.option
+						color: #fff
+
+			.selectize-input
+				height: 100% !important
+				border: none !important
+				box-shadow: none !important
+				border-radius: 0 !important
+				background: none !important
+				display: flex !important
+				align-items: center
+				padding: 0 !important
+
+				input
+					display: none !important
+ 
+				.item
+					color: #fff !important
+
+					&:after
+						display: none !important
+
+		.custom-checkbox
+			margin: rem(20) 0 rem(45)
+
+		a.btn, input.btn
+			font-weight: 300
+			font-size: rem(16)
+			text-align: center
+			text-transform: none
+			color: #fff
+			padding: 17px 25px 19px
+			transition: background .3s ease
+			background: rgba(#000, .5) !important
+
+			&:not(:last-child)
+				margin-right: 15px
+
+			&:hover
+				background: #000 !important
+
+		.custom-checkbox
+			display: flex
+			align-items: center
+			position: relative
+			font-weight: 300
+			
+			.custom-control
+
+				&-input
+					margin: 0 15px 0 0
+					display: inline-block
+					vertical-align: middle
+					position: absolute
+					left: 0
+					top: 0
+					opacity: 0
+					pointer-events: none
+
+					&:checked
+
+						+ label
+
+							&:after
+								opacity: 1
+
+				&-label
+					margin: 0 !important
+					cursor: pointer
+					display: flex
+					align-items: center
+
+					&:before
+						content: ""
+						display: inline-block
+						+size(29px)
+						border: 1px solid #5b5b5b
+						background: #323232
+						margin-right: 25px
+
+					&:after
+						+size(7px 10px)
+						position: absolute
+						content: ""
+						border: 
+							bottom: 1px solid #fff
+							right: 1px solid #fff
+						transform: rotate(45deg)
+						left: 11px
+						top: 7px
+						opacity: 0
+	
+	&_social
+		margin: rem(44) 0 rem(40)
+
+		.row
+			margin: 0 -6px
+
+		.h5
+			margin: 0 0 rem(25)
+
+		.col
+			flex: none
+			width: auto
+			padding: 0 6px 12px
+
+.social_auth
+
+	&_btn
+		border-radius: 0 !important
+		// font-size: rem()
+		border: 1px solid
+		padding: 15px 20px 17px 75px !important
+		position: relative
+
+		&:before
+			content: ""
+			background:
+				color: inherit
+				repeat: no-repeat
+				position: center
+			position: absolute
+			left: 0
+			top: 0
+			bottom: 0
+			width: 50px
+			border-right: 1px solid
+			border-color: inherit
+
+		&.yandex
+			background: rgba(#e80d0c, .2) !important
+			border-color: #e80d0c !important
+
+			&:before
+				background-image: url("../img/yandex.svg")
+
+		&.vkontakte
+			background: rgba(#4b75a3, .2) !important
+			border-color: #4b75a3 !important
+
+			&:before
+				background-image: url("../img/ico-white-vk.svg")
+
+		&.facebook
+			border-color: #4b75a3 !important
+
+			&:before
+				background-image: url("../img/ico-white-fb.svg")
+
+		&.mymailru
+			border-color: #025bf1 !important
+			background: rgba(#025bf1, .2) !important
+
+			&:before
+				background-image: url("../img/ico-mm.svg")
+
+		&.odnoklassniki
+			border-color: #F48C33 !important
+			background: rgba(#F48C33, .2) !important
+
+			&:before
+				background-image: url("../img/ico-ok.svg")
+
+.invalid-feedback
+	margin: 10px 0 0
+
+img.blured-bg
+	position: absolute
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+	height: 100%
+	width: 100%
+	filter: blur(20px)
+	background-color: #000
+	opacity: .5 !important
+
+img.main-img
+	position: relative
+	z-index: 1
+
+.fancybox-slide--image
+	padding: 0 !important
+
+	// .fancybox-content
+	// 	height: 100% !important
+
+.popup-map
+	padding: 0 !important
+	overflow: visible !important
+
+	.fancybox-close-small
+		right: auto
+		left: 100%
+		color: #fff !important
+
+		svg
+			fill: #fff !important
+
+.title-block
+	display: flex
+	justify-content: space-between
+	align-items: center
+	border-bottom: 1px solid #252525
+	padding-bottom: 2rem
+	font-family: "Formular"
+	margin: 0 0 3rem
+	display: none
+
+	&__cont
+		// display: none
+
+		&.show--desktop
+
+			.title-block
+				display: block
+	
+	&__title
+
+		h1, h2
+			font-weight: 400
+			font-size: rem(32)
+			line-height: lh(38, 32)
+
+	&__btn
+		display: none
+
+.vacancy, .vc-one, .v-form
+
+	&__text
+		font-weight: 400
+		max-width: 990px
+		font-size: rem(15)
+		line-height: lh(26, 15)
+
+.vacancy
+
+	&__text
+
+		&:not(:last-child)
+			margin: 0 0 rem(70)
+
+	&__list
+
+		&:not(:last-child)
+			margin: 0 0 rem(90)
+
+		&-one
+
+			&:not(:first-child)
+				margin: 15px 0 0
+		
+.vc-one
+
+	&__title
+		background: #252525
+		padding: 28px 76px 30px 36px
+		font-weight: 300
+		font-size: rem(20)
+		line-height: lh(28, 20)
+		cursor: pointer
+		position: relative
+
+		&:after
+			content: ""
+			position: absolute
+			+size(15px 7px)
+			right: 31px
+			top: calc(50% - 4px)
+			transition: transform .3s ease
+			background: url("../img/ico-vc-title-arrow.png") no-repeat
+
+	&:not(.js__opened)
+
+		.vc-one__title
+
+			&:after
+				transform: rotate(180deg)
+
+	&.js__opened
+
+		.vc-one__title
+
+			+ .vc-one__text
+				display: block
+
+	&__text
+		display: none
+		margin: 40px 0 0
+
+.v-form
+	display: flex
+	align-items: center
+	justify-content: space-between
+	padding: rem(33) rem(45)
+	border: 1px solid #252525
+
+	&__text
+		max-width: 690px
+		margin-right: 2rem
+
+	&__btn
+
+		.btn
+			text-transform: none 
+			font-size: rem(16)
+
+.search-page
+	margin: 5rem 0 0
+
+.search
+
+	&__form
+		position: relative
+		max-width: 990px
+		margin-bottom: 2rem
+
+		input[type="text"]
+			border: none
+			border-bottom: 1px solid #333
+			color: #fff
+			background: none
+			+size(100% 45px)
+			padding: 0 10px
+
+		input[type="submit"]
+			border: none
+			+size(45px 44px)
+			position: absolute
+			right: 0
+			top: 0
+			overflow: hidden
+			text-indent: -9999px
+			background: url("../img/ico-search.svg") center no-repeat, #000
+			background-size: 15px auto !important
+
+	&__one
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+
+		&:not(:first-child)
+			margin: 1rem 0 0
+
+		> a
+			margin: 0 0 .6rem
+			display: inline-block
+			font-size: rem(22)
+
+		i
+
+			font-size: rem(18)
+			margin: 0 0 5px
+			display: inline-block
+
+.peoples
+
+	&__title
+		margin: 0 0 rem(56)
+
+		&:not(:first-child)
+			margin-top: rem(52)
+
+		.title-block
+			align-items: flex-end
+			display: flex
+			margin-bottom: 0
+
+			&__subtitle
+
+				h3
+					text-transform: uppercase
+					font-size: rem(12)
+					line-height: 1
+
+	&__list
+
+		&:not(:last-child)
+			margin-bottom: rem(52)
+
+		&-one
+
+			&:not(:first-child)
+				margin: rem(72) 0 0
+
+@media screen and (min-width: 660px)
+
+
+
+	.peoples
+
+		&__plate
+			display: flex
+			flex-wrap: wrap
+			margin: 0 0 rem(-60) -2rem
+
+			&-one
+				width: calc((100% - 2rem * 3) / 3)
+				margin: 0 0 rem(60) 2rem
+
+				.people
+					display: block
+
+					&__img
+						margin-right: 0 !important
+						width: 100% !important
+						margin-bottom: rem(35)
+
+					&__desc
+						min-height: 0
+
+					&-desc
+
+						&__name
+							// margin-bottom: 0
+
+.people
+	display: flex
+	align-items: center
+
+	&__img
+		flex: none
+		margin-right: rem(105)
+		position: relative
+
+		img
+			display: block
+			// w100p
+			width: 100%
+			filter: grayscale(100%)
+
+		&-name
+			position: absolute
+			left: 35px
+			bottom: 35px
+			font-weight: 300
+			font-size: rem(15)
+			background: #272727
+			padding: 13px 20px
+
+	&__desc
+		min-height: 280px
+		display: flex
+		flex-direction: column
+
+.people-desc
+	flex: 1 1 auto
+	display: flex
+	flex-direction: column
+
+	&__status, &__name
+		font-family: "Formular"
+
+	&__status
+		text-transform: uppercase
+		font-weight: 300
+		color: #6f6f6f
+		font-size: rem(12)
+		margin-bottom: rem(15)
+
+	&__name
+		font-size: rem(32)
+		line-height: lh(38, 32)
+
+		&:not(:last-child)
+			margin-bottom: 2rem
+
+	&__contacts
+		padding: 2rem 0 0
+		margin: auto 0 0 
+
+.people-contacts
+	display: flex
+	flex-wrap: wrap
+	font-weight: 300
+
+	a
+		font: inherit
+		display: flex
+		align-items: center
+		border-bottom: none
+
+		&:hover, &:focus
+			text-decoration: underline !important
+
+		&:before
+			flex: none
+			content: ""
+			background-size: contain !important
+			margin-right: 17px
+
+	&__mail, &__phone, &__skype
+
+		&:not(:last-child)
+			margin-right: rem(38)
+
+	&__mail
+
+		a
+			&:before
+				background: url("../img/ico-mail.svg") no-repeat
+				+size(16px 11px)
+
+	&__phone
+
+		a
+
+			&:before
+				background: url("../img/ico-phone.svg") no-repeat
+				+size(14px 15px)
+
+	&__skype
+
+		a
+
+			&:before
+				background: url("../img/ico-skype.svg") no-repeat
+				+size(16px 15px)
+
+.search-popup
+	background: none !important
+	padding: 0 !important
+	border-top: 1px solid #000 !important
+
+	&-row, &-row-active
+		padding: 5px 25px !important
+		transition: background .3s ease
+
+		&:not(:last-child)
+			border-bottom: 1px solid #000
+			
+	&-row
+		background: #333 !important
+
+		&:hover, &-active
+			background: rgba(0, 0, 0, 0.14) !important
+
+
+.to-top
+	position: fixed
+	right: 2vw
+	bottom: 2vw
+	border: none
+	display: none
+	padding: 0
+	transform: rotate(-90deg)
+	z-index: 10
+
+	span
+		display: block
+		margin: 0
+
+.ui-dialog
+	z-index: 99
+	border: none !important
+	padding: 0 !important
+	border-radius: 0 !important
+	background: #515151 !important
+	box-shadow: none !important
+	font: inherit !important
+
+	*
+		font: inherit !important
+
+	.findbox
+		border-radius: 0 !important
+		background: none !important
+		border: none !important
+		padding-top: 0 !important
+
+		input
+			background: #424141
+			height: 38px
+			padding: 5px 13px
+			border: none
+			color: #fff
+
+	.userbox
+
+		li
+
+			a
+				border-radius: 0 !important
+				color: #fff !important
+				font-size: rem(15) !important
+				padding: 10px 15px !important
+
+				&:hover
+					border-radius: 0 !important
+					color: #fff !important
+					background: #424141 !important
+
+	.ui-dialog
+
+		&-title
+
+
+		&-titlebar
+			border-radius: 0 !important
+			padding: 14px 17px !important
+			color: #fff !important
+			border: none !important
+			background: none !important
+
+			.ui
+
+				&-button
+					right: 11px !important
+					overflow: hidden
+					text-indent: -9999px
+					display: block !important
+					background: url("../img/ico-reset-white.svg") center no-repeat !important
+					background-size: 15px !important
+					border: none !important
+					font-size: 0 !important
+
+		&-content
+			position: static !important
+
+	.ui-widget-content
+		padding: 0 !important
+		border-radius: 0 !important
+
+.friendDialog .findbox
+
+.photoLabel 
+
+	.img-taglabel
+		background: rgba(#decbd7, .2)
+		border: 2px solid rgba(#fff, .2) !important
+
+		span
+			display: block !important
+			bottom: auto !important
+			border: none !important
+			border-radius: 0 !important
+			opacity: 1 !important
+			left: 50% !important
+			top: calc(100% + 20px)
+			transform: translateX(-50%)
+			background: #333 !important
+			padding: 6px 12px 7px !important
+			white-space: nowrap
+			max-width: 300px
+			overflow: hidden
+			text-overflow: ellipsis
+
+.labelList
+	display: flex !important
+	align-items: center
+	position: relative
+
+	li
+		margin: 0 14px 14px 0
+		display: inline-flex
+		align-items: center
+		color: #fff
+		background: #333
+		padding: 7px 11px 6px
+
+		// &:first-child
+			// margin-left: 10px
+
+	i
+		display: none !important
+
+	.labels
+
+		&:not(:empty)
+			margin: 0 -14px -14px 10px
+
+		&:empty
+
+			&:before
+				content: ""
+				position: absolute
+				top: 0
+				left: 0
+				bottom: 0
+				right: 0
+				background: #000 !important
+				z-index: 5
+
+	.tag
+
+		// &:first-child
+			// padding: 7px 34px 6px 11px
+
+
+	.del
+		margin-left: 11px
+		+size(10px)
+		background: url("../img/ico-reset-white.svg") no-repeat
+		background-size: contain !important
+
+
+.loaded
+	.day-night
+		opacity: 1
+
+
+@media (max-width: 1000px)
+	.day-night
+
+		&--exclusive
+			display: none !important
+
+
+.day-night
+	flex: none
+	position: absolute
+	z-index: 10
+	bottom: -95px
+	left: 1vw;
+	border-radius: 30px
+	border: 1px solid #363636
+	padding: 3px
+	display: flex
+	justify-content: space-between
+	width: 109px
+	opacity: 0
+	transition: opacity .1s ease, background .6s ease
+
+	&--exclusive
+		position: fixed 
+
+	&--night
+		background: #000
+
+		&:after
+			background: #fff
+			animation: dayNightNight 2s ease forwards
+			// right: 3px
+			left: calc(100% - 40px)	
+
+		.day-night__btn
+
+			&--night
+				// filter: none
+
+			&--day
+				filter: invert(100%)
+
+	&--day
+		// filter: invert(100%)
+		background: #fff
+
+		&:after
+			background: #000
+			animation: dayNightDay 1s ease forwards
+			left: 3px
+			// right: auto !important
+
+		.day-night__btn
+
+			&--night
+				// filter: invert(100%)
+
+			&--day
+				// filter: none
+				filter: invert(100%)
+
+	&:after
+		content: ""
+		position: absolute
+		border-radius: 50%
+		+size(37px)
+		top: 3px
+		transition: all .6s ease
+		animation-play-state: 1s
+
+	&__btn
+		flex: none
+		border-radius: 50%
+		border: none
+		padding: 0
+		+size(37px)
+		position: relative
+		z-index: 2
+
+		&--night
+			background: url("../img/ico-night.svg") center no-repeat
+			background-size: 12px auto
+
+		&--day
+			background: url("../img/ico-day.svg") center no-repeat
+			background-size: 26px auto
+
+
+
+@media screen and (min-width: 1000px)
+	.day-night
+		bottom: auto
+		top: calc(50% + 1px)
+		left: 40px
+		transform-origin: left
+		transform: rotate(-90deg) translate(.5px, .5px)
+
+		&__btn
+			transform: rotate(90deg)
+
+// @keyframes dayNightDay
+// 	// 0%
+// 		// right: auto
+// 		// left: 3px
+
+// 	0%
+// 		left: 3px
+// 		width: calc(100% - 6px)
+
+// 	100%
+// 		left: 3px
+// 		width: 37px
+
+// @keyframes dayNightNight
+// 	// 0%
+// 		// right: 3px
+// 		// left: auto
+
+// 	0%
+// 		left: 3px
+// 		width: calc(100% - 6px)
+
+// 	100%
+// 		left: calc(100% - 40px)
+// 		width: 37px
+
+body.loaded
+
+	.day-night:after
+		// animation-play-state: paused
+		// animation-delay: 1.1s
+
+body.adblock-detected:not(.js__adblock-disclemer-hidden)
+
+	.adblock-message__cont
+		transform: translate3d(0, 100%, 0)
+		opacity: 1
+		transition-duration: .1s
+
+#ui-datepicker-div
+	z-index: 9999 !important
+
+.href-answer
+	font-size: rem(16)
+	padding: 3px 5px 3px 3px
+
+.bx-touch
+
+	.to-top
+		display: none !important
+
+.adblock-message
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding: 15px 0
+	color: #000
+
+	&__btn
+		border: none
+		color: #fff
+		background: #333
+		padding: 12px
+
+	&__cont
+		position: fixed
+		bottom: 100%
+		z-index: 16
+		left: 0
+		right: 0
+		transition: transform .3s ease, opacity .3s ease
+		background: #b3c0e2
+		opacity: 0
+
+.ajax--item
+	animation-name: fadeInUp
+	
+	&:not(.animated)
+		visibility: hidden
+
+.search-page
+	
+	&__body
+		display: flex
+		justify-content: space-between
+
+	&__content
+		width: calc(100% - 300px)
+
+		.item
+
+			&__desc
+				padding: 2rem 4rem 1rem 0.875rem
+
+			&__event
+				left: 16px
+
+		.events__one 
+
+			.item__desc
+				padding-right: 5rem
+
+		.city-event
+
+			&__desc
+				padding: 1rem
+
+		.article
+
+			&__desc
+				padding: 2rem
+
+			&__title
+				font-size: rem(30)
+
+	&__sidebar
+		width: 270px
+
+	.search__form
+		max-width: none
+		margin-bottom: 0
+		padding: 1.3rem 0
+		background: #000
+		position: sticky
+		top: 0
+		z-index: 10
+
+		input[type="submit"]
+			top: calc(50% - 22px)
+
+.search-results
+
+	&__item
+
+		&:not(:first-child)
+			margin: 5rem 0 0
+
+		&-title
+			font-size: rem(28)
+			margin-bottom: 1rem
+
+.search-nav
+	position: sticky
+	top: 87px
+
+.search-menu
+	background: #121212
+
+	li
+
+		&:not(:first-child)
+			border-top: 1px solid #333
+
+	&__link
+		display: block
+		padding: 20px 30px
+		transition: background .3s ease
+
+		&:hover, &:focus, &.active
+			background: #333
+
+		&:not([data-count])
+			pointer-events: none
+			color: rgba(#fff, .6)
+
+		&[data-count]
+			position: relative
+			padding-right: 80px
+
+			&:after
+				content: attr(data-count)
+				position: absolute
+				display: flex
+				text-align: center
+				justify-content: center
+				align-items: center
+				color: rgba(#fff, .6)
+				right: 0
+				top: 0
+				height: 100%
+				white-space: nowrap
+				font-size: rem(18)
+				padding-right: 20px
+
+.nav-page_container
+	margin: 2rem 0 0
+
+.paginator
+	display: flex
+	justify-content: center
+	margin: rem(65) 0 0
+
+	&-arrow, &__link
+		display: block
+		+size(30px)
+
+	&-arrow
+		position: relative
+
+		&:after
+			content: ""
+			position: absolute
+			top: calc(50% - 5px)
+			left: calc(50% - 7px)
+			+size(10px)
+			border: 
+				right: 1px solid #fff
+				top: 1px solid #fff
+			transform: rotate(45deg)
+
+	li
+
+		&:first-child
+
+			.paginator-arrow
+				transform: rotate(180deg)
+
+	&__link
+		line-height: 30px
+		font-size: rem(14)
+		text-align: center
+		display: block
+
+		&.active
+			color: #fff
+			background: #333
+
+	li
+
+		&:not(:last-child)
+			margin-right: 6px
+
+.popup-mini
+	position: absolute
+	z-index: 1001
+	width: 364px
+	background: #000
+	border-radius: 3px
+	top: calc(100% + 20px)
+	left: 0
+	padding: 27px
+	box-shadow: 2px 2px 5px 0 rgba(0,0,0,.1)
+	font-weight: 300
+	border: 1px solid #252525
+
+	&__title
+		font-size: 16px
+		margin-bottom: 27px
+		color: #fff
+
+	&__controls
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+		.comment-form__submit
+			margin: 0 !important
+			padding: 18px 22px 20px
+
+		.button
+			background: #7b7b7b
+			color: #fff
+			text-align: center
+			padding: 10px 21px
+			transition: background .3s ease
+			display: inline-block
+
+		.btn-simple
+			color: #fff
+			display: inline-block
+			padding: 18px 19px 20px
+			border: 1px solid #252525
+			transition: background .3s ease
+
+			&:hover, &:focus
+				background: #333
+
+
+
+.form-group
+	position: relative
+
+.forms__input--file
+	display: none
+
+.file-label
+	position: absolute
+	top: 0
+	left: 0
+	+size(100%)
+	background: url("../img/ico-add-file.svg") right 15px center no-repeat
+	cursor: pointer
+
+.form-btns
+	margin: 20px 0 0
+
+@import "grid"
+@import "media"
+
+@keyframes blurIn
+	from
+		// filter: blur(30px)
+		opacity: 0
+	to
+		opacity: 1
+		// filter: blur(0)
+
+@media (max-width: 1000px)
+	body.main,
+	body.dir-main
+
+		.main-slider__slide-video:not(:last-child)
+			display: block !important
+
+
+
+.item-promo-solaris
+	display: none
+
+.pool
+	margin: 50px 0
+	max-width: 500px
+	padding: 30px
+
+	&__title, &__text
+		text-align: center
+
+	&__title
+		font-size: rem(32)
+
+	&__text
+		font-size: rem(20)
+		margin: 20px 0 0
+
+	&__list
+		margin: 40px 0 0
+
+		&-item
+
+			&:not(:first-child)
+				margin: 8px 0 0
+
+	&__count
+		margin: 12px 0 0
+		text-align: center
+
+.pool-variant
+	padding: 7px
+	border-radius: 3px
+	cursor: pointer
+	position: relative
+	overflow: hidden
+	padding-right: 50px
+
+	&--this &__persents
+
+		&:before
+			content: ""
+			position: absolute
+			+size(10px 7px)
+			border-top: 1px solid currentColor
+			border-right: 1px solid currentColor
+			transform: rotateZ(130deg)
+			right: calc(100% + 5px)
+			top: 3px
+
+	&__text, &__persents
+		z-index: 1	
+
+	&__text
+		position: relative
+		font-size: rem(18)
+
+	&__persents
+		position: absolute
+		top: 5px
+		right: 5px
+
+	&__counter
+		position: absolute
+		pointer-events: none
+		left: 0
+		top: 0
+		height: 100%
+
+.variant-count
+	font-size: 12px
+	margin-left: 10px
+
+.main-content__banner div[id*="item"]
+
+	&:not(:first-child)
+		display: none
+
+	&:first-child
+		opacity: 0
+
+.main-content__banner.js__ready 
+	
+	div[id*="item"]
+
+		&:not(.js__visible)
+			display: none
+
+		&.js__visible
+			opacity: 1
+			display: block
+
+#offer-event
+	width: 100%
+
+.form-group
+
+	&.type
+		
+		&--F
+			flex-direction: column !important
+
+			> div
+				position: relative
+
+				&:not(:first-child)
+					margin: 15px 0 0
+
+.forms__input--file-support
+	box-sizing: content-box
+	padding-bottom: 17px !important

@@ -1,0 +1,838 @@
+@media (min-width: 1200px)
+	body[class*="dir-city-"]
+
+		.head.js__scrolled .main-nav .main-menu li:not(:last-child)
+			margin-right: 1.6vw
+
+		&.head-menu
+			transition: padding .3s ease
+
+		.head
+			transition: transform .3s ease
+
+			&.js__head-none.js__scrolled.js__show:not(.fixed)
+				transform: translate3d(0,-100%,0) !important
+
+		.head
+
+			&.fixed
+				position: fixed
+				top: 0
+				transform: translate3d(0,0,0) !important
+
+
+		&:not(.js__scroll)
+			.head
+				position: absolute !important
+		
+				
+		&.js__visible-menu
+
+			&.js__scroll
+
+				.head
+					position: relative !important
+
+
+		&.js__hidden-menu
+			padding-top: 0 !important	
+
+			.head:not(.fixed)
+				transform: translate3d(0, -100%, 0) !important
+
+		&.head-menu
+
+			&:not([class*="dir-city-"])
+				padding-top: 0 !important
+
+.main-slider--dotted
+
+	~ .inner-content
+		margin: 0 !important
+		overflow: visible
+		
+	&:after
+		content: ""
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		height: 140px
+		background: linear-gradient(to bottom, rgba(0,0,0,.00001), #000)
+
+.venue-inst
+
+	.swiper
+
+		&-slide
+			height: auto
+			display: flex
+			flex-direction: column
+
+	&__slide
+		display: flex
+		flex-direction: column
+		flex: 1 1 auto
+
+		&:not(a)
+			position: relative
+
+			&:after
+				content: ""
+				position: absolute
+				top: 0
+				left: 0
+				+size(100%)
+				background: url("../img/inst-slider-shadow.png") bottom -2px center no-repeat
+				background-size: 100% auto
+
+		&-title
+			font-size: 18px
+			padding: 25px
+			line-height: calc(22 / 18)
+
+		&-img
+			padding: 10px 25px 25px
+			margin: auto 0 0 auto
+
+body.loaded
+
+	.venue
+
+		&__loader
+			pointer-events: none
+			transition-delay: .5s
+			opacity: 0
+
+.venue
+
+	&__loader
+		position: fixed
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		display: flex
+		justify-content: center
+		align-items: center
+		padding: 30px
+		z-index: 999
+		transition: opacity .3s ease
+		background-color: #000
+
+
+	&__slider, &__tabs
+		margin: 0 0 73px
+
+	&__info
+		margin: -100px 0 62px
+		position: relative
+
+	&__soc, &__inst
+		margin: 0 0 64px
+
+	&__inst
+		padding: 11px 0
+		position: relative
+
+		&:before, &:after
+			content: ""
+			position: absolute
+			+size(300vw 1px)
+			background: #323232
+			left: 50%
+			transform: translateX(-50%)
+			pointer-events: none
+
+		&:before
+			top: 0
+
+		&:after
+			bottom: 0w
+
+	&__contacts, &__map
+		margin: 0 0 60px
+
+	&__about
+		margin: 0 0 120px
+
+	&__live
+		margin: 0 0 80px
+
+		&-title
+			text-align: center
+			font-size: 2rem
+			margin: 0 0 55px
+
+		.swiper-slide
+			width: auto
+
+		.live
+			border-radius: 50%
+			+size(140px)
+			display: flex
+			justify-content: center
+			align-items: center
+			position: relative
+
+			&:after
+				content: ""
+				top: 1px
+				right: 1px
+				bottom: 1px
+				left: 1px
+				border: 11px solid #000
+				position: absolute
+				border-radius: 50%
+				pointer-events: none
+
+			&--visited
+				background: #323232
+
+			&:not(.live--visited)
+				background: linear-gradient(#F8EC34 0%, #E72E7C 75%, #6C2DC2 97%)
+
+			&__img
+				border-radius: 50%
+				overflow: hidden
+				+size(120px)
+				padding: 0 !important
+
+				img
+					border-radius: 50%
+					+size(120px)
+					max-width: none
+					object-fit: cover
+					object-position: center
+					opacity: .7
+					flex: none
+					display: block
+
+			&__titles, &__labels
+				display: none
+
+.v-slide
+	position: relative
+
+	&__img
+
+		img
+			display: block
+
+	&__title
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		padding: 10px 44px 36px
+
+		span
+			text-transform: uppercase
+			font-size: 12px
+			padding: 10px 20px
+			background: #000
+			display: inline-block
+			white-space: nowrap
+
+.venue-info
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+	&__title
+		margin-right: auto
+
+	&__likes
+		margin-right: 104px
+
+	&__soc
+
+		.f-soc
+
+			&__link
+				background: none !important
+				// border: 1px solid #323232
+
+				&:not(:last-child)
+					border-right: none
+					margin-right: -1px
+
+.v-title
+	display: flex
+	align-items: center
+
+	&__img
+		overflow: hidden
+		+size(75px)
+		border-radius: 50%
+		flex: none
+		margin-right: 35px
+		display: flex
+		justify-content: center
+		align-items: center
+
+		img
+			border-radius: inherit
+	
+	&__type
+		color: rgba(#fff, .5)
+		text-transform: uppercase
+		font-size: 12px
+		font-weight: 400
+		margin-bottom: 8px
+
+	&__name
+		font-size: 24px
+
+.v-likes
+	display: flex
+
+	&__stars, &__hearths
+		// border: 1px solid #323232
+
+		&:not(:last-child)
+			margin-right: 26px 
+
+		span
+			border-radius: 20px
+			line-height: 1
+			padding: 4px 10px 5px
+			font-size: 12px
+			line-height: 1
+
+	&__stars
+		display: flex
+		align-items: center
+		background: url("../img/ico-star.svg") left 21px center no-repeat
+		padding: 16px 17px 16px 48px
+
+	&__hearths
+		padding: 16px 17px 16px 55px
+		background: url("../img/ico-hearth.svg") left 21px center no-repeat
+
+		span
+			background: #323232
+
+.v-soc
+	position: relative
+
+	&__scrollbar
+		margin: 10px 0 0
+
+		.swiper-scrollbar
+
+			&-drag
+				height: 3px
+				background: #323232
+
+.venue-soc
+	display: flex
+	justify-content: space-between
+
+	&__slider
+		width: calc(100% - 310px)
+		overflow: hidden
+		
+		img
+			display: block
+
+	&__link
+		flex: 1 1 auto
+		background: #323232
+		padding: 55px 20px 30px
+		display: flex
+		justify-content: center
+		position: relative
+		font-size: 20px
+		margin: 0 0 13px 30px
+
+		&:after
+			content: "+"
+			position: absolute
+			line-height: 1
+			right: 35px
+			bottom: 30px
+			font-size: 35px
+
+.v-soc__slide
+	position: relative
+	display: block
+
+	img
+		width: 100%
+
+	&-soc-img
+		position: absolute
+		right: 25px
+		bottom: 26px
+		background: #000
+		display: flex
+		justify-content: center
+		align-items: center
+		border-radius: 5px
+		+size(31px)
+
+		img
+			max-width: 17px
+			width: auto
+
+.v-contacts
+	display: flex
+	align-items: center
+
+	&__btn
+		flex: none
+		margin-right: 50px
+
+	&__item
+		flex: 1 1 auto
+
+		&-title
+			text-transform: uppercase
+			font-size: 12px
+			line-height: 1
+			margin-bottom: 14px
+			color: rgba(#fff, .3)
+
+.map-btn
+	border: 1px solid #323232
+	padding: 15px 25px
+	line-height: 1
+	display: inline-block
+
+.v-tabs
+	display: flex
+	align-items: center
+	background: #323232
+	padding: 7px
+
+	&__tabs
+		flex: 1 1 auto
+		display: flex
+		margin-right: 12%
+
+		select
+			display: none
+
+	&__btns
+		flex: none
+		display: flex
+
+.v-tabs
+
+	&__content
+		margin: 52px 0 0
+
+	&__tab
+		flex: 1 1 auto
+		text-align: center
+		font-size: 18px
+		line-height: 1
+		display: flex
+		align-items: center
+		justify-content: center
+		transition: color .3s ease
+
+		&:not(.active)
+			color: rgba(255, 255, 255, 0.6)
+			cursor: pointer
+
+			&:hover
+				color: #fff
+
+		&[data-count]
+
+			&:after
+				content: attr(data-count)
+				font-size: 14px
+				flex: none
+				+size(30px)
+				display: flex
+				align-items: center
+				justify-content: center
+				border-radius: 50%
+				background: #252424
+				margin-left: 12px
+				color: #fff
+
+.tab-btn
+	background: #000
+	padding: 9px 16px 9px
+	border-radius: 5px
+
+	&:not(:last-child)
+		margin-right: 9px
+
+.tabs-content
+
+	&:after
+		content: ""
+		display: table
+		clear: both
+
+	&:not(.active)
+		display: none
+
+	&__slider
+		float: right
+		width: 43%
+		margin: 0 0 20px 20px
+		position: relative
+
+.vabout-slider
+
+	&__bullets
+		display: none
+
+	&__slide
+		display: block
+
+	&__nav
+
+		.swiper-button
+
+			&-prev, &-next
+				margin: 0
+				top: 0
+				height: 100%
+				width: 50px
+				border: none
+				transform: none
+				background: rgba(0, 0, 0, 0.6)
+				transition: background .3s ease
+				z-index: 2
+
+				&:before
+					content: ""
+					border-top: 1px solid #fff
+					border-right: 1px solid #fff
+					height: 15px
+					width: 15px
+					position: absolute
+					top: calc(50% - 7px)
+
+			&-prev
+				left: 0
+
+				&:before
+					transform: rotate(-135deg);
+					left: calc(50% - 3px);
+
+			&-next
+				right: 0
+
+				&:before
+					transform: rotate(45deg);
+					left: calc(50% - 12px);
+
+.tabs-text
+	max-width: 1125px
+	line-height: calc(23 / 16)
+
+	&__toggle
+		margin: 20px 0 0
+
+	&:not(.js__opened)
+
+		.tabs-text__full
+			display: none
+
+	&.js__opened
+
+		.tabs-text__anons
+			display: none
+
+.text-toggle
+	text-decoration: underline
+	cursor: pointer
+
+.v-about
+	display: flex
+	align-items: flex-start
+	border: 1px solid #323232
+	padding: 40px 42px 42px
+
+	&__item
+		flex: 1 1 auto
+
+		&-title
+			color: rgba(255, 255, 255, 0.5)
+			font-size: 14px
+			margin-bottom: 9px
+
+		&-text
+			line-height: calc(19 / 16)
+			max-width: 215px
+
+.v-list
+
+	&__item
+		display: flex
+
+		&-title
+			display: flex
+			flex-direction: column
+			justify-content: center
+			width: persent(414)
+			flex: none
+
+		&-list
+			flex: 1 1 auto
+
+		&:nth-child(even)
+			flex-direction: row-reverse
+
+			.v-list__title
+				padding-left: persent(90, 414)
+
+		&:not(:first-child)
+			margin: 135px 0 0
+
+	&__title
+
+		&-text
+			font-size: 32px
+			line-height: calc(39 / 32)
+			max-width: 250px
+			margin: 0 0 44px
+
+
+
+.vl-items
+	display: flex
+	margin: 0 0 0 -31px
+
+	&__item
+		width: calc((100% - 31px * 2) / 2)
+		margin: 0 0 0 31px
+
+		.item__desc
+			display: flex
+			flex-direction: column-reverse
+
+			&-top
+				margin: 11px 0 0
+
+.white-color
+
+	.v-title
+
+		&__type
+			color: #000
+
+	.v-likes
+		filter: invert(100%)
+
+		&__stars, &__hearths
+			border-color: #fff
+
+			span
+				color: #fff
+
+	.venue-info
+
+		&__soc
+
+			.f-soc
+
+				img
+					filter: invert(100%)
+
+	.v-tabs
+
+		&__tab
+
+			&.active
+				color: #fff
+
+	.v-about__item-title
+		color: #000
+
+@media (max-width: 1200px)
+	.venue
+
+		&__slider, &__info, &__soc,
+		&__contacts, &__tabs, &__about
+			margin: 0 0 40px
+
+	.v-list__item
+
+		&:not(:first-child)
+			margin: 30px 0 0
+
+	.venue-soc
+
+		&__link
+			padding: 30px 20px
+
+	.venue-soc
+
+		&__slider
+			width: calc(100% - 270px)
+
+@media (max-width: 1100px)
+	.v-about
+		padding: 30px
+
+@media (max-width: 1000px)
+	.v-contacts
+		flex-wrap: wrap
+
+		&__btn
+			width: 100%
+			margin: 0 0 20px
+
+	.v-tabs
+
+		&__tab
+			display: none
+
+		&__tabs
+
+			select
+				display: block
+				border: none
+				background: url("../img/ico-select-arrow-white.svg") center right 10px no-repeat, #000
+				color: #fff
+				padding: 9px 30px 9px 16px
+				border-radius: 5px
+
+	.v-about
+		padding: 20px 20px 0
+		flex-wrap: wrap
+
+		&__item
+			width: calc(33.33% - 20px)
+			margin-bottom: 20px
+
+			&:not(:last-child)
+				margin-right: 20px
+				flex: none
+
+	.venue-info
+		flex-wrap: wrap
+
+		&__title
+			width: 100%
+			margin: 0 0 20px
+
+	.v-list
+
+		&__item
+			flex-direction: column !important
+
+			&-title
+				width: 100%
+				margin: 0 0 15px
+
+	.v-list__title
+		padding: 0 !important
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+		&-btn
+			flex: none
+			margin-left: 20px
+
+		&-text
+			max-width: none
+			margin: 0
+			font-size: 18px
+
+			br
+				display: none
+	
+	.venue-soc
+		flex-direction: column
+
+		&__slider
+			width: auto
+
+			img
+				width: 100%
+
+		&__link
+			margin: 30px 0 0
+			align-items: center
+			justify-content: space-between
+			padding: 20px
+
+			br
+				display: none
+
+			&:after
+				position: static
+
+	.tabs-text .text-page
+		column-gap: 3%
+
+@media (max-width: 660px)
+	.venue-info
+
+		&__likes
+			margin: 0 0 30px
+
+	.venue
+
+		&__soc
+			// overflow: hidden
+
+	.venue-soc
+
+		&__slider
+			overflow: visible
+
+	.v-contacts
+
+		&__item
+			width: 100%
+
+			&:not(:last-child)
+				margin-bottom: 25px
+
+	.tabs-text .text-page
+		column-count: 1
+
+	.v-tabs
+		flex-direction: column-reverse
+		align-items: stretch
+
+		&__content
+			margin: 20px 0 0
+
+		&__btns
+			display: block
+
+			.tab-btn
+				display: block
+
+				&:not(:last-child)
+					margin: 0 0 10px
+
+		&__tabs
+			margin: 20px 0 0 !important
+
+			select
+				width: 100%
+
+	.v-about
+
+		&__item
+			width: 100%
+
+	.vl-items
+		display: block
+		margin: 0
+
+		&__item
+			width: 100%
+			margin: 0
+
+			&:not(:first-child)
+				margin: 20px 0 0
+
+	.tabs-content__slider
+		float: none
+		margin-left: 0
+		width: 100%

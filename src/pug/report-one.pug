@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Репортаж
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading.head-menu
+		include inc/header.pug
+		include inc/mobileMenu.pug
+		main#content
+			.inner-content
+				.wrapper
+					.reportaj
+						.reportaj__titles
+							.reportaj__titles-one
+								.titles
+									.titles__subtitle Double L
+									.titles__title Dj 1985 craftmusic
+							.reportaj__titles-one
+								.titles
+									.titles__date 6 июня
+							.reportaj__titles-one
+								.titles
+									.titles__subtitle Фотограф
+									.titles__title Женя Хажей
+						.reportaj__slider
+							.report-slider
+								a.report-slider__slide.fancybox(href="img/photos/report-slide-img.jpg" data-fancybox="report-slider" data-caption="Великолепный день! И не менее великолепный вечер предстоит сегодня в Double L! Не будем скрывать - наш любимчик DJ 1985 готовит для вас пушечный музон! ")
+									img(src="img/photos/report-slide-img.jpg")
+									.report-slider__slide-text Женя Хажей&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Geo.Pro
+								a.report-slider__slide.fancybox(href="img/photos/report-small-1.jpg" data-fancybox="report-slider" data-caption="Великолепный день! И не менее великолепный вечер предстоит сегодня в Double L! Не будем скрывать - наш любимчик DJ 1985 готовит для вас пушечный музон! ")
+									img(src="img/photos/report-small-1.jpg")
+									.report-slider__slide-text Женя Хажей&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Geo.Pro
+								a.report-slider__slide.fancybox(href="img/photos/report-small-2.jpg" data-fancybox="report-slider" data-caption="Великолепный день! И не менее великолепный вечер предстоит сегодня в Double L! Не будем скрывать - наш любимчик DJ 1985 готовит для вас пушечный музон! ")
+									img(src="img/photos/report-small-2.jpg")
+									.report-slider__slide-text Женя Хажей&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Geo.Pro
+								a.report-slider__slide.fancybox(href="img/photos/report-small-0.jpg" data-fancybox="report-slider" data-caption="Великолепный день! И не менее великолепный вечер предстоит сегодня в Double L! Не будем скрывать - наш любимчик DJ 1985 готовит для вас пушечный музон! ")
+									img(src="img/photos/report-small-0.jpg")
+									.report-slider__slide-text Женя Хажей&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Geo.Pro
+								a.report-slider__slide.fancybox(href="img/photos/report-small-1.jpg" data-fancybox="report-slider" data-caption="Великолепный день! И не менее великолепный вечер предстоит сегодня в Double L! Не будем скрывать - наш любимчик DJ 1985 готовит для вас пушечный музон! ")
+									img(src="img/photos/report-small-1.jpg")
+									.report-slider__slide-text Женя Хажей&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Geo.Pro
+								a.report-slider__slide.fancybox(href="img/photos/report-small-2.jpg" data-fancybox="report-slider" data-caption="Великолепный день! И не менее великолепный вечер предстоит сегодня в Double L! Не будем скрывать - наш любимчик DJ 1985 готовит для вас пушечный музон! ")
+									img(src="img/photos/img/photos/report-small-2.jpg")
+									.report-slider__slide-text Женя Хажей&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Geo.Pro
+							.reportaj__slider-desc
+								.slider-desc
+									.slider-desc__text 
+										span 123
+									.slider-desc__btns
+										.slider-desc__btns-play
+										a.slider-desc__btns-download(target="_blank" download="" href="#") Скачать
+										.slider-desc__btns-share
+						.reportaj__small-slider
+							.small-slider
+								- for (let i = 0; i < 2; i++)
+									- for (let i = 0; i < 3; i++)
+										figure.small-slider__slide
+											img(src="img/photos/report-small-"+i+".jpg")
+						.reportaj__desc
+							.report-desc
+								.report-desc__text
+									.text-page
+										p Великолепный день! И не менее великолепный вечер предстоит сегодня в Double L!
+										p Не будем скрывать- наш любимчик DJ 1985 готовит для вас пушечный музон! Будет много необычного и увлекательного: мелодии стран Карибского бассейна, советские и международные франки грувы, даб, фанк хип-хоп и конечно же soul!
+										p Занимайте свободные столы, стартуем в 21.30!
+								.report-desc__share
+									.share-block
+										.share-block__title Поделиться <br />репортажем
+										.share-block__soc
+											.share-soc
+												each name in ["vk", "fb", "inst"]
+													a.share-soc__link(href="#" style="background-image: url(img/ico-black-"+name+".png")
+						.reportaj__comments
+							.comments
+								.comments__top
+									.comments__count 4 комментария
+									.comments__link
+										a.write-comment-link(href="#") Написать комментарий
+								form(action="#")
+									.comments__list
+										.comments__one
+											.comment
+												.comment__header
+													.c-head
+														figure.c-head__img
+															img(src="img/no-photo.png")
+														.c-head__name
+															.c-head__name-text Xpage
+															.c-head__name-date-time 02.08.2018&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;08:45
+														.c-head__counter
+															span(class="comment-like")
+																img(src="img/ico-dislike.png" class="comment-like_dislike")
+																span(class="badge" data-counter="+2")
+																img(src="img/ico-like.png" class="comment-like_like")
+												.comment__body
+													.comment-text Тестовый комментарий
+												.comment__footer
+													.comment__footer-reply
+														a(href="#") Ответить
+													.comment__footer-form.visible
+														.comment-form
+															textarea.comment-form__text
+															input.comment-form__submit(type="submit" value="Отправить")
+												.comment__answer
+													.comment.comment--highlight
+														.comment__header
+															.c-head
+																figure.c-head__img
+																	img(src="img/no-photo.png")
+																.c-head__name
+																	.c-head__name-text Xpage
+																	.c-head__name-date-time 02.08.2018&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;08:45
+																.c-head__from
+																	.reply-to-link Xpage
+																.c-head__counter
+																	span(class="comment-like")
+																		img(src="img/ico-dislike.png" class="comment-like_dislike")
+																		span(class="badge" data-counter="-2")
+																		img(src="img/ico-like.png" class="comment-like_like")
+														.comment__body
+															.comment-text Тестовый комментарий
+														.comment__footer
+															.comment__footer-reply
+																a(href="#") Ответить
+															.comment__footer-form
+																.comment-form
+																	textarea.comment-form__text
+																	input.comment-form__submit(type="submit" value="Отправить")
+														.comment__answer
+															.comment
+																.comment__header
+																	.c-head
+																		figure.c-head__img
+																			img(src="img/no-photo.png")
+																		.c-head__name
+																			.c-head__name-text Xpage
+																			.c-head__name-date-time 02.08.2018&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;08:45
+																		.c-head__from
+																			.reply-to-link Xpage
+																		.c-head__counter
+																			span(class="comment-like")
+																				img(src="img/ico-dislike.png" class="comment-like_dislike")
+																				span(class="badge" data-counter="0")
+																				img(src="img/ico-like.png" class="comment-like_like")
+																.comment__body
+																	.comment-text Тестовый комментарий
+																.comment__footer
+																	.comment__footer-reply
+																		a(href="#") Ответить
+																	.comment__footer-form
+																		.comment-form
+																			textarea.comment-form__text
+																			input.comment-form__submit(type="submit" value="Отправить")
+										.comments__one
+											.comment
+												.comment__header
+													.c-head
+														figure.c-head__img
+															img(src="img/no-photo.png")
+														.c-head__name
+															.c-head__name-text Xpage
+															.c-head__name-date-time 02.08.2018&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;08:45
+														.c-head__counter
+															span(class="comment-like")
+																img(src="img/ico-dislike.png" class="comment-like_dislike")
+																span(class="badge" data-counter="+2")
+																img(src="img/ico-like.png" class="comment-like_like")
+												.comment__body
+													.comment-text Тестовый комментарий
+												.comment__footer
+													.comment__footer-reply
+														a(href="#") Ответить
+													.comment__footer-form
+														.comment-form
+															textarea.comment-form__text
+															input.comment-form__submit(type="submit" value="Отправить")
+									.comments__btn
+										a.write-comment(href="#") Написать комментарий
+		include inc/footer.pug
+		include inc/scripts.pug

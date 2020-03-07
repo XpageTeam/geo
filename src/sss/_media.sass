@@ -1,0 +1,2428 @@
+@import "vars"
+
+@media screen and (max-height: 730px)
+	.zavediniya
+
+		&__one
+
+			&:nth-child(even)
+				transform: translateY(100px)
+
+@media screen and (min-width: 1000px)
+	.filter__select-label
+		display: none
+
+	.day-night
+		bottom: auto
+		top: calc(50% + 50px)
+		left: 70px
+		transform-origin: left
+		transform: rotate(-90deg) translate(.5px, .5px)
+
+		&__btn
+			transform: rotate(90deg)
+
+@media screen and (max-width: 1700px)
+	.reportaj__slider
+		> .report-slider__banner
+			display: none
+
+@media screen and (max-width: 1440px)
+	.right-offset
+		margin-left: rem(-40)
+
+	.left-offset
+		margin-left: rem(40)
+
+	.day-night
+
+		&:not(&--exclusive)
+			left: 141px
+
+		&--exclusive
+			top: auto !important
+			bottom: 20px
+			left: 20px
+			transform: translate(0.5px, 0.5px) !important
+
+@media screen and (max-width: 1420px)
+
+	.report-slider__slide.vertical-span .report-slider__banner
+		right: 50px
+
+	.logo
+		max-width: 80px
+
+	.day-night
+		left: 103px
+
+	.report-slider
+		// width: 100%
+
+		.slick
+
+			&-arrow
+				top: 0
+				+size(50px 100%)
+				border: none
+				transform: none
+				background: rgba(#000, .2)
+				transition: background .3s ease
+				z-index: 2
+
+				&:before
+					content: ""
+					border:
+						top: 1px solid #fff
+						right: 1px solid #fff
+					+size(15px)
+					position: absolute
+					top: calc(50% - 7px)
+
+				&:hover, &:focus
+					background: rgba(#000, .6)
+
+
+			&-prev
+				left: -7px
+
+				&:before
+					transform: rotate(-135deg)
+					left: calc(50% - 3px)
+
+			&-next
+				right: -7px
+
+				&:before
+					transform: rotate(45deg)
+					left: calc(50% - 12px)
+
+@media screen and (max-width: 1400px)
+	.footer__developer
+		margin-right: 90px
+
+@media screen and (max-width: 1320px)
+	.to-top
+		right: 4vw
+
+
+	.main
+		.head__wrap
+			padding: 0
+
+	.day-night
+		left: 52px
+
+	.js__scroll .search-form
+		top: -12px
+
+@media screen and (max-width: 1280px)
+	html
+		font-size: 98%
+
+	#mskBan, .stream
+		padding: 53% 0 0
+		height: auto
+		max-width: 1200px
+		width: auto
+		margin: 130px 2rem 0
+
+	.head
+		padding: 2rem 2rem 0
+
+	.small-slider__container + .wrapper
+		width: auto
+
+	.footer
+		padding: 2rem
+		margin: 0
+
+		&-bot
+			margin-top: 2rem
+
+	.footer
+
+		&__soc, &__logo
+			flex: none
+
+		&__logo
+			display: none !important
+
+		&__menu
+			margin-left: 0
+
+	.main-content
+
+		&__item
+			margin-bottom: 2rem
+
+		&__btn
+			margin: 2rem 0 0
+
+		&__banner
+			margin: 3rem 0 0
+
+	@supports (display: grid)
+		.main-content
+			grid-gap: 2rem
+
+			&__item
+				margin-bottom: 0
+
+	.report-one
+		max-width: none
+
+		&__text
+			margin: 30px 0 0
+
+		&__sliders
+			margin-right: 2rem
+
+@media screen and (max-width: 1200px)
+
+	.report-slider__slide.vertical-span
+
+		.report-slider__banner
+			display: none !important
+
+	.search-form
+		top: calc(100% + -3px)
+
+	.search-results
+
+		.events
+			grid-template-columns: repeat(2, 1fr)
+
+	.city-list
+
+		&__one
+			width: calc((100% - 34px * 2) / 2)
+
+	.right-block__draggable
+		bottom: 61vh
+
+	.main-content
+
+		&__cont
+			margin: 4rem 0 0
+
+	.to-top
+		right: 4.7vw
+
+	body.inner
+
+		.head
+
+			.main-nav
+
+				&__menu
+					margin-right: 3vw
+
+				&__search, &__lc
+
+					&:not(:last-child)
+						margin-right: 1.6rem
+
+			&__photoset
+				margin-left: 1.6rem
+
+	.articles
+
+		&__one
+
+			&:not(:first-child)
+				margin: 2rem 0 0
+
+	.article
+
+		&__desc
+			padding: 2rem
+
+		&__title
+			margin-bottom: 1.5rem
+
+	.inner-content
+		// margin: 2rem 0 0
+
+	.small-slider
+		margin: 0 -10px
+
+		&__slide
+			margin: 0 10px
+
+	.zavedeniya-one
+
+		&__top-sliders
+			width: 620px
+
+		&__slider
+			margin: 40px 0
+
+			&-nav
+				display: none !important
+
+			&-main
+				width: 100%
+
+		&__bot
+			margin: 20px 0 0
+
+	.text-page
+
+		[align="left"]
+			max-width: calc(100% - 20px)
+			margin-right: 20px
+
+		[align="right"]
+			max-width: calc(100% - 20px)
+			margin-left: 20px
+
+	.right-offset, .left-offset
+		margin-left: 0
+
+	.user-photo
+
+		.pl-4
+			padding-left: 0 !important
+			height: auto
+			width: 60px
+
+	.comments__top
+		margin-bottom: 1rem
+
+	.section-comments
+
+		.row
+
+			> .col-auto
+				padding: 0 !important
+
+@media screen and (max-width: 1100px)
+	html
+		font-size: 95%
+
+	.main-content
+		grid-gap: 2rem
+		grid-template-columns: repeat(2, 1fr)
+
+		.item
+
+			&__img
+				display: block
+
+	.reportaj
+
+		&--all
+
+			.reportaj
+
+				&__titles
+					padding-bottom: 2rem
+
+				&__desc
+
+					.report-desc
+
+						&__text
+
+							&-tags
+								margin: 2rem 0 0
+
+		&__titles
+			margin-bottom: 1rem
+
+		&__imgs
+			margin: 2.5rem 0 0
+
+		&__comments
+			margin: 3rem 0 0
+
+	.imgs
+		margin: 0 0 -1rem -1rem
+		grid-gap: 1rem
+
+		&__one
+			width: calc((100% - 1rem * 3) / 3)
+			margin: 0 0 1rem 1rem
+
+	.report-one
+
+		&__sliders
+			width: 400px
+
+		&__slider
+
+			&-nav
+				display: none !important
+
+			&-main
+				width: 100%
+
+				img
+					width: 100%
+
+	.filter
+
+		&__range
+
+			&-label
+				margin-right: 1.2rem
+
+	.people
+
+		&__img
+			margin-right: 3rem
+			width: 300px
+
+		&__desc
+			min-height: 240px
+
+	.peoples
+
+		&__title
+			margin-bottom: 1.5rem
+
+			.title-block
+				padding-bottom: 1.5rem
+
+		&__list
+
+			&-one
+
+				&:not(:first-child)
+					margin: 2rem 0 0
+
+	
+
+	body.head-menu
+		padding: 7.5rem 0 0
+
+	.multi-date__content
+		align-items: flex-end
+		display: flex
+		font-size: rem(17)
+		padding-bottom: 8px
+
+	.multi-date, .filter__select select
+		background: url("../img/ico-select-arrow-white.svg") right 5px center no-repeat !important
+		background-size: 7px auto !important
+		height: 40px
+
+		&:after
+			display: none !important
+
+	.multi-date
+		margin: 1px 0 0
+
+		&__content
+			margin: 0
+			padding:
+				left: 10px
+				right: 10px
+
+	.filter
+
+		&__inputs
+			align-items: flex-end !important
+
+		&__select 
+			width: calc((100% - 2rem * 3) / 3) !important
+
+			select
+				opacity: 1
+				+size(100% 40px)
+				// background: url("../img/ico-select-arrow-white.svg") right 5px center no-repeat !important
+				border-bottom: 1px solid #333 !important
+
+	.multi-date__date
+		margin: 0 9px 6px 0
+
+	@media screen and (min-width: 660px)
+		.peoples
+
+			&__plate
+				margin: 0 0 -2rem -1rem
+
+				&-one
+					width: calc((100% - 1rem * 3) / 3)
+					margin: 0 0 2rem 1rem
+
+@media screen and (max-width: 1200px) and (min-width: 1000px)
+	.main__nav
+		margin-top: -50px
+
+	.small-slider__slide img
+		width: auto
+		height: auto
+
+@media screen and (max-width: 1000px) and (min-width: 660px)
+	@supports (display: grid)
+		.main-content
+			grid-template-columns: repeat(2, 1fr)
+
+@media screen and (max-width: 1000px)
+	html
+		font-size: 95%
+
+
+
+	.small-slider__slide img
+		max-height: 145px
+
+	.head
+
+		&__logo
+			align-items: center !important
+			flex-direction: row !important
+			justify-content: flex-start !important
+
+			&-city
+				margin-left: 10px
+
+				.city-select
+					height: auto
+
+		&__language
+			order: 1
+			margin: -8px 10px 0 auto !important
+			align-self: center
+			display: none
+
+		&__burger
+			order: 2
+
+	select.city-select__select
+		// padding-right: 30px
+		// background: url("../img/ico-select-arrow-white.svg") right 10px center no-repeat
+
+	.search-page
+
+		&__body
+			flex-direction: column-reverse
+
+		&__content, &__sidebar
+			width: auto
+
+		&__sidebar
+			margin-bottom: 2rem	
+
+	.report-one__slider-main 
+		.slick-arrow
+			background-color: rgba(0, 0, 0, 0.4) !important
+
+	.report-one__top-info
+		.share-block
+			padding: 0 !important
+
+	body[class*=dir-event] .report-one .buy-btn
+		margin-bottom: -5px !important
+
+	.dir-order-photographer
+
+		main
+
+			> .wrapper
+				padding: 0 !important
+
+	.form-login_container .form-control
+		padding: 0 10px
+
+
+	.to-top
+		right: 4vw
+		bottom: 4vw
+
+	.report-one__slider-main, .zavedeniya-one__slider-main
+
+		&:not(.slick-initialized)
+			opacity: 0
+
+	.head__switcher
+		display: none
+
+	.zavedeniya-one__slider-main .slick-arrow, .report-one__slider-main .slick-prev
+		background-color: rgba(#000, .4)
+
+	.head__burger, .mobile-menu
+		display: block
+
+	.head__photoset, .head__nav
+		display: none
+
+	.head
+
+		&__burger
+			padding: 20px
+			margin-right: -20px
+			cursor: pointer
+
+	.white-color
+
+		.report-slider
+
+			.slick
+
+				&-arrow
+
+					&:before
+						border-color: #fff !important
+
+	.report-slider__slide 
+
+		&:not(.vertical-span)
+
+			figure
+				width: 100%
+
+	.multi-date__placeholder
+		display: none
+
+	div.comment-body.p-4
+		padding: .8rem !important
+
+	.filter
+
+		&__inputs
+			margin: 0 0 0 -1.125rem
+
+		&__select
+			margin: 0 0 0 1.125rem
+			flex: 1 1 auto
+
+			&-label
+				margin-bottom: 10px
+
+	body.head-menu
+		padding: 9.5rem 0 0
+
+	.anons__title
+		margin: 2.1875rem 0 0
+
+	.filter__select 
+
+		select
+			+size(100% 40px)
+
+	.people
+
+		&__img
+			width: 250px
+
+	@media screen and (min-width: 660px)
+		.peoples
+
+			&__plate
+
+				&-one
+					width: calc((100% - 1rem * 2) / 2)
+
+	.zavediniya
+
+		&__one
+			width: 48%
+
+	.article-one
+
+		&__detail
+
+			table, tbody, tr, td
+				display: block
+
+			img
+				max-width: 45vw !important
+
+			[align]
+				margin-bottom: 20px !important
+
+			[align="left"]
+				// max-width: calc(100% - 15px)
+				margin-right: 15px !important
+
+			[align="right"]
+				// max-width: calc(100% - 15px)
+				margin-left: 15px !important
+
+	.main__nav
+		margin-top: -40px
+
+	.report-one
+
+		&__top, &__top-info
+			display: block
+
+			&:after
+				content: ""
+				display: table
+				clear: both
+
+		&__sliders
+			width: 230px
+			float: left
+			margin-bottom: 15px
+
+	.article
+
+		&__desc
+			position: relative
+
+		&__img
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+
+			img
+				+size(100%)
+				object:
+					fit: cover
+					position: center
+
+		&:before
+			z-index: 1
+
+	.right-block
+		display: none
+
+	.wrapper
+		max-width: 800px
+
+	.filter
+
+		&__range
+			margin-bottom: 0
+
+
+
+	.city-list
+		margin: 0 0 -2rem -2rem
+
+		&__one
+			width: calc((100% - 2rem * 2) / 2)
+			margin: 0 0 2rem 2rem 
+
+	body.head-menu
+
+		.head
+
+			&__logo
+				flex-direction: column
+				align-items: flex-start
+
+			&__wrap
+				padding: 2rem 0
+
+	.head
+
+		&__soc
+			display: none
+
+		&__logo
+			width: 100%
+			display: flex
+			justify-content: space-between
+			align-items: flex-start
+			max-width: none
+
+		&__nav
+
+			.main-menu
+
+				&__link
+					font-size: rem(15)
+	
+	.inner-content
+		margin: 2.5rem 0 0 !important
+
+	.city-select
+
+		&__select
+			margin: 0
+
+	.main-nav
+
+		&__search
+			margin: 0 1.2rem 0 0
+
+		&__lc
+			margin: 0 0 0 1.2rem
+
+	.footer
+
+		&-top
+			flex-wrap: wrap
+			// align-items: center
+
+		&__menu
+			margin: 0
+
+		&__soc
+			order: 2
+
+		&__logo
+			order: 1
+			display: block
+
+		&__logo, &__soc
+			margin: 2rem 0 0
+
+	.f-menu
+		// width: 30%
+		flex: 1 1 auto
+
+		&:not(:last-child)
+			margin-right: 20px
+
+	.z-item
+
+		&__title
+			font-size: 2rem
+
+		&__rating
+			margin-bottom: 1.5rem
+
+		&__contacts
+			padding: 20px
+
+	.filter
+
+		&__cont
+			margin-bottom: 1rem
+
+		&__select
+
+			select
+				border-bottom: none
+				background: #323232
+				padding: 5px 10px
+				opacity: 1
+
+			&-label
+				margin-bottom: 15px
+				display: block
+	
+	.events
+		margin: 0 0 -2rem -2rem
+		grid-gap: 2rem
+		grid-template-columns: repeat(2, 1fr)
+
+		&__one
+			width: calc((100% - 2rem * 2) / 2)
+			margin: 0 0 2rem 2rem
+
+			&--big
+				width: calc(100% - 2rem)
+				grid-row: 1
+
+			.item
+
+				&__img
+					display: block
+	
+	body.head-menu
+
+		.head
+
+			&__wrap
+				align-items: flex-start
+
+	.reportaj
+
+		&__desc
+			margin: 3rem 0 0
+
+	.report-desc
+		flex-direction: column
+		align-items: flex-start
+
+		&__share
+			margin: 20px 0 0 0 !important
+			padding: 18px
+			width: 100%
+
+	.share-block
+		// flex-direction: column
+		justify-content: space-between
+
+		&__title
+			// margin: 0 0 15px
+			// max-width: none
+			// text-align: center
+
+	.zavedeniya-one
+
+		&__top
+			flex-direction: column
+			position: relative
+
+			&-info
+				margin: 0 0 15px
+				display: block
+				// position: relative
+
+				.btn
+					// float: right
+					position: absolute
+					left: 0
+					bottom: 0
+
+				.rating
+					position: absolute
+					right: 0
+					top: 0
+					margin-bottom: 0
+
+			&-sliders
+				width: 100%
+				padding-bottom: 75px
+
+				img
+					width: 100%
+
+		&__bot
+			flex-direction: column
+
+			.share-block
+				margin: 15px 0 0 0
+				width: 100%
+
+	
+
+	.filter
+
+		&__inputs
+			// align-items: flex-start
+
+		&__select
+			// width: auto !important
+
+		&__range
+			flex-direction: column
+			align-items: flex-start
+			margin-left: 2rem
+			align-self: flex-start
+
+			&-label
+				margin: 0 0 15px
+				text-align: left
+
+	.article
+
+		&__desc
+			padding: 1.8rem !important
+
+	.article
+
+		&-one
+
+			&__detail
+				margin: 2.8rem 0 0
+
+		&__repost
+			margin: 2rem 0 0
+
+		&__controls
+			margin: 3.1rem 0 0
+
+		&__comments
+			margin: 1.9rem 0 0
+
+		&-titles
+
+			&__title
+
+				h1
+					font-size: rem(28)
+					margin-bottom: 10px
+
+	.article-controls
+
+		&__title
+			font-size: rem(28)
+
+			br
+				// display: none
+
+		span
+			display: none
+
+		a
+
+			&:after, &:before
+				margin: 0 15px 0
+
+			&:after, &:before
+				background: url("../img/ico-small-arrow.svg") no-repeat
+				+size(20px 19px)
+
+	#form-comment-block
+		margin: 
+			left: 0 !important
+			right: 0 !important
+		padding: 
+			left: 16px
+			right: 16px
+
+		.col-12
+			padding: 0 !important
+	
+	.share-block
+		padding: 20px !important
+
+
+	body, html
+		overflow-x: hidden
+		width: 100%
+
+	body
+		position: relative
+
+	body.js__menu-opened
+		overflow: hidden
+		position: fixed
+		top: 0
+		left: 0
+		bottom: 0
+
+		header.head, #content, .footer, .mobile-menu
+			transform: translate3d(-270px, 0, 0) !important
+
+
+	.mobile-menu
+		position: fixed
+		width: 270px
+		left: 100%
+		top: 0
+		bottom: 0
+		// min-height: 100%
+		// border-left: 1px solid #333333
+		font-weight: 300
+		background: #0a0a0a
+		padding: 20px 0
+		display: flex
+		flex-direction: column
+		overflow-y: auto
+		-webkit-overflow-scrolling: touch
+
+		&__language
+			margin: auto 0 0
+			padding: 20px 0 0
+			display: flex
+			justify-content: center
+
+		&__footer
+			padding: 30px 0 0
+			display: flex
+			flex-direction: column
+			align-items: center
+
+			.day-night
+				position: relative
+				top: auto
+				right: auto
+				bottom: auto
+				left: auto
+				margin: 30px 0 0
+
+			.f-soc
+
+				&__link
+					border-color: #333333
+
+					img
+						opacity: 1
+						transition: none
+
+		&__submenu
+			display: none
+
+		&__lc
+			border-bottom: 1px solid #333333
+
+		&__list
+			margin: 20px 0 0
+
+		&__city
+
+			.city-select
+				height: auto
+
+				&__select
+					font-size: rem(16) !important
+					padding: 12px 40px 14px 17px !important
+					+size(100% 40px)
+					background: url("../img/ico-select-arrow-white.svg") center right 15px no-repeat, #151515
+					background-size: 8px auto !important
+
+			select.city-select
+
+			.selectize
+
+				&-input
+					background: none !important
+					border-radius: 0
+					border: none
+					padding: 0
+
+					&:after
+						display: none !important
+
+				&-control
+					display: block
+
+		&__link, &__sub-title, &__city, 
+		&__search, &__footer, &__personal
+			padding: 
+				left: 36px !important
+				right: 36px !important
+
+		&__search
+			margin: 15px 0 0
+
+			iframe[style*="width:0px"]
+				display: none
+
+			.search-form
+				position: static
+				display: block
+
+		&__sub-title
+			padding-right: 35px
+			position: relative
+
+			&:before
+				content: ""
+				position: absolute
+				+size(8px)
+				border:
+					bottom: 1px solid #333333
+					right: 1px solid #333333
+				right: 15px
+				top: calc(50% - 5px)
+				transform: rotate(45deg)
+				transition: transform .3s ease
+
+		&__link
+			color: #fff
+			padding: 10px 0
+			display: block
+
+			&.active
+				background: #333333
+
+		&__personal
+			margin: 30px 0 0
+
+		&__soc
+			margin: 0 auto
+
+			.f-soc
+
+				&__link
+					border: none
+					background:
+						color: #151515
+
+					&:not(:last-child)
+						margin-right: 2px
+
+	.submenu
+
+		.mobile-menu
+
+			&__link
+				padding: 6px 15px 6px 25px
+
+	.mobile-search
+		position: relative
+		
+		&__input
+			font-size: rem(16) !important
+			padding: 12px 40px 14px 17px !important
+			+size(100% 40px)
+			background: #151515
+			border: none
+			color: #fff
+
+		&__submit
+			position: absolute
+			top: 0
+			right: 0
+			+size(40px)
+			text-indent: -9999px
+			overflow: hidden
+			padding: 0
+			border: none
+			background: url("../img/ico-search.svg") center no-repeat
+			background-size: 30% !important
+
+	.mobile-pers
+
+		&__login, &__reg, &__order-photographer
+
+			&:not(:first-child)
+				margin: 9px 0 0
+
+		&__login
+
+			a
+
+				&:before
+					background-image: url("../img/ico-lc.svg")
+					background-size: 50% !important
+
+		&__reg
+
+			a
+
+				&:before
+					background:
+						image: url("../img/ico-reset-white.svg")
+						size: 40% !important
+						color: transparent !important
+					transform: rotate(-45deg)
+					z-index: 2
+
+				&:after
+					content: ""
+					position: absolute
+					background: #151515
+					+size(25px)
+					left: 0
+					top: 0
+
+		&__order-photographer
+
+			a
+
+				&:before
+					background-image: url("../img/ico-photoset-new.svg")
+					background-size: 50% !important
+
+		a
+			display: flex
+			align-items: center
+			position: relative
+			border: none
+
+			&:before
+				content: ""
+				+size(25px)
+				margin: 0 20px 0 0
+				background: 
+					color: #151515
+					position: center
+					repeat: no-repeat
+
+	// body[class*="dir-reportage"]
+
+	// 	.mobile-pers__order-photographer a:before
+	// 		background-image: url("../img/ico-$.svg")
+	// 		background-size: 31% !important
+
+	.lc-mobile
+		color: #fff
+		display: block
+		padding: 10px 15px 10px 40px
+		background: url("../img/ico-lc.svg") left 15px center no-repeat
+		background-size: 15px 14px
+
+	.burger
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		+size(30px 20px)
+		border: none
+		background: none
+		padding: 0
+		transition: width .3s ease
+
+		span, &:after, &:before
+			+size(100% 2px)
+			display: block
+			background: #fff
+
+		span
+			transition: opacity .3s ease
+
+		&:before, &:after
+			content: ""
+			transition: transform .3s ease
+			transform-origin: left
+
+		&.js__active
+			width: 25px
+
+			span
+				opacity: 0
+
+			$angle: 45deg
+
+			&:before
+				transform: rotate($angle)
+
+			&:after
+				transform: rotate(-$angle)
+
+	// почему то класс .js__active стал ставиться на блок выше, я переписал стили немного
+
+	.head__burger.js__active
+		.burger
+			width: 25px
+
+			span
+				opacity: 0
+
+			$angle: 45deg
+
+			&:before
+				transform: rotate($angle)
+
+			&:after
+				transform: rotate(-$angle)
+
+
+
+	body.head-menu 
+		.head__nav
+			display: none
+
+		.head__wrap
+			padding: 0 0 2rem 0
+
+	.head__wrap
+		padding: 0
+
+	.head, #content, .footer, .mobile-menu
+		transition: transform .3s ease
+
+		&__burger
+			flex: none
+
+@media screen and (max-width: 1000px) and (orientation: portrait)
+	.report-slider
+		min-height: 0
+
+		.slick
+
+			&-slide, &-list, &-track, &-slide > div
+				min-height: 0
+
+		&__slide
+			// padding-top: 67%
+			// max-height: 100%
+			// min-height: 0
+
+			figure
+				// width: 100%
+
+			img
+				// max-width: 100% !important
+
+		.img-area
+
+			img
+				// max-width: none !important
+
+@media screen and (max-width: 840px) and (orientation: landscape)
+	.footer__menu
+		width: 100%
+
+	.report-slider__slide:not(.vertical-span) 
+
+		figure
+			// width: auto
+
+			img
+				// max-width: calc(100vw - 4rem)
+				width: auto
+
+	.report-slider
+
+		&__slide
+
+			figure
+
+				&:not(.lazy-loaded)
+
+					img
+						width: auto
+
+@media screen and (max-width: 660px)
+	html
+		font-size: 93%
+
+	audio
+		display: none !important
+		pointer-events: none
+
+
+	.page-inner
+		.card-water__top-item 
+			max-width: 100%
+			align-items: flex-start
+
+			.btn__cart.btn__cart--blue
+				position: static
+				margin-top: 20px
+
+
+	.videoBanner
+		display: none
+
+	.imageBanner
+		display: block
+
+	
+
+	#mskBan, .stream
+		margin: 85px 18px 0
+
+	.stream
+		padding-left: 10px
+		font-size: 14px
+		top: 0px
+
+		&:before
+			+size(33px)
+			top: calc(50% - 17px)
+
+	.face-search
+
+		&__top
+			flex-direction: column
+
+			&-text, &-search
+				width: auto
+				padding: 0
+				border: none
+
+				&:not(:first-child)
+					margin: 20px 0 0
+
+	.popup-mini
+		width: auto
+		right: 0
+		padding: 15px
+
+		&__title
+			font-size: 14px
+			margin-bottom: 12px
+
+		&__controls
+			font-size: 14px
+
+			&-left
+				flex: 1 1 auto
+				text-align: center
+
+				&:not(:last-child)
+					margin-right: 15px
+
+			.btn-simple
+				padding: 12px 14px 11px
+				width: 100%
+
+			.comment-form__submit
+				padding: 12px 16px 13px
+				width: 100%
+
+	.report-slider
+		margin: 0
+		height: 230px
+
+		&__finish
+			left: 0
+			right: 0
+
+		.imgWrap
+
+			.img-overlay, .img-cont
+				display: none
+
+
+	body[class*=dir-event] 
+		.report-one .buy-btn
+			margin-bottom: 0 !important
+
+	.search-results
+
+		.events
+			grid-template-columns: 1fr
+
+	.city-list
+
+		&__one
+			width: calc((100% - 34px * 1) / 1)
+
+	.slider-desc__btns-share-block
+		// top: auto
+		// bottom: 100%
+
+	.inner-content
+		overflow: visible
+
+	.fancybox-slide--html
+		padding: 0 !important
+
+	.forms-user .fancybox-close-small
+		height: 60px
+		width: 60px
+
+		svg
+			height: 48px !important
+			width: 60px !important
+
+	.social_auth_btn
+		padding: 10px 13px 10px 65px !important
+
+	.col-12
+		padding: 15px 0 !important
+
+	.section-comments .row > .col-auto
+		margin-bottom: 10px
+
+	.comments__btn a
+		margin: 15px 0 0
+
+	.write-comment
+		padding: 12px 20px 14px
+
+
+
+	.interview-mobile
+		font-size: 16px !important
+		font-weight: bold !important
+		line-height: 1.5 !important
+		
+
+	.zavedeniya-one__title
+		padding-right: 75px
+
+	#photo-order
+		margin: 0
+		min-width: 0
+
+	.forms-user, #photo-order
+
+		.h4, .form-cont
+			padding: 1.2rem
+
+	.to-top
+		display: none !important
+
+	body[class*=dir-event] .report-one .buy-btn
+		margin: 20px 0 0
+
+	ymaps[class*="-balloon "]
+		left: 0 !important
+		transform: none !important
+
+	.head__photoset
+		margin-left: auto !important
+		margin-right: 1rem !important
+		// margin-top: 7px
+		display: none !important
+
+	.photoset-link
+		width: 24px
+		height: 20px
+
+	.report-one 
+
+		&__top
+			position: relative
+
+		.share-block, .buy-btn
+			margin: 0
+			position: absolute
+			bottom: 60px			
+
+		.share-block
+			left: 0
+			// bottom: 80px
+			padding: 0 !important
+			display: block !important
+
+			&__title
+				max-width: none
+				margin-bottom: 10px
+
+		.buy-btn
+			right: 0
+
+		&__sliders
+			padding-bottom: 140px
+
+
+
+	.filter
+
+		&__range
+			width: 100%
+
+	.balloonContent
+		padding: 8px 18px 13px
+		max-width: none
+
+		&-title
+			line-height: 1.3
+
+	.balloonContent-phone:not(:last-child), 
+	.balloonContent-address:not(:last-child), 
+	.balloonContent-time:not(:last-child)
+		margin: 0 0 .5rem 
+
+	.report-one__top
+		display: flex
+		flex-direction: column-reverse
+
+	.report-one
+
+		&__sliders
+			margin: 25px 0 0
+
+		.share-block
+			// width: 100%
+			// justify-content: space-between
+
+		&__info
+
+			&-label
+				margin-bottom: 7px !important
+
+			&-text
+				font-size: rem(28)
+
+				&--big
+					margin: 25px 0 0
+					font-size: rem(28)
+
+	.article
+
+		&__desc
+			padding: rem(40) 18px !important
+
+	.report-one__info-label:not(:first-child)
+		margin: 30px 0 0
+
+	.main-content
+
+		&__banner
+			margin: 0
+
+		&__btn
+			margin-bottom: 2rem
+
+	.people
+		display: block
+
+		&:after
+			content: ""
+			display: table
+			clear: both
+
+		&-desc, &__desc
+			display: block
+
+		&__img
+			margin: 0 10px 10px 0
+			// width: 300px
+			width: 24%
+			float: left
+			padding-bottom: 15px
+			z-index: 5
+
+			&-name
+				left: 0
+				bottom: 0
+				width: 100%
+				padding: 5px 10px
+				overflow: hidden
+
+		&__desc
+			min-height: 0
+			// width: 100% !important
+
+		&-desc
+
+			&__status
+				margin-bottom: 10px
+
+			&__name
+				font-size: rem(18)
+				margin-bottom: 20px
+
+	.peoples
+
+		&__title
+			margin-bottom: 1.5rem
+
+			.title-block
+				padding-bottom: 1.5rem
+
+		&__list
+
+			&-one
+
+				&:not(:first-child)
+					margin: 2rem 0 0
+
+		&__plate
+
+			.people
+
+				&__img
+					width: 40%
+
+		// &__plate
+		// 	margin: 0 0 -2rem -1rem
+
+		// 	&-one
+		// 		width: calc((100% - 1rem * 3) / 3)
+		// 		margin: 0 0 2rem 1rem
+
+	// .title-block
+
+	// 	&__cont, &__btn
+	// 		display: block
+
+	.title-block
+		display: flex !important
+
+	.filter-toggle
+		border: none
+		background: url("../img/ico-filter.svg") center no-repeat
+		background-size: contain !important
+		+size(25px)
+		border-radius: 0
+
+	.filter__cont
+		display: none
+
+	.imgs
+		grid-template-columns: repeat(2, 1fr)
+		grid-gap: 18px
+
+		&__one
+			width: calc((100% - 1rem * 2) / 2)
+			padding: 0 !important
+
+			// &.vertical-span
+				// grid-row: span 1
+
+			img
+				position: static !important
+				// +size(100% auto)
+				width: 100%
+				// height: auto !important
+				object:
+					fit: unset
+
+	.footer
+		padding: 
+			left: 0
+			right: 0
+
+		&__developer
+			display: none
+
+	body.head-menu
+		padding-top: 0
+
+		.head
+			position: static
+
+	.popup-map
+		padding: 0
+
+		.mapCity
+			max-width: 100%			
+			
+	.main-content
+
+		&__cont
+			margin: 2rem 0 0
+
+	.reportaj
+
+		&__titles
+			flex-direction: column
+			align-items: stretch
+
+			&-one
+				width: auto !important
+				max-width: none !important
+
+				&:not(:first-child)
+					margin: 1.3rem 0 0
+
+		&__slider
+			flex-direction: column
+
+			&-desc
+				margin: 1.7rem 0 0
+
+		&__small-slider
+			display: none
+
+	.titles
+
+		&__subtitle
+			margin: 0 0 .6rem
+
+		&__title
+			font-size: 1.4rem
+
+		&__date
+			font-size: 1rem
+
+	.report-slider
+		width: auto
+
+		&__slide
+
+			&:after, &:before
+				display: none
+
+	body.head-menu
+
+		.head
+
+			&__nav
+				display: none
+
+			&__wrap
+				align-items: center
+
+	.articles
+
+		~ .load--more_container
+			margin: 2rem 0 0
+
+	.article
+
+		&__desc
+			padding: 1.2rem 18px
+
+			&-bot
+				padding-top: 1.5rem
+
+		&__text, &__title
+			max-width: 280px
+
+		&__title
+			font-size: 1.625rem !important
+			margin-bottom: 10px
+
+	.article-counters
+
+		&__comments, &__likes
+			padding: 10px 10px 8px 37px
+
+		&__likes
+			background-position: top 8px left 11px
+
+		&__comments
+
+	.events
+		margin: 0
+		flex-direction: column
+		grid-template-columns: 1fr
+		grid-gap: 18px
+
+		&__one
+			width: auto
+			margin: 0
+
+			&--big
+				grid-column: 1
+
+			.item
+
+				&__img
+					display: block
+
+			&:not(:first-child)
+				margin: 18px 0 0
+
+	.multi-date__content, .filter-select
+		padding-left: 0 !important
+
+	.article-titles
+
+		&__date
+			margin: 0 0 10px
+
+		&__title
+			margin-bottom: 12px
+
+	.filter
+
+		&__cont
+			margin-bottom: 40px
+
+		&__inputs
+			flex-direction: column
+			align-items: stretch
+			margin: 0
+
+		&__select
+			width: 100% !important
+			margin-left: 0
+
+			&:not(:first-child)
+				margin: 15px 0 0
+
+			select
+				opacity: 1
+
+		&__submit
+			margin: 20px 0 0
+			width: 100% !important
+			flex-direction: column
+
+			.z-item
+
+				&__arrow
+					margin: 0
+					border-radius: 0
+					width: 100%
+
+					&:before, &:after
+						display: none
+
+		&-submit
+			text-indent: 0
+			background: inherit
+			color: #fff
+			opacity: 1
+			border: none
+
+		&-reset
+			text-indent: 0
+			width: 100%
+			margin: 10px 0 0 0
+			text-align: center
+			background-image: none !important
+
+	.title-block__title h1, .title-block__title h2
+		font-size: rem(26)
+
+	.head
+		padding: 20px 18px
+		// position: static
+
+		&__wrap
+			align-items: center
+
+		&__logo
+			width: auto
+
+		&__nav
+			display: none
+
+	body.inner
+
+		.head
+			padding: 0 18px
+
+			&__wrap
+				padding: 18px 0
+
+	.article
+		&-detail
+
+			table 
+				&:not(:first-child)
+					margin-top: 20px
+
+		&__comments
+			.row
+				margin: 0 !important
+
+
+
+
+
+	.zavediniya
+		flex-direction: column
+		margin: 0 0 -20px
+		padding-bottom: 0
+
+		&__one
+			margin: 0 0 20px
+			transform: none !important
+			width: 100%
+
+	.z-item
+
+		&__rating
+			margin-bottom: 10px
+
+		&__title
+
+			&-cont
+				margin-bottom: 1rem
+
+	
+
+	.main__nav
+		display: none
+
+	.wrapper, .footer__wrap, .head__wrap
+		padding: 0 18px
+
+	@supports (display: grid)
+		.main-content
+			display: block
+
+	.main-content
+
+		&__item
+			margin-bottom: 20px
+
+	.copy
+
+		br
+			display: none
+
+	.footer
+		padding-bottom: 0
+		padding-bottom: constant(safe-area-inset-bottom);
+		padding-bottom: env(safe-area-inset-bottom);
+		margin-bottom: 2rem
+
+		&-top
+			display: none
+
+		&-bot
+			margin-top: 0
+			flex-direction: column
+			align-items: center
+			text-align: center
+
+		&__developer
+			margin: 1rem 0 0
+
+		&__wrap
+			border-top: none
+
+	.main-content
+
+		.item__btn
+			display: none
+
+	.main-content__item--box .item--evenet .item__desc, .main-content__item--col .item--evenet .item__desc
+		padding-right: 4rem
+
+	.events
+
+		&__one
+
+			&--big
+
+				.item
+
+					&__desc	
+
+						&-title
+							font-size: rem(18)
+
+					&__btn
+
+						.buy-btn
+							text-indent: -9999px !important		
+							width: 59px !important
+							padding-left: 0 !important
+							background-position: center !important		
+
+			.item
+
+				&__event
+					top: 1rem
+					left: auto
+					right: 18px !important
+
+				&__desc
+					padding: 1rem 6rem 1rem 18px 
+
+					&-top
+						margin-top: 10px !important
+
+				&__btn
+					bottom: 1rem
+					right: 18px
+
+					.buy-btn
+						display: block
+
+	.filter
+
+		&__range
+			margin: 2rem 0 40px
+			flex-direction: column
+
+			&-label
+				margin-right: auto
+
+			.range
+
+				&__cont
+					margin: 1rem 0 0
+					width: 100%
+
+	.city-list
+		margin: 0
+
+		&__one
+			margin: 0
+			width: 100%
+
+			&:not(:first-child)
+				margin: 18px 0 0
+
+	.report-one
+
+		&__sliders
+			width: 100%
+
+	.forms-user
+
+		.btn
+			width: 100%
+			text-align: center
+
+			&:not(:last-child)
+				margin: 0 0 10px
+
+	.form-login_container 
+
+		.form-group
+
+			&:not(:first-child)
+				margin: 10px 0 0
+
+	.multi-date
+
+		&__placeholder
+			opacity: 0
+
+	.date-input-multiple
+		opacity: 0
+
+	.article-one
+
+		&__detail
+
+	.article-anons
+
+		br
+			display: none
+
+		&__titles
+			flex-direction: column
+
+		&__text
+			margin: 3rem 0 0
+
+	.anons
+
+		&__title
+			margin: 3rem 0 0
+
+			h2
+				font-size: rem(30)
+
+		&__text
+			font-size: rem(16)
+
+	.article-one__detail
+
+		br
+			display: none
+
+		img
+			max-width: 100% !important
+
+	.comments
+
+		&__top
+			flex-direction: column
+			align-items: flex-start
+
+		&__link
+			margin: 1rem 0 0
+
+	.article__repost
+		padding: 0 18px
+
+		.share-block
+			width: 100%
+			justify-content: space-around
+			// padding: 20px 35px !important
+
+	.city-event__bot-phone:not(:first-child)
+		margin: 9px 0 0
+
+	#form-comment-block
+		padding: 0
+
+	.section-comments
+
+		.row
+			margin: 0 !important 
+
+
+		.row[id]
+			display: block !important
+			margin-top: 15px !important
+
+			&:after
+				content: ""
+				display: table
+				clear: both
+			// flex-direction: column
+			// align-items: flex-start
+
+			> .col-auto
+				float: left
+				margin-right: 20px
+
+			.user-photo .pl-4
+				margin: 0 !important
+				padding-top: 0 !important
+				width: 50px
+
+			> .col, > .col-auto
+				display: block
+				// flex: 1 1 auto
+
+			> .col, .comment-body
+				padding: 0 !important
+
+			.comment-body
+
+				.mb-2
+					min-height: 65px
+					padding-top: 5px
+
+					~	.row
+						display: block !important
+						margin: 0
+
+					b
+						display: inline-block
+						margin-bottom: 3px
+
+				.comment-like
+
+					span
+						margin: 0 8px
+						padding: 5px 8px
+						font-size: rem(14)
+
+					img
+						width: 14px
+
+						&:first-child
+							margin-bottom: 3px
+
+						&:last-child
+							margin-top: 3px
+
+				.text-muted
+					// width: 100%
+					display: block
+
+
+	.popup-map 
+
+		.fancybox-close-small
+			left: auto
+			right: 0
+			color: #000 !important
+			background: #fff
+
+	.forms-user
+
+		.h4
+			padding: 20px 4rem 20px 20px
+
+		.fancybox-close-small
+
+			svg
+				+size(55px 68px)
+
+		.form-cont
+			padding: 20px
+
+	.report-slider
+
+		&__slide
+
+			&-text
+
+				svg
+					width: 45px
+
+			.decor
+
+				&:after
+					// +size(23)
+					height: 6px !important
+					width: 36px !important
+					bottom: 37px !important
+
+				&:before
+					width: 12px !important
+					right: 24px !important
+					height: 12px !important
+					bottom: 29px !important
+
+	.slider-desc
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+
+		&__text
+			margin-bottom: 20px
+
+			&:empty
+				display: none
+
+		&__btns
+			margin: 20px 0 0 
+
+	.zavedeniya-one__bot .share-block
+		margin: 60px 0 0
+
+	#form-comment-block
+		margin-bottom: 0 !important
+
+	#section-comments
+		padding-bottom: 0 !important
+
+	.report-desc__share
+		.share-block
+			padding: 0 !important
+
+	body[class*=dir-event] 
+		.report-one 
+			.buy-btn
+				position: absolute
+				bottom: 75px
+				left: 0
+				right: inherit
+
+	.report-one .share-block
+		bottom: -15px
+
+	.share-block__soc
+		display: flex
+
+	#content
+		overflow: visible
+
+	.head
+
+		&__language
+			margin-top: 0 !important
+
+@media screen and (max-width: 660px) and (orientation: portrait)
+	.mapCity
+		max-height: 65vh !important
+
+@media screen and (max-width: 360px)
+	.forms-user
+
+		> .align-items-center
+
+			> .col-auto
+				display: none
+
+	.share-block
+		flex-direction: column
+		text-align: center
+		justify-content: space-between
+
+		&__title
+			max-width: none
+			margin: 0 0 10px
+
+			br
+				display: none
+
+@media screen and (min-width: 1000px) and (max-width: 1500px)
+	.day-night
+		transform: scale(.8) rotate(-90deg) translate(0.5px, 0.5px)
+
+@media screen and (min-width: 1000px) and (max-width: 1300px)
+	.day-night
+		transform: scale(.7) rotate(-90deg) translate(0.5px, 0.5px)
+
+@media screen and (max-width: 800px) and (orientation: portrait)
+	.finish-slide
+		justify-content: center
+		// text-align: center
+
+		&__repeat
+			position: absolute
+			margin: 0
+			right: 20px
+			bottom: 20px
+
+		&__banner
+			width: 100%
+			max-height: 100%
+			text-align: center
+
+		&__title, &__subtitle, &__place, &__center
+			display: inline-block
+
+		&__place
+			margin-bottom: 10px
+
+		&__title
+			margin-bottom: 0px
+			font-size: rem(20)
+
+		&__center
+
+			margin: 10px 0 0
+
+			&-left
+				padding: 0 !important
+				border: none
+
+			&-left, &-right
+				padding: 10px 15px
+				display: block
+
+				&:not(:last-child)
+					margin: 0 0 1rem
+
+			.share-block__title
+				max-width: none
+				margin: 0 0 10px
+				text-align: center
+
+				display: none
+
+				br
+					display: none
+
+			.share-soc
+				justify-content: center
+	
+		&__repeat
+			margin: 15px 0 0
+			text-align: center
+
+		&__title, &__center, &__subtitle, &__place
+			display: none
+
+	.repeat-btn
+		+size(40px)
+		display: inline-block
+		background-size: 50% !important

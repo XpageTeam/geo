@@ -1,0 +1,30 @@
+header.head
+	.wrapper
+		.head__wrap
+			.head__logo
+				a.logo(href="/")
+					img(src="img/logo.png")
+				.head__logo-city
+					.city-select
+						select.city-select__select
+							option(value="0" selected) Челябинск
+							option(value="1") Челябинск
+							option(value="2") Челябинск
+							option(value="3") Челябинск
+			.head__nav
+				.main-nav
+					.main-nav__search
+						a.search-link(href="#" title="Поиск")
+					nav.main-nav__menu
+						ul.main-menu
+							each title, i in ["Репортажи", "События", "Эксклюзив", "Заведения", "Музыка"]
+								li
+									if (i == 3)
+										a.main-menu__link.active(href="#")=title
+									else
+										a.main-menu__link(href="#")=title
+					.main-nav__lc
+						a.lc-link(href="#" title="Личный кабинет")
+			.head__burger
+				.burger
+					span

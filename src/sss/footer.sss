@@ -1,0 +1,75 @@
+.footer
+	background: var(--main-bgc)
+	margin: 3.25rem 0 0
+	padding: 0 2rem 3.25rem
+
+	&__wrap
+		border-top: 1px solid #333
+		margin: 0 auto
+		padding: rem(52) 0 0
+		max-width: 1200px
+
+	&-top, &-bot
+		display: flex
+		justify-content: space-between
+
+	&__logo, &__soc
+		flex: 1 1 auto
+
+	&__soc
+		text-align: right
+
+	&__menu
+		flex: 3 1 auto
+		margin: 0 rem(120)
+		display: flex
+		justify-content: space-between
+
+.dev
+	display: flex
+	align-items: center
+
+	&__text
+		font-size: 14px
+		color: #4a4a4a
+		margin-right: 10px
+
+.f-soc
+	display: inline-flex
+
+	&__link
+		size: 52px
+		display: flex
+		justify-content: center
+		align-items: center
+		background: #333
+
+		&:not(:last-child)
+			margin-right: 2px
+
+.f-menu
+
+	&__link
+		color: #4a4a4a
+		transition: color .3s ease
+		border-bottom: 1px solid transparent
+
+		&:hover, &:focus, &.active
+			color: #fff
+
+		&.active
+			border-color: #fff
+
+	li
+
+		&:not(:first-child)
+			margin: 5px 0 0
+
+.copy
+	color: #4a4a4a
+	line-height: lh(24, 16)
+	letter-spacing: -.025em
+
+.footer-bot
+	align-items: flex-end
+	margin: 37px 0 0

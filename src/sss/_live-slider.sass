@@ -1,0 +1,177 @@
+.live-slider
+
+	&__cont
+		margin: 95px 0 0
+
+		+ .main-content__cont
+			margin: 75px 0 0
+
+		&-scrollbar
+			margin: 25px 0 0
+			padding: 0 62px
+
+		.swiper
+
+			&-scrollbar
+				background: #242424
+				border-radius: 3px
+
+				&-drag
+					background: #6C6A6A
+					border-radius: inherit
+					height: 4px
+
+					&:before
+						content: ""
+						position: absolute
+						top: -5px
+						bottom: -5px
+						left: 0
+						right: 0
+
+.live
+	position: relative
+
+	&:not(&--visited)
+
+		.live-labes
+
+			&__main
+				background: #FF3055
+
+		.live
+
+			&__img
+				background: linear-gradient(131.42deg, #FF3055 4.08%, #B723B1 94.14%)
+				padding: 3px
+
+			&__titles, &__labels
+				left: 3px
+				right: 3px
+				top: 3px
+
+			&__titles
+				bottom: 3px
+
+
+	&--visited
+
+		.live-labes
+
+			&__main
+				background: #000
+
+		.live
+
+			&__titles, &__labels
+				left: 0
+				right: 0
+				top: 0
+
+			&__titles
+				bottom: 0
+
+	&__img
+		display: block
+
+		img
+			display: block
+			width: 100%
+
+	&__titles, &__labels
+		position: absolute
+		pointer-events: none
+
+	&__titles
+		background: url("../img/live-shadow.png") left bottom repeat-x
+		display: flex
+		flex-direction: column
+		justify-content: flex-end
+		padding: 10px 32px 45px
+
+		&-title
+			font-size: 20px
+			line-height: calc(24 / 20)
+			color: #fff !important
+
+		&-place
+			text-transform: uppercase
+			font-size: 12px
+			line-height: calc(14 / 12)
+			margin: 10px 0 0
+			pointer-events: all
+
+		&-date
+			margin: 10px 0 0
+			color: #fff
+			background-color: #000000
+			font-weight: 300
+			text-transform: uppercase
+			line-height: 1
+			letter-spacing: .01em
+			font-size: 1rem
+			align-self: flex-start
+			padding: 10px 17px
+
+			&:empty
+				display: none
+
+.live-labes
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding: 33px 32px 10px
+
+	&__main
+		text-transform: uppercase
+		font-size: 12px
+		line-height: 1
+		white-space: nowrap
+		padding: 9px 14px
+		border-radius: 6px
+		color: #fff !important
+
+	&__video
+		background: url("../img/ico-live-play.svg") center no-repeat, #fff
+		+size(30px)
+		border-radius: 5px
+
+@media (max-width: 1200px)
+	.live-slider
+
+		&__cont
+
+			&-scrollbar
+				padding: 0 20px
+
+@media (max-width: 1000px)
+	.live-slider
+
+		&__cont
+			margin: 55px 0 0
+
+			+ .main-content__cont
+				margin: 55px 0 0
+
+	.live
+
+		&__titles
+			padding: 10px 20px 30px
+
+			&-place
+				margin: 14px 0 0
+
+	.live-labes
+		padding: 30px 20px 10px
+
+@media (max-width: 660px)
+	.live-slider
+
+		&__cont
+			margin: 35px 0 0
+
+			+ .main-content__cont
+				margin: 35px 0 0
+
+			&-scrollbar
+				margin: 10px 0 20px

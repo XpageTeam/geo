@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Заведение
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading.head-menu
+		include inc/header.pug
+		include inc/mobileMenu.pug
+		main#content
+			.inner-content
+				.wrapper
+					.zavedeniya-one
+						.zavedeniya-one__top
+
+							.zavedeniya-one__top-info
+								.rating
+									.rating__star
+										.star
+									.rating__number 4.75
+
+								.zavedeniya-one__title Double l Craft pub
+
+								.zavedeniya-one__contacts
+									.zavedeniya-one__phone
+										a(href="tel:+73512500950") +7 (351) 250-09-50
+									address.zavediniya-one__address Елькина, 45а<br> (бизнес-центр «Випр», 1 этаж)
+									.zavedeniya-one__time
+										.time-item пн-пт 09.00 - 20.00
+										.time-item сб 09.00 - 18.00
+										.time-weekend вс выходной
+
+								a(href="#").btn Посмотреть на карте 
+
+
+
+							.zavedeniya-one__top-sliders
+								.zavedeniya-one__slider-main
+									.zavedeniya-one__slider-item
+										img(src="img/photos/zavedeniya-one-1.jpg", alt="")
+									.zavedeniya-one__slider-item
+										img(src="img/photos/zavedeniya-one-1.jpg", alt="")
+									.zavedeniya-one__slider-item
+										img(src="img/photos/zavedeniya-one-1.jpg", alt="")
+									.zavedeniya-one__slider-item
+										img(src="img/photos/zavedeniya-one-1.jpg", alt="")
+
+								.zavedeniya-one__slider-nav
+									.zavedeniya-one__slider-nav-item
+										img(src="img/photos/zavedeniya-one-2.jpg", alt="")
+									.zavedeniya-one__slider-nav-item
+										img(src="img/photos/zavedeniya-one-3.jpg", alt="")
+									.zavedeniya-one__slider-nav-item
+										img(src="img/photos/zavedeniya-one-4.jpg", alt="")
+									.zavedeniya-one__slider-nav-item
+										img(src="img/photos/zavedeniya-one-2.jpg", alt="")
+
+						.zavedeniya-one__bot
+							.zavedeniya-one__text
+								.text-page
+									p Это первый в Челябинске гастропаб ремесленного (крафтового) пива с максимально дружественной атмосферой, вкусной кухней, вполне доступными каждому ценами и огромным выбором как бутылочного, так и разливного пива со всего мира — более 300 видов.
+									p Концепция заведения заключается в развитии культуры пития качественных напитков, уютном времяпровождении без громкой музыки, а так же культурных мероприятиях по выходным дням. Здесь нет карты бара, потому что ассортимент напитков бесконечно меняется — это регулярные эксперименты и новинки микропивоварен.
+									p Ежедневно в будни с 12 до 16.30 вы можете отведать очень сытный бизнес-ланч по вполне умеренным ценам, потому как цель ребят показать, что и в самом центре Челябинска вы можете поесть вкусно и вполне доступно.
+
+							.share-block
+								.share-block__title Поделиться<br> заведением
+								.share-block__soc
+									.share-soc
+										each name in ["vk", "fb", "inst"]
+											a.share-soc__link(href="#" style="background-image: url(img/ico-black-"+name+".png")
+
+						.zavedeniya-one__slider
+							.zavedeniya-one__slider-title Ближайшие события
+							.zavedeniya-one__slider__list
+								.events__one
+									a.item(href="#")
+										.item__event 6 июня
+										figure.item__img
+											img(src="img/photos/e-4.jpg")
+										.item__desc
+											.item__desc-top
+												.item__desc-top__title Вечеринка
+												.item__desc-top__date  Золотой пляж
+											.item__desc-title Концерт группировки «Ленинград»
+											.item__btn
+												.buy-btn Купить билет
+								.events__one
+									a.item(href="#")
+										.item__event 6 июня
+										figure.item__img
+											img(src="img/photos/e-5.jpg")
+										.item__desc
+											.item__desc-top
+												.item__desc-top__title Вечеринка
+												.item__desc-top__date  Золотой пляж
+											.item__desc-title Влади, Шым, Хамиль и Змей – участники «Касты»
+											.item__btn
+												.buy-btn Купить билет
+
+								.events__one
+									a.item(href="#")
+										.item__event 6 июня
+										figure.item__img
+											img(src="img/photos/e-6.jpg")
+										.item__desc
+											.item__desc-top
+												.item__desc-top__title Вечеринка
+												.item__desc-top__date  Золотой пляж
+											.item__desc-title COMEDY CLUB - 15 лет!
+											.item__btn
+												.buy-btn Купить билет
+
+								.events__one
+									a.item(href="#")
+										.item__event 6 июня
+										figure.item__img
+											img(src="img/photos/e-4.jpg")
+										.item__desc
+											.item__desc-top
+												.item__desc-top__title Вечеринка
+												.item__desc-top__date  Золотой пляж
+											.item__desc-title Концерт группировки «Ленинград»
+											.item__btn
+												.buy-btn Купить билет
+
+
+
+						.zavedeniya-one__report
+							.zavedeniya-one__report__title Репортажи
+							#photoReport
+								<!-- Обрати внимание на этот блок во второй версии главной -->
+								photo-report
+
+						.reportaj__comments
+							.comments
+								.comments__top
+									.comments__count 4 комментария
+									.comments__link
+										a.write-comment-link(href="#") Написать комментарий
+								form(action="#")
+									.comments__list
+										.comments__one
+											.comment
+												.comment__header
+													.c-head
+														figure.c-head__img
+															img(src="img/no-photo.png")
+														.c-head__name
+															.c-head__name-text Xpage
+															.c-head__name-date-time 02.08.2018&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;08:45
+														.c-head__counter
+															span(class="comment-like")
+																img(src="img/ico-dislike.png" class="comment-like_dislike")
+																span(class="badge" data-counter="+2")
+																img(src="img/ico-like.png" class="comment-like_like")
+												.comment__body
+													.comment-text Тестовый комментарий
+												.comment__footer
+													.comment__footer-reply
+														a(href="#") Ответить
+													.comment__footer-form.visible
+														.comment-form
+															textarea.comment-form__text
+															input.comment-form__submit(type="submit" value="Отправить")
+												.comment__answer
+													.comment.comment--highlight
+														.comment__header
+															.c-head
+																figure.c-head__img
+																	img(src="img/no-photo.png")
+																.c-head__name
+																	.c-head__name-text Xpage
+																	.c-head__name-date-time 02.08.2018&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;08:45
+																.c-head__from
+																	.reply-to-link Xpage
+																.c-head__counter
+																	span(class="comment-like")
+																		img(src="img/ico-dislike.png" class="comment-like_dislike")
+																		span(class="badge" data-counter="-2")
+																		img(src="img/ico-like.png" class="comment-like_like")
+														.comment__body
+															.comment-text Тестовый комментарий
+														.comment__footer
+															.comment__footer-reply
+																a(href="#") Ответить
+															.comment__footer-form
+																.comment-form
+																	textarea.comment-form__text
+																	input.comment-form__submit(type="submit" value="Отправить")
+														.comment__answer
+															.comment
+																.comment__header
+																	.c-head
+																		figure.c-head__img
+																			img(src="img/no-photo.png")
+																		.c-head__name
+																			.c-head__name-text Xpage
+																			.c-head__name-date-time 02.08.2018&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;08:45
+																		.c-head__from
+																			.reply-to-link Xpage
+																		.c-head__counter
+																			span(class="comment-like")
+																				img(src="img/ico-dislike.png" class="comment-like_dislike")
+																				span(class="badge" data-counter="0")
+																				img(src="img/ico-like.png" class="comment-like_like")
+																.comment__body
+																	.comment-text Тестовый комментарий
+																.comment__footer
+																	.comment__footer-reply
+																		a(href="#") Ответить
+																	.comment__footer-form
+																		.comment-form
+																			textarea.comment-form__text
+																			input.comment-form__submit(type="submit" value="Отправить")
+										.comments__one
+											.comment
+												.comment__header
+													.c-head
+														figure.c-head__img
+															img(src="img/no-photo.png")
+														.c-head__name
+															.c-head__name-text Xpage
+															.c-head__name-date-time 02.08.2018&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;08:45
+														.c-head__counter
+															span(class="comment-like")
+																img(src="img/ico-dislike.png" class="comment-like_dislike")
+																span(class="badge" data-counter="+2")
+																img(src="img/ico-like.png" class="comment-like_like")
+												.comment__body
+													.comment-text Тестовый комментарий
+												.comment__footer
+													.comment__footer-reply
+														a(href="#") Ответить
+													.comment__footer-form
+														.comment-form
+															textarea.comment-form__text
+															input.comment-form__submit(type="submit" value="Отправить")
+									.comments__btn
+										a.write-comment(href="#") Написать комментарий
+
+
+								
+
+		include inc/footer.pug
+		include inc/scripts.pug

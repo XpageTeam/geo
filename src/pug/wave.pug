@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Geo - wave
+		include inc/head.pug
+		each name in ["common", "fonts", "wave"]
+			link(rel="stylesheet" href="css/"+name+".css")
+	body.inner.loading
+		include inc/wave-header.pug
+		include inc/mobileMenu.pug
+		main#content
+			<!-- тут подключается отдельный css -->
+		include inc/footer.pug
+		include inc/scripts.pug

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Сотрудники
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading.head-menu
+		include inc/header.pug
+		include inc/mobileMenu.pug
+		main#content
+			.inner-content
+				.title-block__cont
+					.wrapper
+						.title-block
+							.title-block__title
+								h1 Вакансии
+							.title-block__btn
+								button.filter-toggle
+				.face-search__cont
+					.wrapper
+						.face-search
+							.face-search__top
+								.face-search__title Найти себя или друзей на
+									br
+									| GEO PRO стало еще проще 
+								.face-search__text
+									.text-page
+										p Команда Napoleon IT создала специальный интерфейс, который автоматически выбирает все фотографии с тобой. Как? Просто сделай селфи! Модуль компьютерного зрения просмотрит все отчеты на сайте и выдаст результат. Правда удобно? Больше не нужно вспоминать и искать фотоотчеты, они сами появятся в 1 клик.
+								.face-search__form
+									form(action="#")
+										.face-form
+											.face-form__img
+												<!-- кратинка для отображения загруженной фотографии -->
+												<!-- Поставить класс loaded на картинку для её отображения -->
+												img(src="")
+												input.face-form__img-input(type="file" id="photo")
+												label.face-form__img-label(for="photo")
+													span Загрузить фото
+												<!-- для ожидания ставить класс face-loading на боди -->
+											//- .face-form__inputs
+												.face-inputs
+													.face-inputs__select(data-placeholder="Город")
+														select
+															<!-- Пустой option для работы плейсхолдера в селектайзе -->
+															option(value="") 
+															option(value="0") Челябинск
+															option(value="1") Челябинск
+															option(value="2") Челябинск
+															option(value="3") Челябинск
+															option(value="4") Челябинск
+															option(value="5") Челябинск
+													.face-inputs__select(data-placeholder="Год")
+														select
+															<!-- Пустой option для работы плейсхолдера в селектайзе -->
+															option(value="") 
+															option(value="0") 2019
+															option(value="1") 2019
+															option(value="2") 2019
+															option(value="3") 2019
+															option(value="4") 2019
+															option(value="5") 2019
+													.face-inputs__select(data-placeholder="Заведение")
+														select
+															<!-- Пустой option для работы плейсхолдера в селектайзе -->
+															option(value="") 
+															option(value="0") United
+															option(value="1") United
+															option(value="2") United
+															option(value="3") United
+															option(value="4") United
+															option(value="5") United
+													.face-inputs__select(data-placeholder="Мероприятие")
+														select
+															<!-- Пустой option для работы плейсхолдера в селектайзе -->
+															option(value="") 
+															option(value="0") Репортаж
+															option(value="1") Репортаж
+															option(value="2") Репортаж
+															option(value="3") Репортаж
+															option(value="4") Репортаж
+															option(value="5") Репортаж
+													.face-inputs__submit
+														input.btn(type="submit" value="Найти")
+							.face-search__results
+								.face-search__results-title 
+									.fsr-title
+										.fsr-title__year 2017 год
+										.fsr-title__btn
+											a.default-btn.fancybox(href="#sale") Купи весь год за 588 руб.
+								.face-search__results-list
+									.fsr-list
+										.fsr-list__title Январь
+										.fsr-list__list
+											.face-results
+												.face-results__item
+													.face-result
+														input.face-result__input(type="checkbox" id="face-result-0" checked="")
+														label.face-result__label(for="face-result-0")
+															img(src="img/photos/face-photo-0.jpg")
+												.face-results__item
+													.face-result
+														input.face-result__input(type="checkbox" id="face-result-1" checked="")
+														label.face-result__label(for="face-result-1")
+															img(src="img/photos/face-photo-1.jpg")
+												.face-results__item
+													.face-result
+														input.face-result__input(type="checkbox" id="face-result-2" checked="")
+														label.face-result__label(for="face-result-2")
+															img(src="img/photos/face-photo-2.jpg")
+												.face-results__item.face-results__item--vert
+													.face-result
+														input.face-result__input(type="checkbox" id="face-result-3")
+														label.face-result__label(for="face-result-3")
+															img(src="img/photos/face-photo-3.jpg")
+												.face-results__item
+													.face-result
+														input.face-result__input(type="checkbox" id="face-result-4")
+														label.face-result__label(for="face-result-4")
+															img(src="img/photos/face-photo-4.jpg")
+												.face-results__item.face-results__item--vert
+													.face-result
+														input.face-result__input(type="checkbox" id="face-result-6")
+														label.face-result__label(for="face-result-6")
+															img(src="img/photos/face-photo-6.jpg")
+												.face-results__item
+													.face-result
+														input.face-result__input(type="checkbox" id="face-result-5")
+														label.face-result__label(for="face-result-5")
+															img(src="img/photos/face-photo-5.jpg")
+								.face-search__results-btn
+									a.default-btn(href="#") Открыть бесплатно 3шт.
+							.face-search__results
+								.face-search__results-title 
+									.fsr-title
+										.fsr-title__year 2016 год
+										.fsr-title__btn
+											a.default-btn(href="#") Купи весь год за 588 руб.
+								.face-search__results-list
+									.fsr-list
+										.fsr-list__title Январь
+										.fsr-list__list
+											.face-results
+												.face-results__item
+													.face-result.face-result--blured
+														input.face-result__input(type="checkbox" id="face-result-01")
+														label.face-result__label(for="face-result-01")
+															img(src="img/photos/face-photo-0.jpg")
+												.face-results__item
+													.face-result.face-result--blured
+														input.face-result__input(type="checkbox" id="face-result-11")
+														label.face-result__label(for="face-result-11")
+															img(src="img/photos/face-photo-1.jpg")
+												.face-results__item
+													.face-result.face-result--blured
+														input.face-result__input(type="checkbox" id="face-result-21")
+														label.face-result__label(for="face-result-21")
+															img(src="img/photos/face-photo-2.jpg")
+							.face-search__slider
+								.face-slider
+									.swiper-wrapper
+										.swiper-slide
+											figure.face-slider__img
+												img(src="img/photos/face-photo-small-0.jpg")
+												a.face-slider__remove(href="#")
+													<svg viewBox="0 0 40 40"><path d="M10,10 L30,30 M30,10 L10,30"></path></svg>
+										.swiper-slide
+											figure.face-slider__img
+												img(src="img/photos/face-photo-small-1.jpg")
+												a.face-slider__remove(href="#")
+													<svg viewBox="0 0 40 40"><path d="M10,10 L30,30 M30,10 L10,30"></path></svg>
+										.swiper-slide
+											figure.face-slider__img
+												img(src="img/photos/face-photo-small-2.jpg")
+												a.face-slider__remove(href="#")
+													<svg viewBox="0 0 40 40"><path d="M10,10 L30,30 M30,10 L10,30"></path></svg>
+										.swiper-slide
+											figure.face-slider__img
+												img(src="img/photos/face-photo-3.jpg")
+												a.face-slider__remove(href="#")
+													<svg viewBox="0 0 40 40"><path d="M10,10 L30,30 M30,10 L10,30"></path></svg>
+										.swiper-slide
+											.face-slider__placeholder
+										.swiper-slide
+											.face-slider__placeholder
+							.face-search__itog
+								.fs-itog
+									.fs-itog__left
+										.fs-itog__left-text Вы выбрали 1 год за 588 руб. и 3 фотографии за 99 руб.
+										.fs-itog__left-btn
+											a.default-btn.fancybox(href="#") Купить
+										.fs-itog__left-itog
+											b Итого: 687 руб.
+									.fs-itog__right
+										a.default-btn.fancybox(href="#sale-f" data-fancybox) Как получить скидку до 50%
+		.sales-popup.sales-popup--first#sale-f
+			.sales-popup__title Действует скидка при покупке
+			.sales-popup__content
+				//- .sales-table
+					.sales-table__column
+						.sales-table__item 5 фото - 10%
+						.sales-table__item 10 фото - 15%
+						.sales-table__item 15 фото - 20%
+						.sales-table__item 20 фото - 25%
+						.sales-table__item 25 фото - 30%
+					.sales-table__column
+						.sales-table__item 30 фото - 35%
+						.sales-table__item 35 фото - 40%
+						.sales-table__item 40 фото - 45%
+						.sales-table__item 45 фото - 50%
+				.sales-list
+					- for (let i = 10; i <= 50; i += 5)
+						.sales-list__item
+							.sales-list__item-perc=i 
+								span %
+							.sales-list__item-text="при "+(i - 5)+" фото"
+		script
+			| document.addEventListener("DOMContentLoaded", function(){
+			| 	$.fancybox.open({src: "#message"});	
+			| });
+		.fs-message.sales-popup#message
+			.sales-popup__content
+				.sales-popup__content-text Вам бесплатно доступны 3 фотографии!
+				.sales-popup__content-btn
+					a.default-btn(href="#" onclick="$.fancybox.close(); return false;") ОК
+		include inc/footer.pug
+		include inc/scripts.pug

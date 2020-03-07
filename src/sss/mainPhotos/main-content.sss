@@ -1,0 +1,80 @@
+@import "./main-photos-item.sss"
+
+.main-content
+	display: grid
+	grid-gap: rem(32) rem(30)
+	grid-template-columns: repeat(3, 1fr)
+
+	&__sort
+		position: fixed
+		left: 0
+		top: 0
+		height: 100%
+		min-width: 300px
+		max-width: 420px
+		border: 1px solid #fff
+		z-index: 20
+
+	&__btn
+		text-align: center
+		margin: rem(58) 0 0
+
+	&__banner
+		margin: 3.25rem 0 0
+
+	&__cont
+		position: relative
+		z-index: 5
+		margin: rem(113) 0 0
+
+	&__item
+		display: flex
+		flex-direction: column
+		margin-bottom: 55px
+		width: 30%
+		overflow: hidden
+		opacity: 0
+		margin-bottom: 0
+		width: auto
+
+		&.animated
+			animation: fadeInUp 1s forwards !important
+
+		&-img
+			display: flex
+			flex-direction: column
+
+		&--row
+			grid-column: span 2
+
+			.item
+
+				&--evenet
+
+					.item
+
+						&__desc
+							padding-right: 15rem
+
+		&--box, &--col
+
+			.item
+
+				&--evenet
+
+					.item
+
+						&__desc
+							padding-right: 7rem
+
+		&--subscribe
+			width: 30%
+
+		&--col
+			grid-row: span 2
+
+		&.highlight
+			
+			.canvas-shadow
+				opacity: 1
+				transform: scale3d(1.1, 1.1, 1.1)

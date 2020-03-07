@@ -1,0 +1,44 @@
+aside.mobile-menu
+	.mobile-menu__city
+		.city-select
+			select.city-select__select
+				option(value="0" selected) Челябинск
+				option(value="1") Челябинск
+				option(value="2") Челябинск
+				option(value="3") Челябинск
+	.mobile-menu__search
+		form(action="#")
+			.mobile-search
+				input.mobile-search__input(type="text" placeholder="Поиск")
+				input.mobile-search__submit(type="submit")
+	ul.mobile-menu__list
+		li.mobile-menu__el
+			a.mobile-menu__link.active(href="#") Пункт 1
+		li.mobile-menu__el
+			a.mobile-menu__link(href="#") Пункт 2
+		li.mobile-menu__el
+			a.mobile-menu__link(href="#") Пункт 3
+		li.mobile-menu__el
+			span.mobile-menu__sub-title Заголовок подменю
+			nav.mobile-menu__submenu
+				ul.submenu
+					li.mobile-menu__el
+						a.mobile-menu__link(href="#") Пункт 1
+					li.mobile-menu__el
+						a.mobile-menu__link(href="#") Пункт 2
+					li.mobile-menu__el
+						a.mobile-menu__link(href="#") Пункт 3
+		li.mobile-menu__el
+			a.mobile-menu__link(href="#") Пункт 4
+	.mobile-menu__personal
+		.mobile-pers
+			.mobile-pers__login
+				a(href="#") Вход
+			.mobile-pers__reg
+				a(href="#") Регистрация
+	.mobile-menu__footer
+		.mobile-menu__soc
+			.f-soc
+				each name in ["vk", "inst", "fb"]
+					a.f-soc__link(href="#")
+						img(src="img/ico-"+name+".png" srcset="img/ico-"+name+"2x.png 2x")

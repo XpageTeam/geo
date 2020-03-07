@@ -1,0 +1,30 @@
+body.adblock-detected:not(.js__adblock-disclemer-hidden)
+
+	.adblock-message__cont
+		transform: translate3d(0, 100%, 0)
+		opacity: 1
+		transition-duration: .1s
+
+
+.adblock-message
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding: 15px 0
+	color: #000
+
+	&__btn
+		border: none
+		color: #fff
+		background: #333
+		padding: 12px
+
+	&__cont
+		position: fixed
+		bottom: 100%
+		z-index: 16
+		left: 0
+		right: 0
+		transition: transform .3s ease, opacity .3s ease
+		background: #b3c0e2
+		opacity: 0

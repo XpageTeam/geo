@@ -1,0 +1,72 @@
+@import "../css/common.css"
+@import "swiper/dist/css/swiper.css"
+@import "../css/selectize.css"
+@import "../css/animate.css"
+
+@import "_vars.sss"
+
+
+@import "_base.sss"
+@import "_header.sss"
+@import "adblock-detector.sss"
+
+
+@import "main-slider.sss"
+@import "mainPhotos/main-content.sss"
+
+
+@import "custom-select.sss"
+
+
+
+
+
+@import "news-block.sss"
+
+@import "footer.sss"
+
+.wrapper, #mskBan, .stream
+	max-width: var(--base-width)
+	padding: 0 2rem
+	margin: 0 auto
+	box-sizing: content-box
+
+#mskBan, .stream
+	position: relative
+	// padding: 35% 0 0
+	width: calc(100% - 4rem)
+	max-width: calc(1200px - 4rem)
+	margin-top: 130px
+	height: 675px
+
+	+ .main-content__cont
+		margin-top: 40px
+
+	iframe
+		position: absolute
+		top: 0
+		left: 0
+		+size(100%)
+
+.stream
+
+	&_header
+		margin: 0
+		position: absolute
+		top: -50px
+		left: 35px
+		padding-left: 30px
+
+		&:before
+			content: ''
+			display: block
+			width: 49px
+			height: 49px
+			position: absolute
+			left: -33px
+			top: -16px
+			background: url(../img/live.png) no-repeat
+			background-size: 100% auto
+
+*[v-cloak]
+	display: none

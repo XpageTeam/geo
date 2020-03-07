@@ -1,0 +1,612 @@
+.offer-restaurant
+	display: flex
+	align-items: center
+
+	// *
+	// 	transition-delay: 2s
+
+	&__img
+		position: relative
+		flex: none
+		display: flex
+		justify-content: center
+		align-items: center
+		max-width: 784px
+		max-height: 784px
+		width: 100%
+		height: 100%
+
+		img
+			display: block
+			z-index: 10
+			opacity: 0 !important
+			transition: opacity 1s ease
+
+	&__title
+		opacity: 0
+		transition: opacity 1s ease, transform 1s ease
+
+	&__text
+		opacity: 0
+		transition: opacity 1s ease, transform 1s ease
+
+
+	&__info
+
+
+		.btn
+			margin-top: 65px
+			background: #323232
+			color: #fff
+			border: 0 !important
+			opacity: 0
+			transition: opacity 1s ease, transform 1s ease
+
+	&__file
+		display: flex
+		align-items: center
+		margin-top: 100px
+		opacity: 0
+		transition: opacity 1s ease, transform 1s ease
+
+		a
+			position: relative
+			display: flex
+			align-items: center
+			border-bottom-color: transparent
+
+			// &:hover
+			// 	border-bottom-color: currentColor
+
+
+
+			&:before
+				content: ''
+				display: inline-block
+				background-image: url('../img/ico-pdf.svg')
+				background-repeat: no-repeat
+				background-position: center
+				background-size: contain
+				margin-right: 20px
+				+size(24px)
+
+
+
+.platform-features
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+	&__slider
+		width: 712px
+
+		.swiper-slide
+			transform: translate3d(100%,0,0)
+			transition: transform .4s ease, opacity .4s ease
+
+			figure
+				transition: transform .4s ease, opacity .4s ease
+
+
+			&:not(.swiper-slide-active)
+				transform: translate3d(100%,0,0)
+
+				figure
+					transform: scale(.8)
+					opacity: .4
+
+		.swiper-button
+			+size(48px)
+			border-radius: 50%
+			background: #323232
+
+			&:before
+				content: ''
+				position: absolute
+				display: block
+				top: calc(50% - 3px)
+				left: calc(50% - 3px)
+				+size(6px)
+				border-right: 1px solid #fff
+				border-top: 1px solid #fff
+				transform: rotate(45deg)
+
+			&-prev
+				transform: rotate(180deg)
+				left: calc(32% - 24px)
+
+			&-next
+				right: calc(32% - 24px)
+
+
+
+.platform-price
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+	&__bot
+		position: relative
+		margin-top: -80px
+
+	&__list
+		display: flex
+		justify-content: space-between
+		// align-items: flex-start
+
+	&__item
+		border: 1px solid rgba(255, 255, 255, 0.2)
+		border-radius: 10px
+		display: flex
+		flex-direction: column
+		padding: 20px 40px
+
+
+		&:not(:first-child)
+			margin-left: 32px
+
+		&:nth-child(2)
+			background: #B9D3B4
+			flex: 1 1 auto
+			flex-direction: row
+			align-items: center
+
+		&:nth-child(3)
+			background: #323232
+			border: 0
+
+		&-info
+			max-width: 250px
+			margin-right: auto
+
+		&-subtitle
+			color: rgba(0, 0, 0, 0.3)
+			font-size: rem(14)
+			margin-top: 5px
+
+		&-price
+			white-space: nowrap
+			font-size: rem(24)
+
+
+
+
+	&-label
+		font-size: rem(16)
+		color: rgba(255, 255, 255, 0.3)
+		margin-bottom: 10px
+
+	&-text
+		font-size: rem(24)
+		color: #fff
+		white-space: nowrap
+
+
+
+
+.dir-it
+	.form-cont, .h4
+		background: #323232
+
+	.h4
+		padding: 60px 70px 0 70px
+		font-size: rem(32)
+
+	.form-cont
+		padding: 60px 70px
+
+	.notetext
+		display: block
+		margin-bottom: 30px
+
+	.form-wrap
+		display: flex
+		flex-wrap: wrap
+		margin: 0 0 -60px -60px
+
+
+		.form-group
+			display: flex
+			flex-direction: column-reverse
+			width: calc((100% - 60px * 3) / 3)
+			margin: 0 0 60px 60px !important
+
+		input
+			&[required]
+				~ label
+					&:after
+						content: '*'
+						display: inline-block
+						margin-left: 5px
+
+				+ label:after
+					color: red
+
+
+		
+		.forms-wrap--bot
+			max-width: 410px
+			margin-bottom: 60px
+			margin-top: auto
+			margin-left: 40px
+
+		.form-btns
+			margin-bottom: 60px
+			margin-top: auto
+			margin-left: 60px
+
+	.form-control__label
+		color: rgba(255, 255, 255, 0.3)
+
+.circle-animate
+	border: 1px solid rgba(255, 255, 255, 0.06)
+	border-radius: 50%
+	position: absolute
+	top: 0
+	left: 0
+	max-width: 784px
+	max-height: 784px
+	width: 100%
+	height: 100%
+	display: flex
+	justify-content: center
+	align-items: center
+	animation: pulse 2s ease infinite
+
+	span
+		max-width: 505px
+		max-height: 505px
+		+size(100%)
+		display: block
+		border-radius: 50%
+		background: rgba(7, 7, 7, 1)
+		display: flex
+		justify-content: center
+		align-items: center
+		border: 1px solid rgba(255, 255, 255, 0.1)
+
+		&:before
+			content: ''
+			display: block
+			max-width: 350px
+			max-height: 350px
+			+size(100%)
+			background: rgba(23, 23, 23, 1)
+			display: flex
+			justify-content: center
+			align-items: center
+			border-radius: 50%
+			border: 1px solid rgba(255, 255, 255, 0.1)
+
+
+@keyframes pulse
+	0%
+		transform: scale3d(1, 1, 1)
+		opacity: .3
+
+	50%
+		transform: scale3d(1.15, 1.15, 1.15)
+		opacity: .8
+
+	100%
+		transform: scale3d(1, 1, 1)
+		opacity: .3
+   
+
+.gastreet
+	&-animat
+		.offer-restaurant
+			&__title
+				opacity: 1
+
+			&__text
+				opacity: 1
+
+			&__img
+				img
+					opacity: 1 !important
+
+			&__info
+				.btn
+					opacity: 1
+
+			&__file
+				opacity: 1
+
+
+	&-animated
+		transition: opacity .5s ease, transform .5s ease
+		
+
+
+
+		&.animated
+			animation: fadeInUp 1s forwards !important
+			visibility: visible !important
+
+
+	&-cont
+		display: flex
+		align-items: center
+		// min-height: calc(100vh - 100px)
+		padding: 150px 0
+
+		.wrapper
+			width: 100%
+
+		// &:not(:first-child)
+		// 	margin-top:
+
+		&.platform-price-cont
+			padding-bottom: 100px
+
+	&__info
+		margin-right: 20px
+
+		&-title
+			font-size: rem(32)
+			margin-bottom: 20px
+
+		&-subtitle
+			font-size: rem(16)
+
+
+		&-text
+			font-size: rem(16)
+			margin-top: 45px
+			line-height: 23px
+
+			ul
+				li
+					position: relative
+					padding-left: 55px
+
+					&:not(:first-child)
+						margin-top: 10px
+
+					&:before
+						content: ''
+						display: block
+						position: absolute
+						left: 0
+						top: 9px
+						width: 17px
+						height: 1px
+						background: rgba(196, 196, 196, 0.3)
+
+
+@media screen and (max-width: 1600px)
+	
+	.gastreet
+		&-cont
+			padding: 100px 0
+
+@media screen and (max-width: 1500px)
+	
+	.gastreet
+		&-cont
+			padding: 70px 0
+
+@media screen and (max-width: 1400px)
+	
+	.gastreet
+		&-cont
+			padding: 50px 0
+
+@media screen and (max-width: 1200px)
+	
+	.offer-restaurant__img
+		max-width: 50%
+
+	.platform-price
+		&-cont
+			margin-bottom: 60px
+
+		&__list
+			flex-wrap: wrap
+
+		&__item
+			flex: 1 1 auto
+
+			&:nth-child(2)
+				order: 1
+				margin: 20px 0 0 0
+
+
+@media screen and (max-width: 1000px)
+
+	.dir-it
+		.wrapper
+			box-sizing: border-box
+
+		.form-wrap 
+			margin: 0 0 -30px -30px
+
+			.form-group
+				width: calc((100% - 30px * 2) / 2)
+				margin: 0 0 30px 30px !important
+
+			.form-btns
+				margin-left: 30px
+
+
+			.form-control
+				height: 50px
+
+		.h4
+			padding: 30px 30px 0 30px
+
+		.form-cont
+			padding: 30px
+
+
+	
+	.gastreet__info-text
+		margin-top: 20px
+
+	.offer-restaurant
+		&__info 
+			.btn
+				margin-top: 35px
+
+		&__file
+			margin-top: 45px
+
+	.platform-features
+		flex-direction: column
+		align-items: flex-start
+
+		&-cont
+			margin-bottom: 30px
+
+		&__info
+			margin-bottom: 30px
+
+		&__slider
+			width: 100%
+
+		&__title
+			br
+				display: none
+
+	.platform-price
+		&__bot
+			margin-top: 0
+
+	.gastreet-cont.platform-price-cont
+		padding-bottom: 50px
+
+@media screen and (max-width: 667px)
+	
+	
+	.platform-price-cont
+		margin-bottom: 20px
+
+
+	.gastreet-cont.platform-price-cont
+		padding-bottom: 20px
+
+	.platform-features
+
+		&__slider
+
+			.swiper-slide
+				transform: none
+				transition: transform .4s ease, opacity .4s ease
+
+				figure
+					display: flex
+					justify-content: center
+
+					transition: transform .4s ease, opacity .4s ease
+
+
+				&:not(.swiper-slide-active)
+					transform: none
+
+					figure
+						transform: scale(1)
+						opacity: 1
+
+			.swiper-button
+
+				&-prev
+					left: 10px
+
+				&-next
+					right: 10px
+
+
+	.gastreet
+		&-cont
+			padding: 20px 0
+
+	.circle-animate
+		+size(320px)
+		top: calc(50% - 160px)
+		left: calc(50% - 160px)
+		// transform: translate3d(-50%,-50%,0)
+
+		span
+			width: 280px
+			height: 280px
+
+			&:before
+				+size(80%)
+
+
+
+
+
+	.offer-restaurant
+		flex-direction: column-reverse
+
+		&__img
+			max-width: 100%
+
+	.gastreet
+		&-cont
+			&:not(:first-child)
+				// margin-top: 0
+
+		&__info
+			margin-right: 0
+
+			&-title
+				font-size: rem(25)
+
+	.platform-features__slider .swiper-button
+		height: 38px
+		width: 38px
+
+	.platform-price
+		flex-direction: column
+
+		&__img
+			margin-top: 30px
+
+		&__item
+			margin-left: 0
+
+			&:nth-child(2)
+				order: 0
+
+			&:not(:first-child)
+				margin: 20px 0 0 0
+
+	.gastreet-cont
+		min-height: 100%
+
+	.dir-it
+		.h4
+			padding: 20px 15px 0 15px
+
+		.form-cont
+			padding: 15px
+
+		.form-wrap
+
+			.form-btns
+				margin-bottom: 25px
+
+			.form-group
+				width: 100%
+				margin: 0 0 30px 30px !important
+
+
+	.platform-price__item
+		flex-direction: column !important
+		align-items: flex-start !important
+
+	.platform-price__item
+			
+		&-price
+			margin-top: 10px
+
+
+
+	.dir-it .h4
+		font-size: 1.6rem
+
+
+

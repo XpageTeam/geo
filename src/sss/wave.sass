@@ -1,0 +1,95 @@
+@import "bourbon"
+
+$output-bourbon-deprecation-warnings: false;
+@import "vars"
+@import "functions"
+@import "wave-footer"
+// @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&subset=cyrillic')
+
+*::selection
+	color: #fff
+	background: #969696
+
+input, a, button, textarea, select
+	outline: none
+
+input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]), textarea, select, input[type="submit"], button
+	-webkit-appearance: none
+	appearance: none
+	border-radius: 0
+
+
+*::-webkit-input-placeholder
+	color: #4a4a4a
+	opacity: 1
+
+*:-moz-placeholder
+	color: #4a4a4a
+	opacity: 1
+
+*::-moz-placeholder
+	color: #4a4a4a
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #4a4a4a
+	opacity: 1
+
+#{$all-text-inputs}
+
+	&:not(.comment-form__text):not(.search-form__input)
+	
+		&::-webkit-input-placeholder
+			color: #fff
+			opacity: 1
+
+		&:-moz-placeholder
+			color: #fff
+			opacity: 1
+
+		&::-moz-placeholder
+			color: #fff
+			opacity: 1
+
+		&:-ms-input-placeholder
+			color: #fff
+			opacity: 1
+
+*, *:after, *:before
+	box-sizing: border-box
+
+address
+	font-weight: inherit
+
+body
+	min-width: 320px
+	line-height: 1.2
+	font-family: "Formular", Arial, sans-serif
+	font-weight: 400
+	font-size: 16px
+	background: #479BD6
+	color: #fff
+	position: relative
+	min-height: 100vh
+	display: flex
+	flex-direction: column
+	overflow-x: hidden
+	overflow-y: scroll
+
+.head, .footer
+	flex: none
+
+#content
+	flex: 1 1 auto
+
+.wrapper
+	max-width: 1208px
+	box-sizing: content-box
+	padding: 0 20px
+	margin: 0 auto
+
+img, svg
+	max-width: 100%
+
+@import "wave-head"
+

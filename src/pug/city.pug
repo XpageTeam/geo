@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Город
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug
+		include inc/mobileMenu.pug
+		main#content
+			.right-block
+				.right-block__draggable
+				.right-block__placeholder Здесь что-то будет
+			.main-slider__cont
+				.main-slider
+					- for (let i = 0; i < 3; i++)
+						.main-slider__slide
+							figure.main-slider__slide-img
+								picture
+									<!-- Большая картинка -->
+									source(data-main="" media="screen and (orientation: landscape)" srcset="img/photos/main-banner-img.jpg")
+										
+									<!-- Картинка для телефонов -->
+									source(media="screen and (orientation: portrait)" srcset="img/photos/adaptive-banner.jpg")
+									img
+							.main-slider__slide-desc
+								.wrapper
+									.main-slider__slide-text «Каждый на концерте хотел бы <br /> заняться со мной сексом»
+									.main-slider__slide-title Дельфин
+				.main-slider__arrows
+					//- .wrapper
+			.main__nav
+				.wrapper
+					.main-nav
+						.main-nav__search
+							a.search-link(href="#" title="Поиск")
+						nav.main-nav__menu
+							ul.main-menu
+								each title in ["Репортажи", "События", "Эксклюзив", "город", "Музыка"]
+									li
+										a.main-menu__link(href="#")=title
+						.main-nav__lc
+							a.lc-link(href="#" title="Личный кабинет")
+			.inner-content
+				.filter__cont
+					.wrapper
+						.filter
+							form(action="#")
+								.filter__inputs
+									.filter__select(placeholder="Категория")
+										label.filter__select-label Категория
+										select(multiple="").filter-select
+											option(value="1") Категория 1
+											option(value="2") Категория 2
+											option(value="3") Категория 3
+											option(value="4") Категория 5
+											option(value="5") Категория 4
+											option(value="6") Категория 6
+									.filter__range
+										label.filter__range-label Рейтинг
+										.range__cont
+											i.range(data-min="1" data-max="4.5" data-step="0.5")
+											input.range__min(type="hidden" value="1")
+											input.range__max(type="hidden" value="3")
+									.filter__submit 
+										.z-item__arrow
+											input.filter-submit(type="submit" value="Применить")
+				.wrapper
+					.city__cont
+						.city
+							.city__map
+								.city__map-toggle
+									span Смотреть на карте
+								.city-map.city-map--hidden
+									<!-- img/ico-loc-active.png - большой маркер, img/ico-loc.png - маленький маркер -->
+									img(src="img/photos/city-map.jpg")
+							.city__list
+								.city-list
+									each event, i in [{title: "Solaris sessions", address: " Молодогвардейцев, 31"}, {title: "Barbaresco ", address: " Елькина, 45а (бизнес-центр «Випр», 1 этаж)"}, {title: "Bar Boris Bar", address: " Агалакова, 21"}, {title: "Double Craft pub", address: " Елькина, 45а (бизнес-центр «Випр», 1 этаж)"}, {title: "Гранд Отель Видгоф", address: " Молодогвардейцев, 31"}, {title: "Napoleonit Russia", address: " Елькина, 45а (бизнес-центр «Випр», 1 этаж)"}, {title: "Bar Boris Bar", address: " Агалакова, 21"}, {title: "Double Craft pub", address: " Елькина, 45а (бизнес-центр «Випр», 1 этаж)"}, ]
+										.city-list__one
+											a.city-event(href="#")
+												figure.city-event__img
+													img(src="img/photos/city-"+i+".jpg")
+												.city-event__desc
+													.city-event__title=event.title
+													.city-event__desc-bot
+														.city-event__bot
+															.city-event__bot-left
+																.city-event__bot-adress=event.address
+																.city-event__bot-phone
+																	span +7 (351) 250-09-50
+															.city-event__bot-right
+																.city-event__rating 3.15
+			.main-content__cont
+				.wrapper
+					.main-content__banner
+						a.main-banner(href="#")
+							picture
+								source(media="screen and (min-width: 1000px)" srcset="img/photos/main-banner.jpg" data-main="")
+								source(media="screen and (max-width: 1000px) and (min-width: 660px)" srcset="img/photos/main-banner-tab.jpg")
+								source(media="screen and (max-width: 660px)" srcset="img/photos/main-banner-mobile.jpg")
+								img
+		include inc/footer.pug
+		include inc/scripts.pug

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Главная
+		include inc/head.pug
+		include inc/css.pug
+	body.main.loading
+		include inc/header.pug
+		include inc/mobileMenu.pug
+		main#content
+			.right-block
+			.main-slider__cont
+				.main-slider
+					.swiper-wrapper
+						.swiper-slide
+							.main-slider__slide
+								.main-slider__slide-video
+									<!-- Тут два видео, для компьютеров и телефонов. Для каждого видео свой постер. -->
+									video(data-desktop-src="files/video.mp4" playsinline data-mobile-src="files/video.mp4" data-desktop-poster="img/video-poster.jpg" data-mobile-poster="img/video-poster.jpg" muted="" preload="metadata")
+								a.main-slider__slide-desc(href='#')
+									.wrapper
+										.main-slider__slide-text «Каждый на концерте хотел бы <br /> заняться со мной сексом»
+										.main-slider__slide-title Дельфин
+						- for (let i = 0; i < 3; i++)
+							.swiper-slide
+								.main-slider__slide
+									figure.main-slider__slide-img
+										picture
+											<!-- Большая картинка -->
+											source(data-main="" media="screen and (orientation: landscape)" srcset="img/photos/main-banner-img.jpg")
+												
+											<!-- Картинка для телефонов -->
+											source(media="screen and (orientation: portrait)" srcset="img/photos/adaptive-banner.jpg")
+											img
+										.slide-decor(style="color: #f8f6f5")
+									.main-slider__slide-desc
+										.wrapper
+											.main-slider__slide-text «Каждый на концерте хотел бы <br /> заняться со мной сексом»
+											.main-slider__slide-title Дельфин
+					.swiper-pagination
+					.main-slider__arrows
+						.swiper-button.swiper-button-prev
+						.swiper-button.swiper-button-next
+			.main__nav
+				.wrapper
+					.main-nav
+						.main-nav__search
+							a.search-link(href="#" title="Поиск")
+							.search-form
+								form(action="#")
+									.search-form__wrap
+										input.search-form__input(type="text" placeholder="Поиск")
+										.z-item__arrow
+											input.search-form__submit.filter-submit(type="submit")
+						nav.main-nav__menu
+							ul.main-menu
+								each title in ["Репортажи", "События", "Эксклюзив", "город", "Музыка"]
+									li(style="color: #fff")
+										a.main-menu__link(href="#")=title
+						.main-nav__lc
+							a.lc-link(href="#" title="Личный кабинет")
+			.main-content__cont
+				.wrapper
+					#photoReport
+						<!-- Обрати внимание на этот блок во второй версии главной -->
+						photo-report
+					.main-content__banner
+						a.main-banner(href="#")
+							picture
+								source(media="screen and (min-width: 1000px)" srcset="img/photos/main-banner.jpg" data-main="")
+								source(media="screen and (max-width: 1000px) and (min-width: 660px)" srcset="img/photos/main-banner-tab.jpg")
+								source(media="screen and (max-width: 660px)" srcset="img/photos/main-banner-mobile.jpg")
+								img
+		include inc/footer.pug
+		include inc/scripts.pug

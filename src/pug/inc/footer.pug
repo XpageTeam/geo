@@ -1,0 +1,28 @@
+footer.footer
+	.footer__wrap
+		.footer-top
+			.footer__logo
+				a.f-logo(href="#")
+					img(src="img/f-logo.png")
+			nav.footer__menu
+				each menu in [["Фотоотчеты", "События", "Статьи", "Заведения", ], ["Сообщества", "Федеральная администрация", "Администрация Челябинск", "Пользовательское соглашение", "Вакансии", "Рекламодателям", ], ["Помощь", "Сотрудники", "Федеральная администрация", "Пользовательское соглашение", "Реклама ", "Вакансии", ], ]
+					ul.f-menu
+						each link in menu
+							li
+								a.f-menu__link(href="#")=link
+			.footer__soc
+				.f-soc
+					each name in ["vk", "inst", "fb"]
+						a.f-soc__link(href="#")
+							img(src="img/ico-"+name+".png" srcset="img/ico-"+name+"2x.png 2x")
+		.footer-bot
+			.footer__copy
+				.copy © GeoPro, <br />2002-2018, все права защищены
+			.footer__developer
+				a.dev(href="#" target="_blank")
+					img.dev__img(src="img/developer.png")
+#write-form(style="max-width: 650px; display: none")
+	//- include photo-form.html
+	include write-form.html
+#offer-event.forms-user(style="max-width: 650px; display: none")
+	include add-event-form.html

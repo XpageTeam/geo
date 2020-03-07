@@ -1,0 +1,588 @@
+.dir-promo-blog-camp
+	background: linear-gradient(0deg, rgba(236,233,233,1) 0%, rgba(255,255,255,1) 50%)
+
+	footer
+		background-color: #ECE9E9 !important
+
+	.city-select
+		.item
+			color: #000
+
+
+.checkbox--list
+	display: flex
+	flex-wrap: wrap
+	margin: 30px 0 -30px -30px
+
+	br, input[type="checkbox"]
+		display: none
+
+	input[type="checkbox"]:checked + label:after
+		opacity: 1	
+	
+	label
+		width: calc((100% - 30px * 4) / 4)
+		margin: 0 0 30px 30px
+		position: relative
+		cursor: pointer
+		padding-left: 30px
+		display: flex
+		align-items: center
+		user-select: none
+
+		&:before, &:after
+			content: ""
+			position: absolute
+
+		&:before
+			width: 16px
+			height: 16px
+			background: #ffffff
+			top: calc(50% - 8px)
+			left: 0
+
+		&:after
+			width: 6px
+			height: 11px
+			left: 5px
+			top: calc(50% - 7px)
+			border-bottom: 2px solid var(--form-background-color)
+			border-right: 2px solid var(--form-background-color)
+			transform: rotateZ(45deg)
+			transition: opacity .3s ease
+			opacity: 0
+
+@media (max-width: 1200px) and (min-width: 1000px)
+	.checkbox--list
+		
+		label
+			width: calc((100% - 30px * 3) / 3)
+
+@media (max-width: 1000px) and (min-width: 660px)
+	.checkbox--list
+		
+		label
+			width: calc((100% - 30px * 2) / 2)
+
+@media (max-width: 660px)
+	.checkbox--list
+		
+		label
+			width: calc((100% - 30px * 1) / 1)
+
+body[class*="dir-promo"]
+	background-color: var(--background-color)
+	color: var(--color)
+
+	.iframe-wrap
+		position: relative
+		max-width: 1000px
+		width: 100%
+		padding-top: 56%
+
+		iframe
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+
+			&[height]
+				height: 100% !important
+
+
+
+	svg
+		background: transparent
+
+
+	.soc
+		svg 
+			color: var(--color) 
+			path
+				fill: currentColor
+				// fill: var(--color)
+	.f-soc
+		svg 
+			color: var(--color) 
+			path
+				fill: currentColor
+				
+	.text-page
+		*
+			margin: 0 0 20px 0
+
+		[height], [width]
+			height: auto !important
+
+	.head.js__scrolled
+
+		.city-select
+			*
+				color: #fff
+
+		*
+			background: #121212
+
+		.logo
+			svg
+				path
+					fill: #fff
+
+		.head__wrap
+			background: #121212
+
+			a
+				color: #fff
+
+		.photoset-link
+			svg
+				path
+					fill: #fff
+
+		.lc-link, .search-link
+			svg
+				path
+					stroke: #fff
+	.section-row-form
+		margin-top: 100px
+
+		.wrapper
+			*
+				background-color: var(--form-background-color)
+
+	.item__desc
+		background: none
+
+		&-title
+			background: none
+
+		&-top
+			background: none
+
+			&__title
+				background: none
+		
+
+	.language-link
+		background: #333
+		color: #fff
+
+	&.white-color.head-menu .head__photoset .photoset-link
+		filter: none
+
+
+	.btn, .buy-btn
+		background-color: var(--btn-background-color)
+		color: var(--btn-color)
+
+	.head, .footer
+		background-color: var(--background-color)
+		color: var(--btn-color)
+
+	.head__logo
+		svg
+			fill: var(--color)
+
+	a
+		color: var(--color)
+
+	.lc-link, .search-link
+		svg
+			path
+				stroke: var(--color)
+
+
+
+	*:not[class^="bx-"]
+		background-color: var(--background-color)
+		color: var(--color)	
+
+
+
+	.f-soc__link, .to-top .z-item__arrow
+		background-color: var(--form-background-color)
+
+	.right-block__draggable
+		background-color: var(--color)
+
+
+
+	.main-slider__slide, .main__nav
+		background-color: transparent
+
+		*
+			background: transparent
+
+	.day-night
+		display: none
+
+
+	&.js__main-slider-has
+
+
+
+		.head
+			background: transparent
+			
+			span
+				background: #fff
+				
+			*
+				background: transparent
+
+
+
+.section-row-form
+	.form-cont, .h4
+		background: var(--background-color)
+
+	.h4
+		padding: 60px 70px 0 70px
+		font-size: rem(32)
+
+	.form-cont
+		padding: 60px 70px
+
+	.notetext
+		display: block
+		margin-bottom: 30px
+
+	.form-wrap
+		display: flex
+		flex-wrap: wrap
+		margin: 0 0 -60px -60px
+
+		&--2
+
+			.form-group:not(.form-group--full)
+				width: calc((100% - 60px * 2) / 2)
+				
+
+		.form-group
+			display: flex
+			flex-direction: column-reverse
+			width: calc((100% - 60px * 3) / 3)
+			margin: 0 0 60px 60px !important
+
+			&--full
+				width: calc(100% - 60px)
+
+		input
+			&[required]
+				~ label
+					&:after
+						content: '*'
+						display: inline-block
+						margin-left: 5px
+
+				+ label:after
+					color: red
+
+
+		
+		.forms-wrap--bot
+			max-width: 410px
+			margin-bottom: 60px
+			margin-top: auto
+			margin-left: 40px
+
+		.form-btns
+			margin-bottom: 60px
+			margin-top: auto
+			margin-left: 60px
+
+	.form-control__label
+		color: rgba(255, 255, 255, 0.3)
+
+// .section-row-cont
+// 	background-color: var(--background-color)
+// 	color: var(--color)
+
+.section-row
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+	&-cont
+		margin: 100px 0
+
+	&-single
+		.section-row
+			&-el
+				width: 100%
+
+			&__text
+				align-items: center
+				text-align: center
+				margin: 0 auto
+
+	&-cont
+
+
+		&.img-left
+
+
+			.section-row
+				flex-direction: row-reverse
+
+				&__text
+					text-align: right
+					align-items: flex-end
+					margin-left: auto
+
+				&-el
+
+					+ .section-row-el
+						margin-left: 0
+						margin-right: 30px
+
+
+
+
+	.text-page
+		line-height: 23px
+		flex: none
+		width: 100%
+
+	&__text
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		max-width: 70%
+
+		&.js__has-iframe
+			max-width: 84%
+
+
+
+		> *
+			&:not(:first-child)
+				margin-top: 30px
+
+
+	&-el
+		width: 50%
+
+		// + .section-row-el
+		// 	max-width: 50%
+		// 	width: 100vw
+		// 	margin-left: 30px
+
+	&__img
+		position: relative
+
+		img
+			width: 100%
+
+		&-list
+
+		&-item
+
+			&:not(:first-child)
+				display: none
+
+
+
+
+	.slick
+		&-arrow
+			position: absolute
+			top: calc(50% - 24px)
+			height: 48px
+			width: 48px
+			border-radius: 50%
+			background: #323232
+
+			&:before
+				content: ""
+				position: absolute
+				display: block
+				top: calc(50% - 3px)
+				left: calc(50% - 3px)
+				height: 6px
+				width: 6px
+				border-right: 1px solid #fff
+				border-top: 1px solid #fff
+				transform: rotate(45deg)
+
+
+		&-prev 
+			left: -24px
+			z-index: 10
+			transform: rotate(180deg)
+
+		&-next
+			right: -24px
+
+	.main-imgs__imgs
+		position: relative
+		z-index: 2
+		display: flex
+		flex-direction: column
+		align-items: center
+		// margin-top: -179px
+
+		&-img
+			margin: 0 0 -179px
+			// opacity: 0
+			// transform: translate3d(0,0,0)
+			transition: transform .8s ease,opacity .3s ease
+			max-width: 57%
+
+	.imgs-list
+		display: flex
+		justify-content: space-between
+		background: transparent
+
+		&__item
+			// opacity: 0
+			// transform: translate3d(0,0,0)
+			transition: transform .8s ease,opacity .3s ease
+			max-width: 45%
+
+
+@media screen and (max-width: 1500px)
+	
+	.section-row-cont
+		margin: 50px 0
+
+	.section-row .main-imgs__imgs-img
+		margin: 0px 0 -100px
+
+
+
+@media screen and (max-width: 1200px)
+
+	.section-row__text
+		max-width: 100%
+	
+
+@media screen and (max-width: 1000px)
+
+	.section-row__text.js__has-iframe
+		max-width: 100%
+
+		br
+			display: none
+
+	.section-row-el + .section-row-el
+		margin-left: 20px
+
+
+	.section-row .main-imgs__imgs-img
+		margin: 0px 0 -45px
+
+	.section-row-form
+		.h4
+			padding: 30px 30px 0 30px
+
+		.form-cont
+			padding: 30px
+
+	.section-row-form
+	
+		.form-wrap 
+			margin: 0 0 -30px -30px
+
+			.form-group
+				margin: 0 0 30px 30px !important
+
+				&--full
+					width: calc(100% - 30px) !important
+				
+			.form-group:not(.form-group--full)
+				width: calc((100% - 30px * 2) / 2) !important
+
+			.form-btns
+				margin-left: 30px
+
+
+			.form-control
+				height: 50px
+
+		.text-page h2
+			font-size: 2rem
+
+		.section-row-form
+			margin-top: 45px
+
+@media screen and (max-width: 660px)
+
+	body[class*="dir-promo"]
+
+		.text-page h2
+			font-size: 2rem
+
+	.section-row-single
+		img
+			width: 100% !important
+
+
+
+
+
+	.section-row-cont
+		margin: 20px 0
+
+	.section-row-el
+		width: 100%
+
+	.section-row-el + .section-row-el
+		max-width: 100%
+		margin: 30px 0 0 0
+	
+	.section-row
+		flex-direction: column
+
+		&-el
+			max-width: 100%
+
+	.section-row-cont.img-left .section-row
+		flex-direction: column
+
+	.section-row-cont.img-left .section-row-el + .section-row-el
+		margin: 30px 0 0 0
+
+	.section-row 
+		.slick
+			&-next
+				right: -10px
+
+			&-prev
+				left: -10px
+
+
+	.section-row-form
+
+		.h4
+			padding: 20px 15px 0 15px
+
+		.form-cont
+			padding: 15px
+
+		.form-wrap
+			margin: 0 !important
+
+			.form-btns
+				margin-bottom: 25px
+
+			.form-group
+				margin: 0 0 30px 0 !important
+
+				&:not(.form-group--full), &--full
+					width: 100% !important
+
+			.form-btns, .forms-wrap--bot
+				margin-left: 0
+
+	.section-row 
+		.main-imgs__imgs-img
+			margin: 0
+			max-width: 100%
+
+		.imgs-list
+			flex-direction: column
+
+			&__item
+				max-width: 100%

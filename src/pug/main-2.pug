@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Главная - включено редактирование
+		include inc/head.pug
+		include inc/css.pug
+	body.main.loading
+		include inc/header.pug
+		include inc/mobileMenu.pug
+		main#content
+			.main-slider__cont
+				.main-slider
+					- for (let i = 0; i < 3; i++)
+						.main-slider__slide
+							figure.main-slider__slide-img
+								picture
+									<!-- Большая картинка -->
+									source(data-main="" media="screen and (orientation: landscape)" srcset="img/photos/main-banner-img.jpg")
+										
+									<!-- Картинка для телефонов -->
+									source(media="screen and (orientation: portrait)" srcset="img/photos/adaptive-banner.jpg")
+									img
+								.slide-decor(style="color: #f8f6f5")
+							.main-slider__slide-desc
+								.wrapper
+									.main-slider__slide-title Дельфин
+									.main-slider__slide-text «Каждый на концерте хотел бы <br /> заняться со мной сексом»
+				.main-slider__arrows
+					.wrapper
+			.main__nav
+				.wrapper
+					.main-nav
+						.main-nav__search
+							a.search-link(href="#" title="Поиск")
+						nav.main-nav__menu
+							ul.main-menu
+								each title in ["Репортажи", "События", "Эксклюзив", "Заведения", "Музыка"]
+									li
+										a.main-menu__link(href="#")=title
+						.main-nav__lc
+							a.lc-link(href="#" title="Личный кабинет")
+			.main-content__cont
+				.wrapper
+					#photoReport
+						photo-report(:is-editable="true")
+					.main-content__banner
+						a.main-banner(href="#")
+							picture
+								source(media="screen and (min-width: 1000px)" srcset="img/photos/main-banner.jpg" data-main="")
+								source(media="screen and (max-width: 1000px) and (min-width: 660px)" srcset="img/photos/main-banner-tab.jpg")
+								source(media="screen and (max-width: 660px)" srcset="img/photos/main-banner-mobile.jpg")
+								img
+		include inc/footer.pug
+		include inc/scripts.pug

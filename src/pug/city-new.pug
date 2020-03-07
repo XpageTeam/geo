@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Город
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading.head-menu
+		include inc/header.pug
+		include inc/mobileMenu.pug
+		main#content
+			.inner-content
+				.wrapper
+					.new-city
+						.new-city__top
+							.new-city__top-title Чем вы хотите заняться сегодня?
+							.new-city__top-btns
+								a.city-btn.city-btn--eat(href="#") Поесть
+								a.city-btn.city-btn--drink(href="#") Выпить
+								a.city-btn.city-btn--hear(href="#") Послушать
+						.new-city__list
+							.new-city-list
+								.city-list__row.city-list__row--eat
+									.city-list__row-title
+										.city-title
+											.city-title__title
+												.city-btn.city-btn--eat  Поесть
+											.city-title__link
+												a.all-venues(href="#") Все заведения
+									.city-list__row-list
+										.city-list
+											each event, i in [{title: "Solaris sessions", address: " Молодогвардейцев, 31"}, {title: "Barbaresco ", address: " Елькина, 45а (бизнес-центр «Випр», 1 этаж)"}, {title: "Bar Boris Bar", address: " Агалакова, 21"}, {title: "Double Craft pub", address: " Елькина, 45а (бизнес-центр «Випр», 1 этаж)"}, {title: "Гранд Отель Видгоф", address: " Молодогвардейцев, 31"}, ]
+												.city-list__one
+													a.city-event(href="#")
+														figure.city-event__img
+															img(src="img/city-logo-"+i+".jpg")
+
+															<!-- Скрытые картинки, Вадим объяснит для чего они -->
+															img.hidden-img(src="img/photos/city-"+i+".jpg")
+															img.hidden-img(src="img/photos/city-"+i+".jpg")
+														.city-event__desc
+															.city-event__desc-bot
+																.city-event__bot
+																	.city-event__bot-left
+																		.city-event__bot-adress=event.address
+																		.city-event__bot-phone
+																			span +7 (351) 250-09-50
+																	.city-event__bot-right
+																		.city-event__rating 3.15
+								.city-list__row.city-list__row--drink
+									.city-list__row-title
+										.city-title
+											.city-title__title
+												.city-btn.city-btn--drink Выпить
+											.city-title__link
+												a.all-venues(href="#") Все заведения
+									.city-list__row-list
+										.city-list
+											each event, i in [{title: "Solaris sessions", address: " Молодогвардейцев, 31"}, {title: "Barbaresco ", address: " Елькина, 45а (бизнес-центр «Випр», 1 этаж)"}, {title: "Bar Boris Bar", address: " Агалакова, 21"}, {title: "Double Craft pub", address: " Елькина, 45а (бизнес-центр «Випр», 1 этаж)"}, {title: "Гранд Отель Видгоф", address: " Молодогвардейцев, 31"}, ]
+												.city-list__one
+													a.city-event(href="#")
+														figure.city-event__img
+															img(src="img/city-logo-"+i+".jpg")
+
+															<!-- Скрытые картинки, Вадим объяснит для чего они -->
+															img.hidden-img(src="img/photos/city-"+i+".jpg")
+															img.hidden-img(src="img/photos/city-"+i+".jpg")
+														.city-event__desc
+															.city-event__desc-bot
+																.city-event__bot
+																	.city-event__bot-left
+																		.city-event__bot-adress=event.address
+																		.city-event__bot-phone
+																			span +7 (351) 250-09-50
+																	.city-event__bot-right
+																		.city-event__rating 3.15
+								.city-list__row.city-list__row--hear
+									.city-list__row-title
+										.city-title
+											.city-title__title
+												.city-btn.city-btn--hear Послушать
+											.city-title__link
+												a.all-venues(href="#") Все заведения
+									.city-list__row-list
+										.city-list
+											each event, i in [{title: "Solaris sessions", address: " Молодогвардейцев, 31"}, {title: "Barbaresco ", address: " Елькина, 45а (бизнес-центр «Випр», 1 этаж)"}, {title: "Bar Boris Bar", address: " Агалакова, 21"}, {title: "Double Craft pub", address: " Елькина, 45а (бизнес-центр «Випр», 1 этаж)"}, {title: "Гранд Отель Видгоф", address: " Молодогвардейцев, 31"}, ]
+												.city-list__one
+													a.city-event(href="#")
+														figure.city-event__img
+															img(src="img/city-logo-"+i+".jpg")
+
+															<!-- Скрытые картинки, Вадим объяснит для чего они -->
+															img.hidden-img(src="img/photos/city-"+i+".jpg")
+															img.hidden-img(src="img/photos/city-"+i+".jpg")
+														.city-event__desc
+															.city-event__desc-bot
+																.city-event__bot
+																	.city-event__bot-left
+																		.city-event__bot-adress=event.address
+																		.city-event__bot-phone
+																			span +7 (351) 250-09-50
+																	.city-event__bot-right
+																		.city-event__rating 3.15
+		include inc/footer.pug
+		include inc/scripts.pug
