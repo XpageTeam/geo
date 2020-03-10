@@ -1,6 +1,7 @@
 @import "../css/common.css"
 @import "swiper/dist/css/swiper.css"
 @import "../css/selectize.css"
+@import "../css/jquery.fancybox.css"
 @import "../css/animate.css"
 
 @import "_vars.sss"
@@ -9,10 +10,20 @@
 @import "_base.sss"
 @import "_header.sss"
 @import "adblock-detector.sss"
+@import "day-night.sss"
+@import "right-block.sss"
 
 
 @import "main-slider.sss"
+@import "main-nav.sss"
 @import "mainPhotos/main-content.sss"
+@import "live-slider.sss"
+
+
+@import "filter.sss"
+
+//нужно разобраться откуда этот код
+@import "z-item.sss"
 
 
 @import "custom-select.sss"
@@ -20,10 +31,15 @@
 
 
 
-
+@import "white-theme.sss"
 @import "news-block.sss"
 
 @import "footer.sss"
+
+.compensate-for-scrollbar
+
+	.head
+		right: 17px
 
 .wrapper, #mskBan, .stream
 	max-width: var(--base-width)
@@ -70,3 +86,37 @@
 
 *[v-cloak]
 	display: none
+
+
+@media (max-width: 1280px) and (min-width: 1100px)
+	html
+		font-size: 98%
+
+@media (max-width: 1100px) and (min-width: 660px)
+	html
+		font-size: 95%
+
+@media (max-width: 660px)
+	html
+		font-size: 93%
+
+	.wrapper
+		padding: 0 18px
+
+	.videoBanner
+		display: none
+
+	.imageBanner
+		display: block
+
+	#mskBan, .stream
+		margin: 85px 18px 0
+
+	.stream
+		padding-left: 10px
+		font-size: 14px
+		top: 0px
+
+		&:before
+			size: 33px
+			top: calc(50% - 17px)

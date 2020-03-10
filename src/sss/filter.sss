@@ -1,0 +1,363 @@
+.filter
+
+	&__cont
+		margin: 21px 0 rem(95)
+
+	&__inputs
+		display: flex
+		justify-content: space-between
+		margin: 0 0 0 rem(-82)
+		align-items: flex-end
+
+	&__select
+		width: calc((100% - 5.125rem * 3) / 3)
+		margin: 0 0 0 rem(82)
+		position: relative
+
+		.selectize-input
+			border-radius: 0 !important
+			box-shadow: none !important
+			background: var(--main-bgc)
+			border: none
+			border-bottom: 1px solid #333333
+			padding-left: 0 !important
+			overflow: visible
+			padding-bottom: 26px !important
+
+			&:not(.focus)
+
+				&.has-items
+					padding-bottom: 4px !important
+
+			&.has-items
+				padding: 0 8px 4px 0 !important
+				margin: -10px 0 0
+
+				.item
+					padding: 7px 30px 7px 16px
+					margin: 0 9px 11px 0
+					position: relative
+					pointer-events: none
+
+					&:after
+						pointer-events: all
+						content: "" 
+						position: absolute
+						display: block !important
+						top: 0
+						right: 11px
+						size: 17px 100%
+						transform: none !important
+						border: none !important
+						background: url("../img/ico-reset-white.svg") center no-repeat, #323232 !important
+						background-size: 8px auto !important
+
+			input[type="text"]
+				color: #fff
+				font-size: rem(16)
+
+		.selectize-dropdown
+			border: none !important
+
+			.option
+				font-size: rem(16)
+				line-height: 1
+				color: #fff !important
+				padding: 10px 28px 11px
+
+		select
+			size: 100% 65px
+			border: none
+			border-bottom: 1px solid #333333
+			background: none
+			color: #fff
+			opacity: 0
+
+		&:nth-last-child(3):first-child
+			width: 442px
+
+	&__submit
+		flex: none
+		display: flex
+		margin-left: rem(60)
+
+	&-submit
+		position: absolute
+		top: 0
+		left: 0
+		text-indent: -9999px
+		overflow: hidden
+		opacity: 0
+		size: 100%
+
+	&__range
+		display: flex
+		align-items: center
+		margin-bottom: 20px
+
+		&-label
+			font-weight: 300
+			margin-right: rem(72)
+			margin: 0 rem(72) 0 0
+
+		.range
+
+			&__cont
+				flex: none
+				width: 280px
+
+.filter-reset
+	background: url("../img/ico-reset-white.svg") center no-repeat, #333
+	display: block
+	height: 53px
+	width: 53px
+	flex: none
+	margin-left: .2rem
+	position: relative
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	padding: 19px 20px 19px 19px
+	text-indent: -9999px
+	overflow: hidden
+	
+	&:hover, &:focus
+		background-image: url("../img/ico-reset-black.svg")
+
+	span
+		display: none
+
+.filter-input
+	border: none
+	border-bottom: 1px solid #333333
+	background: var(--main-bgc)
+	color: #fff
+	width: 100%
+	min-height: 35px
+	font-size: rem(14)
+	cursor: pointer
+
+	&.invisible-input
+		opacity: 0
+		position: absolute
+		pointer-events: none
+		top: 100%
+		height: 0
+		min-height: 0
+		overflow: hidden
+		width: 100%
+		left: 0
+
+.multi-date
+	display: flex
+	position: relative
+
+	&:after
+		content: ""
+		position: absolute
+		border-right: 1px solid #fdffff
+		border-bottom: 1px solid #fdffff
+		height: 5px
+		width: 5px
+		top: calc(50% - 11px)
+		right: 5px
+		transform: rotate(45deg)
+
+	&__content
+		flex: none
+		max-width: 100%
+		padding: 0 8px 4px 0
+		margin: -10px 0 0
+
+	&__placeholder
+		flex: none
+		padding: 8px 8px 26px 0
+		align-self: flex-end
+		color: #fff
+		font-size: rem(16)
+
+	&__date
+		display: inline-block
+		background: #323232
+		color: #fff
+		vertical-align: baseline
+		padding: 8px 30px 7px 16px
+		margin: 0 9px 11px 0
+		pointer-events: none
+		font-weight: 300
+		position: relative
+
+		&:after
+			pointer-events: all
+			content: "" 
+			position: absolute
+			display: block !important
+			top: 0
+			right: 11px
+			size: 17px 100%
+			transform: none !important
+			border: none !important
+			background: url("../img/ico-reset-white.svg") center no-repeat, #323232 !important
+			background-size: 8px auto !important
+
+.range
+	position: relative
+	font-style: normal
+	border: none !important
+	background: rgba(#fff, .2) !important
+
+	span
+
+		&:before
+			content: attr(data-value)
+			position: absolute
+			top: calc(100% + 25px)
+			color: rgba(#fff, .55)
+			left: 50%
+			transform: translateX(-50%)
+
+.ui
+
+	&-datepicker
+		height: auto
+		width: auto 
+		background: #333333 !important
+		border: none !important
+		border-radius: 0 !important
+		padding: 0 !important
+		box-shadow: 0px 0px 4px rgba(#000, .2)
+
+		&-unselectable
+			opacity: 1 !important
+			color: #fff !important
+
+			span
+				background: #777 !important
+				border: none !important
+
+		&-header
+			border: none !important
+			border-radius: 0 !important
+			color: #fff !important
+			border-bottom: 1px solid #252424 !important
+			background: none !important
+			padding: 0 !important
+			font-weight: 300
+
+		&-title
+			display: flex
+			justify-content: center
+			height: 55px
+
+		&-prev, &-next
+			display: none !important
+
+		&-month, &-year
+			margin: 0 !important
+			border: none
+			color: #fff
+			width: auto
+			height: 49px
+			font-size: rem(16)
+
+			&:not(.selectize-control), .item
+				background: url("../img/ico-select-arrow.png") center right 3px no-repeat
+
+			.item
+				background-position: top 7px right 3px
+
+			&.selectize-control
+				height: auto
+				width: 45%
+
+			&:not(:last-child)
+				margin: 0 rem(30) 0 0 !important
+
+			.selectize-input
+				padding: 16px 0 12px
+				background: none !important
+				border-radius: 0
+				box-shadow: none
+				border: none !important
+
+				&:after
+					display: none !important
+
+				.item
+					font-size: rem(16)
+					width: 100%
+					text-align: left
+					color: #fff
+
+					&:after
+						display: none !important
+
+				input
+					display: none !important
+
+			.selectize-dropdown
+
+				.option
+					color: #fff
+
+		table
+			width: auto
+			color: #fff
+			margin: 0 17px 27px
+			text-align: center
+			font-weight: 300
+			border-collapse: separate
+			border-spacing: 8px
+
+			th, td
+				font-weight: inherit
+
+			td
+				padding: 0
+
+				a
+					border: none !important
+					padding: 6px
+					font-weight: inherit !important
+					background: none !important
+
+				.ui-state
+
+					&-default, &-highlight
+						color: inherit
+
+					&-highlight
+						background: #000 !important
+
+					&-active
+						background: #fef99e !important
+						color: #000
+
+
+.ui-widget
+
+	&-content
+		background: rgba(#fff, .2)
+
+	.ui-slider
+
+		&-range
+			background: #adc1e1
+
+		&-handle
+			border: 1px solid #adc1e1
+			background: #adc1e1
+			transition: background .3s ease, border-color .3s ease
+			size: 16px
+
+			&:after
+				background: #adc1e1
+				border-radius: 50%
+				size: 6px
+				margin: 0
+				top: calc(50% - 3px)
+				left: calc(50% - 3px)
+
+			&:hover, &:focus
+				background: #adc1e1
+				border-color: #adc1e1

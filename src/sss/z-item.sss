@@ -1,0 +1,74 @@
+.z-item
+	width: 100%
+	flex: 1 1 auto
+	display: flex
+	flex-direction: column
+
+	&__rating, &__title-cont
+		flex: none
+
+	&__rating
+		margin-bottom: rem(45)
+
+	&__title
+		text-decoration: none
+		font-weight: bold
+		font-size: rem(44)
+		line-height: lh(47, 44)
+		max-width: 340px
+
+		&-cont
+			display: flex
+			justify-content: space-between
+			align-items: flex-end
+			color: #fff
+			margin-bottom: rem(35)
+
+	&__arrow
+		position: relative
+		background: #333
+		size: 53px
+		flex: none
+		margin-left: 20px
+		transition: background .3s ease
+
+		&:before, &:after
+			content: ""
+			position: absolute
+			color: #fff
+			transition: color .3s ease
+
+		&:before
+			border-right: 1px solid currentColor
+			border-bottom: 1px solid currentColor
+			size: 13px
+			top: calc(50% - 7px)
+			left: calc(50% - 7px)
+			transform: rotate(-45deg)
+
+		&:after
+			size: 19px 1px
+			background: currentColor
+			top: calc(50% - 1px)
+			left: calc(50% - 11px)
+
+	&__contacts
+		background: #aec2e4
+		flex: 1 1 auto
+		padding: 2rem rem(70)
+		display: flex
+		align-items: center
+
+.z-contacts
+
+	a
+		color: #fff !important
+
+	&__one
+
+		&:not(:first-child)
+			margin: 15px 0 0
+
+		&-title
+			color: #6c7e9c
+			margin-bottom: 3px

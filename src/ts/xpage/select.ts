@@ -1,4 +1,6 @@
-import { EventListener, App, Element, domReady } from "./index";
+import EventListener from "./EventListener";
+import App from "./core";
+import Element from "./Element";
 
 interface selectElement {
 	render(template?: string): string;

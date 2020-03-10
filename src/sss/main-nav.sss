@@ -1,0 +1,149 @@
+.main__nav
+	position: relative
+	z-index: 6
+	padding-top: 20px
+	margin-top: -75px
+
+	&:first-child
+		display: none
+
+.search-form
+	position: absolute
+	top: calc(100% + 35px)
+	left: 0
+	right: 0
+	display: none
+	transition: transform 1s ease
+
+	&__wrap
+		display: flex
+
+		&:before
+			position: absolute
+			content: ""
+			size: 0
+			border-bottom: 9px solid #323232
+			border-right: 9px solid transparent
+			left: 0
+			bottom: 100%
+
+	&__input
+		width: 100%
+		flex: 1 1 auto
+		border: none
+		padding: 0 25px
+		color: #fff
+		background: #323232
+
+	.z-item__arrow
+		flex: none
+
+.main-nav
+	display: flex
+	justify-content: space-between
+	font-family: "Formular"
+	position: relative
+	align-items: center
+
+	&__search, &__lc
+		flex: none
+
+	&__menu
+		flex: 1 1 auto
+
+	&__search
+		margin: 0 rem(115) 0 0
+		display: flex
+
+	&__lc
+		margin: 0 0 0 rem(102)
+
+.main-menu
+	display: flex
+	align-items: center
+
+	li
+		text-align: center
+		flex: 1 1 auto
+
+	&__link
+		color: #fff
+		text-decoration: none
+		font-weight: 400
+		font-size: rem(16)
+		position: relative
+		white-space: nowrap
+		text-transform: uppercase
+		transition: color .3s ease
+
+		&:after, &:before
+			content: ""
+			color: inherit
+			position: absolute
+			left: 0
+			background: currentColor
+			top: calc(100% + 10px)
+
+		&:after
+			size: 38px 5px
+			transform-origin: right
+			transform: scale3d(0, 1, 1)
+
+		&:before
+			size: 12px
+			transform-origin: top
+			transform: scale3d(1, 0, 1)
+
+		&.active, &:hover
+
+			&:before, &:after
+				transform: scale3d(1, 1, 1)
+				transition: transform .1s ease
+
+			&:after
+				transition-delay: 0s
+
+			&:before
+				transition-delay: .1s
+
+.js__scroll
+
+	.search-form
+		transform: translate3d(0,-100%,0)
+		position: fixed
+		top: -10px
+		padding: 20px
+		background: #121212 !important
+
+		form
+			max-width: 1200px
+			margin: 0 auto
+
+	.js__search-block.search-form
+		display: block !important
+
+.js__search-open
+
+	.search-form
+		transform: translate3d(0,100%,0)
+		opacity: 1
+
+@media screen and (max-width: 1200px) and (min-width: 1000px)
+	.main__nav
+		margin-top: -50px
+
+@media (max-width: 1000px)
+	.main-nav
+
+		&__search
+			margin: 0 1.2rem 0 0
+
+		&__lc
+			margin: 0 0 0 1.2rem
+
+	.main__nav
+		margin-top: -40px
+
+@media (max-width: 660px)
+	.main__nav
+		display: none

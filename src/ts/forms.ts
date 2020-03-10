@@ -1,4 +1,8 @@
-import {domReady, App, EventListener, Element} from "./xpage/index"
+import domReady from "./xpage/ready";
+import App from "./xpage/core";
+import Element from "./xpage/Element";
+import EventListener from "./xpage/EventListener";
+
 
 domReady(() => {
 	App.each(".default-input__input--file", (el: HTMLInputElement) => {

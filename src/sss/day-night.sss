@@ -1,0 +1,95 @@
+.loaded
+
+	.day-night
+		opacity: 1
+
+
+@media (max-width: 1000px)
+	.day-night
+
+		&--exclusive
+			display: none !important
+
+
+.day-night
+	flex: none
+	position: absolute
+	z-index: 10
+	bottom: -95px
+	left: 1vw
+	border-radius: 30px
+	border: 1px solid #363636
+	padding: 3px
+	display: flex
+	justify-content: space-between
+	width: 109px
+	opacity: 0
+	transition: opacity .1s ease, background .6s ease
+
+	&--exclusive
+		position: fixed 
+
+	&--night
+		background: #000
+
+		&:after
+			background: #fff
+			animation: dayNightNight 2s ease forwards
+			left: calc(100% - 40px)	
+
+		.day-night__btn
+
+			&--day
+				filter: invert(100%)
+
+	&--day
+		background: #fff
+
+		&:after
+			background: #000
+			animation: dayNightDay 1s ease forwards
+			left: 3px
+
+		.day-night__btn
+
+			&--day
+				filter: invert(100%)
+
+	&:after
+		content: ""
+		position: absolute
+		border-radius: 50%
+		size: 37px
+		top: 3px
+		transition: all .6s ease
+		animation-play-state: 1s
+
+	&__btn
+		flex: none
+		border-radius: 50%
+		border: none
+		padding: 0
+		size: 37px
+		position: relative
+		z-index: 2
+
+		&--night
+			background: url("../img/ico-night.svg") center no-repeat
+			background-size: 12px auto
+
+		&--day
+			background: url("../img/ico-day.svg") center no-repeat
+			background-size: 26px auto
+
+
+
+@media (min-width: 1000px)
+	.day-night
+		bottom: auto
+		top: calc(50% + 1px)
+		left: 40px
+		transform-origin: left
+		transform: rotate(-90deg) translate(.5px, .5px)
+
+		&__btn
+			transform: rotate(90deg)

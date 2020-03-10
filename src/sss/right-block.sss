@@ -1,0 +1,37 @@
+.right-block
+	position: absolute
+	left: 100%
+	top: 0
+	height: 100vh
+	z-index: 10
+	width: 0
+
+	&.moved
+		transition: transform .3s ease
+
+	&__draggable
+		color: #f8f6f5
+		background-color: currentColor
+		position: absolute
+		right: 100%
+		top: 28vw
+		width: vw(247)
+		height: vh(30)
+		z-index: 4
+
+		&:after
+			content: ""
+			position: absolute
+			left: 0
+			top: 100%
+			background: currentColor
+			width: vw(77)
+			height: vh(45)
+
+@media (max-width: 1200px) and (min-width: 1000px)
+	.right-block__draggable
+		bottom: 61vh
+
+@media (max-width: 1000px)
+	.right-block
+		display: none

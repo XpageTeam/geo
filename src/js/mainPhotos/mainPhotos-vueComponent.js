@@ -46,6 +46,10 @@ export default {
 	},
 	methods: {
 
+		/**
+		 * Создаёт обсервер для анимированного 
+		 * появления элементов при скролле
+		 */
 		initObserver(){
 			const observerOptions = {
 				rootMargin: '-100px 0px',
@@ -56,7 +60,6 @@ export default {
 				if (window.requestIdleCallback)
 					window.requestIdleCallback(() => {
 						entries.forEach((value) => {
-							console.log(value.target, value.isIntersecting);
 							if (value.isIntersecting)
 								value.target.classList.add("animated")							
 							});
@@ -71,6 +74,10 @@ export default {
 			this.viewObserver = new IntersectionObserver(callBack, observerOptions);
 		},
 
+		/**
+		 * Добавляет элемент в обсервер
+		 * @param {HTMLElement} targetElement 
+		 */
 		addElementToObserver(targetElement){
 			this.viewObserver.observe(targetElement);
 		},
@@ -94,12 +101,10 @@ export default {
 			this.loadMore();
 		},
 		
-		loadMore(afterLoad = function(){}){
+		loadMore(){
 
 			if (this.isLoading || this.allElementsLoaded)
 				return
-
-			let self = this;
 
 			let lastGridElementsCount = this.cellSizes.length;
 
@@ -111,19 +116,20 @@ export default {
 				url: "/local/php_interface/ajax.php",
 				type: "POST",
 				dataType: 'json',
+				context: this,
 				data: {
-					cityId: self.dataCityId,
+					cityId: this.dataCityId,
 					limit: newGridElementsCount,
 					offset: lastGridElementsCount,
 					commandType: "getElementsForMainPage"
 				},
 				beforeSend(){
-					self.isLoading = true;
+					this.isLoading = true;
 				},
 				success(response){
 
-					if (response.length == 0 && self.loadCounter > 3){
-						self.allElementsLoaded = true;
+					if (response.length == 0 && this.loadCounter > 3){
+						this.allElementsLoaded = true;
 
 						return
 					}
@@ -133,11 +139,11 @@ export default {
 
 							if (response.items[fixedSizeElID].typeData == "news"){
 
-								for (let i = 0; i < response.items[fixedSizeElID].items.length; i++){
-									response.items[fixedSizeElID].items[i].name = response.items[fixedSizeElID].items[i].name.replace(/&quot;/g, "\"")
-								}
-	
-								response.items.swap(self.cellSizes.indexOf("col", self.list.length + 5), fixedSizeElID)
+								for (let i = 0; i < response.items[fixedSizeElID].items.length; i++)
+									response.items[fixedSizeElID].items[i].name = response.items[fixedSizeElID].items[i].name.replace(/&quot;/g, "\"");
+								
+								if (is.desktop())
+									response.items.swap(this.cellSizes.indexOf("col", this.list.length + 5), fixedSizeElID)
 							}
 
 							for (let i = 0; i < response.items.length; i++){
@@ -155,23 +161,19 @@ export default {
 								}
 							}
 
-							self.list = self.list.concat(response.items)
-							self.loadCounter++;
+							this.list = this.list.concat(response.items)
+							this.loadCounter++;
 						}
 
-						if (response.all_cnt <= self.list.length)
-							self.allElementsLoaded = true;
+						if (response.all_cnt <= this.list.length)
+							this.allElementsLoaded = true;
 					}
-
-					setTimeout(_ => {
-						afterLoad();
-					}, 1000);
 				},
 				error(response){
 					console.log(response);
 				},
 				complete(){
-					self.isLoading = false;
+					this.isLoading = false;
 				}
 			});
 		},
@@ -182,6 +184,7 @@ export default {
 				:item="item"\
 				:item-key="key"\
 				:cell-sizes="cellSizes"\
+				:key="key"\
 				v-on:regElement="addElementToObserver"\
 				v-for="(item, key) in list"\>\
 			</mp-item>\

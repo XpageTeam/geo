@@ -11,3 +11,9 @@ window.is = is;
 window.Cookies = Cookies;
 
 require("./custom-select.js");
+
+require("./jquery.fancybox.js");
+
+document.addEventListener("DOMContentLoaded", function(){
+	$(".fancybox").fancybox();
+});

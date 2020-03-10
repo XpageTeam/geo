@@ -1,4 +1,5 @@
-import {App, Element} from "./index";
+import Element from "./Element"
+import App from "./core"
 
 const setSameHeights = (containerSelector: string, targetSelector: string) => {
 	App.each(containerSelector, (el: HTMLElement) => {

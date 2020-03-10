@@ -29,11 +29,12 @@ domReady(() => {
 	if (!mainSlider)
 		return;
 
-	const autoplaySettings: AutoplayOptions | false = mainSlider.querySelectorAll("video").length 
+	const autoplaySettings = mainSlider.querySelectorAll("video").length 
 		? false 
 		: {
 			delay: 4000,
 			disableOnInteraction: false,
+			onlyInViewport: true,
 		};
 
 	swapVideosInMainSlider(mainSlider);

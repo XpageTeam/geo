@@ -2,7 +2,7 @@
 
 .main-content
 	display: grid
-	grid-gap: rem(32) rem(30)
+	gap: rem(32) rem(30)
 	grid-template-columns: repeat(3, 1fr)
 
 	&__sort
@@ -30,12 +30,8 @@
 	&__item
 		display: flex
 		flex-direction: column
-		margin-bottom: 55px
-		width: 30%
 		overflow: hidden
 		opacity: 0
-		margin-bottom: 0
-		width: auto
 
 		&.animated
 			animation: fadeInUp 1s forwards !important
@@ -67,9 +63,6 @@
 						&__desc
 							padding-right: 7rem
 
-		&--subscribe
-			width: 30%
-
 		&--col
 			grid-row: span 2
 
@@ -78,3 +71,86 @@
 			.canvas-shadow
 				opacity: 1
 				transform: scale3d(1.1, 1.1, 1.1)
+
+.download-more
+	color: #fff
+	text-decoration: none
+	display: inline-block
+	border: none
+	background: #333
+	padding: 16px 70px 18px 37px
+	position: relative
+	cursor: pointer
+	white-space: nowrap
+	user-select: none
+
+	&:before, &:after
+		content: ""
+		position: absolute
+		background: #fff
+		size: 13px 1px
+		top: calc(50% - 1px)
+		right: 36px
+
+	&:before
+		transform: rotate(90deg)
+
+	&--loading
+		cursor: wait
+		padding-right: 37px
+
+		&:before, &:after
+			display: none
+
+@media (max-width: 1280px)
+	.main-content
+		gap: 2rem
+
+		&__btn
+			margin: 2rem 0 0
+
+		&__banner
+			margin: 3rem 0 0
+
+@media (max-width: 1200px)
+	.main-content
+
+		&__cont
+			margin: 4rem 0 0
+
+@media (max-width: 1100px)
+	.main-content
+		grid-template-columns: repeat(2, 1fr)
+
+		.item
+
+			&__img
+				display: block
+
+@media (max-width: 1000px) and (min-width: 660px)
+	.main-content
+		grid-template-columns: repeat(2, 1fr)
+
+@media (max-width: 660px)
+	.main-content
+		display: block
+
+		&__banner
+			margin: 0
+
+		&__btn
+			margin-bottom: 2rem
+
+		&__cont
+			margin: 2rem 0 0
+
+		&__item
+			margin-bottom: 20px
+
+			&--box, &--col
+
+				.item--evenet .item__desc
+					padding-right: 4rem
+
+		.item__btn
+			display: none

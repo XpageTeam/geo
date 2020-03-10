@@ -14,7 +14,13 @@ export default {
 		}
 	},
 	mounted(){
-		this.$emit("regElement", this.$el);
+
+		if (this.$el.querySelector("img"))
+			this.$el.querySelector("img").addEventListener("load", () => {
+				this.$emit("regElement", this.$el);
+			})
+		else
+			this.$emit("regElement", this.$el);
 	},
 	template: '\
 		<div :id="\'item-\'+item.id" :class="\'main-content__item--\'+(cellSizes[itemKey] || \'box\')" class="main-content__item">\

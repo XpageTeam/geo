@@ -1,4 +1,6 @@
-import {domReady, EventListener, App} from "../xpage/index"
+import domReady from "../xpage/ready";
+import App from "../xpage/core";
+import EventListener from "../xpage/EventListener";
 
 interface Shadows {
 	right: HTMLElement,
