@@ -40,7 +40,7 @@ export default {
 	template: '\
 		<a :style="item.boxShadow" :target="getTarget(item.link)" :href="item[\'link_\'+(cellSizes[itemKey] || \'box\')] || item.link" :class="\'item--\'+item.typeData" class="item">\
 			<figure class="item__img">\
-				<img :src="item.imgLink[cellSizes[itemKey]]"/>\
+				<img loading="lazy" :src="item.imgLink[cellSizes[itemKey]]"/>\
 			</figure>\
 			<div v-if="item.dateElement" class="item__desc-top__date">{{ item.dateElement }}</div>\
 			<div v-if="!item.isBanner" class="item__desc">\

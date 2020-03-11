@@ -24,11 +24,13 @@ export default {
 		cellSizes: [],
 		allElementsLoaded: false,
 		curLoaderText: BX.message('JS_LOAD_MORE'),
+		lazyObserver: undefined,
 		viewObserver: undefined
 	}),
 	mounted(){
 		setMainContentSize();
 
+		this.initLazyLoadObserver();
 		this.initObserver();
 
 		if (document.body.classList.contains("head-menu"))
@@ -45,6 +47,47 @@ export default {
 		}
 	},
 	methods: {
+
+		/**
+		 * Создаёт обсервер для
+		 * лениваой загрузки изображений
+		 * ! Пока работает с багами
+		 * ! веременно отключил
+		 */
+		initLazyLoadObserver(){
+			const observerOptions = {
+				rootMargin: '300px 0px',
+				threshold: .5
+			};
+
+			const callBack = (entries) => {
+				entries.forEach((item) => {
+					console.log(item.isIntersecting, item.target);
+					if (item.isIntersecting){
+						item.target.addEventListener("load", () => {
+							this.addElementToObserver(item.target.closest(".main-content__item"));
+						}, {once: true});
+						item.target.setAttribute(
+							"src", 
+							item.target.getAttribute("data-src")
+						);
+						
+						// item.target.removeAttribute("data-src");
+					}
+				});
+			}
+
+			this.lazyObserver = new IntersectionObserver(callBack, observerOptions);
+		},
+
+		/**
+		 * добавляет изображение внутри компонента 
+		 * в обсервер для ленивой загрузки
+		 * @param {HTMLImgElement} elementImg 
+		 */
+		addElementImgToObserver(elementImg){
+			this.lazyObserver.observe(elementImg);
+		},
 
 		/**
 		 * Создаёт обсервер для анимированного 
@@ -186,6 +229,7 @@ export default {
 				:cell-sizes="cellSizes"\
 				:key="key"\
 				v-on:regElement="addElementToObserver"\
+				v-on:regLazyImg="addElementImgToObserver"\
 				v-for="(item, key) in list"\>\
 			</mp-item>\
 		</div>\

@@ -15,11 +15,13 @@ export default {
 	},
 	mounted(){
 
-		if (this.$el.querySelector("img"))
+		if (this.$el.querySelector("img")){
+			// this.$emit("regLazyImg", this.$el.querySelector("img"));
+
 			this.$el.querySelector("img").addEventListener("load", () => {
 				this.$emit("regElement", this.$el);
 			})
-		else
+		}else
 			this.$emit("regElement", this.$el);
 	},
 	template: '\
