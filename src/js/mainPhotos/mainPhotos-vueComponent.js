@@ -62,7 +62,6 @@ export default {
 
 			const callBack = (entries) => {
 				entries.forEach((item) => {
-					console.log(item.isIntersecting, item.target);
 					if (item.isIntersecting){
 						item.target.addEventListener("load", () => {
 							this.addElementToObserver(item.target.closest(".main-content__item"));
@@ -71,8 +70,6 @@ export default {
 							"src", 
 							item.target.getAttribute("data-src")
 						);
-						
-						// item.target.removeAttribute("data-src");
 					}
 				});
 			}

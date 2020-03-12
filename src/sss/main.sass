@@ -13,7 +13,6 @@
 @import "../css/animate"
 @import "../css/selectize"
 
-@import "main-banner"
 @import "live-slider"
 @import "_gastreet"
 @import "venue"
@@ -114,106 +113,6 @@ body[class*="dir-tv"]
 		right: 0
 		display: block !important
 		z-index: 1
-
-
-.wrapper, #mskBan, .stream
-	max-width: $base-width + px
-	padding: 0 2rem
-	margin: 0 auto
-	box-sizing: content-box
-
-#mskBan, .stream
-	position: relative
-	// padding: 35% 0 0
-	width: calc(100% - 4rem)
-	max-width: calc(1200px - 4rem)
-	margin-top: 130px
-	height: 675px
-
-	+ .main-content__cont
-		margin-top: 40px
-
-	iframe
-		position: absolute
-		top: 0
-		left: 0
-		+size(100%)
-
-.stream
-
-	&_header
-		margin: 0
-		position: absolute
-		top: -50px
-		left: 35px
-		padding-left: 30px
-
-		&:before
-			content: ''
-			display: block
-			width: 49px
-			height: 49px
-			position: absolute
-			left: -33px
-			top: -16px
-			background: url(../img/live.png) no-repeat
-			background-size: 100% auto
-
-*[v-cloak]
-	display: none
-
-.dir-order-photographer, 
-body[class*="dir-reportage-"], 
-body[class*="dir-event-"], 
-body[class*="dir-exclusive-"],
-body[class*="dir-city-"],
-.dir-personal, 
-.dir-search
-	.photoset-link
-		// background: url(../img/ico-photoset-new.svg) no-repeat center
-
-body.white-color
-	.comment-active_scroll
-		background: #f3f3f3 !important
-
-	.filter__select 
-		.selectize-dropdown
-			&-content
-				background: #ccc !important
-
-			.option
-				color: #000 !important
-
-		.selectize-input.has-items .item:after
-			background: url("../img/ico-reset-black.svg") center no-repeat, #ccc !important
-			background-size: 10px !important
-
-	.selectize-control.multi 
-		.selectize-input 
-			> div.item
-				background: #ccc !important
-				color: #000 !important
-
-
-
-	&.dir-personal
-
-		.head .main-menu__link
-			color: #000 !important
-
-			&:hover, .active
-				color: #000 !important
-
-	.head 
-		.main-menu__link
-			color: #000 !important
-
-			&:hover, &.active
-				color: #000 !important
-
-	
-
-
 
 .head__burger, .mobile-menu
 	display: none
@@ -968,24 +867,6 @@ body[class*=dir-reportage] .item__event
 	left: auto
 
 
-
-.main-banner
-	display: block
-
-	img
-		display: block
-		width: 100%
-
-	&:not(:first-child)
-		margin: 1.5rem 0 0
-
-
-
-.inner-content
-	margin: rem(130) 0 0
-	width: 100%
-	overflow: hidden
-
 .zavediniya
 	display: flex
 	flex-wrap: wrap
@@ -1029,92 +910,6 @@ body[class*=dir-reportage] .item__event
 
 		&:after, &:before
 			display: none
-
-.events
-	display: flex
-	flex-wrap: wrap
-	margin: 0 0 rem(-32) rem(-62)
-
-	&__one
-		width: calc((100% - 3.875rem * 3) / 3)
-		margin: 0 0 rem(32) rem(62)
-		display: flex
-		flex-direction: column
-
-		&--big
-			width: calc((100% - 3.875rem * 1.5) / 1.5)
-
-			.buy-btn
-				text-indent: 0 !important
-				background-position: left 24px center !important
-				padding-left: 73px !important
-				color: #000
-				font-weight: 300
-				text-transform: none
-				font-size: 1rem
-				width: auto !important
-				height: auto !important
-
-			.item
-
-				&__desc
-
-					&-title
-						max-width: 400px
-						font-size: rem(26)
-						line-height: lh(32, 26)
-
-		.item
-			flex: 1 1 auto
-			display: flex
-			flex-direction: column
-
-			&__event
-				background: #000
-				z-index: 3
-				text-transform: uppercase
-				line-height: 1
-				padding: 10px 17px
-				font-size: rem(16)
-
-			&__img
-				display: flex
-				position: relative
-
-				&:after
-					content: ""
-					position: absolute
-					bottom: -1px
-					left: -1px
-					right: -1px
-					top: 30%
-					width: auto
-					background: linear-gradient(to top, rgba(#000, .7), transparent)
-
-			&__desc
-				display: flex
-				flex-direction: column
-				padding-right: 6rem
-
-				&-top
-					order: 1
-					margin: 23px 0 0
-
-					&__date
-						position: static
-						background: none
-						// text-transform: none
-						padding: 0
-
-			&__btn
-
-				.buy-btn
-					border-radius: 0
-					text-indent: -9999px
-					overflow: hidden
-					padding-left: 0
-					+size(59px 41px)
-					background: url("../img/ico-ticket.svg") center no-repeat, #adc1e1
 
 .canvas-shadow
 	filter: blur(30px)
@@ -2366,216 +2161,6 @@ ymaps
 	.share-soc__hide-btns
 		top: 100%
 		padding-top: 1px
-
-.comments
-
-	&__count
-		font-size: rem(22)
-
-	&__title
-		display: flex
-		justify-content: space-between
-		align-items: center
-		font-weight: 300
-
-	&__top
-		border-bottom: 1px solid #252525
-		padding-bottom: 19px
-		display: flex
-		justify-content: space-between
-		align-items: center
-		margin-bottom: rem(50)
-
-	&__link
-		flex: none
-		margin-left: 2rem
-
-	&__one
-		margin: 0 -30px
-
-.write-comment-link
-	display: flex
-	align-items: center
-	color: #fff
-	font-weight: 300
-
-	&:before
-		content: ""
-		margin-right: rem(22)
-		+size(17px)
-		background: url("../img/ico-write-comment.png") no-repeat
-
-.comment
-
-	&-active
-		background: #191919
-
-	&-body
-
-		p
-			word-break: break-word
-	
-	&__body
-		padding: 
-			top: rem(35)
-			bottom: rem(31)
-
-	&__header, &__body, &__footer
-		padding: 
-			left: 30px
-			right: 30px
-		transition: background .3s ease
-
-	&__header
-		padding-top: rem(24)
-
-	&__footer
-		padding-bottom: rem(24)
-
-		&-reply
-
-			a
-				color: #fff !important
-				border-bottom: 1px solid #fff
-				padding-bottom: 1px
-
-		&-form
-			margin: 20px 0 0
-			display: none
-
-			&.visible
-				display: block
-
-	&__answer
-		margin: 0 30px 0 rem(90)
-
-	&-text
-		font-weight: 300
-		font-size: rem(15)
-		line-height: lh(26, 15)
-
-	&-like
-		display: flex
-		align-items: center
-
-		img
-			cursor: pointer
-
-			&:first-child
-				align-self: flex-end
-				margin: 0 0 3px
-
-			&:last-child
-				align-self: flex-start
-				margin: 3px 0 0
-
-		img, span
-			flex: none
-
-		span
-			display: block
-			margin: 0 12px
-
-		// 	&:after
-		// 		content: attr(data-counter)
-		// 		display: block
-		// 		padding: 4px 11px
-		// 		background: #515151
-		// 		border-radius: 6px
-		// 		transition: background .3s ease
-
-		// 	&[data-counter*="+"]
-
-		// 		&:after
-		// 			background: #55a451
-
-		// 	&[data-counter*="-"]
-
-		// 		&:after
-		// 			background: #ca444a
-
-.comment-form
-
-	&__text
-		display: block
-		min-width: 100%
-		max-width: 100%
-		min-height: 100px
-		max-height: 300px
-		background: transparent
-		border: 1px solid #252525
-		color: #fff
-		padding: 10px 15px
-
-	&__submit
-		margin: 20px 0 0
-		color: #fff;
-		text-decoration: none;
-		display: inline-block;
-		border: none;
-		background: #323232;
-		padding: 16px 37px 18px 37px;
-		position: relative;
-		cursor: pointer;
-		white-space: nowrap;
-		transition: background .3s ease, color .3s ease
-
-.c-head
-	display: flex
-	align-items: center
-
-	&__counter, &__img
-		flex: none
-
-	&__img
-		margin-right: rem(35)
-
-		img
-			display: block
-			border-radius: 50%
-			+size(52px)
-
-	&__from
-		align-self: flex-start
-		margin-left: rem(44)
-
-	&__counter
-		margin-left: auto
-		padding-left: 2rem
-		align-self: flex-start
-
-	&__name
-		font-weight: 300
-
-		&-text
-			font-size: rem(22)
-
-		&-date-time
-			font-size: rem(14)
-			color: rgba(#fff, .3)
-			margin: 12px 0 0
-
-.reply-to-link
-	border: 1px solid #252525
-	border-radius: 6px
-	color: #515151
-	padding: 5px 10px 6px 31px
-	cursor: pointer
-	background: url("../img/ico-reply-to.png") center left 8px no-repeat
-
-.comments__btn
-	text-align: center
-
-	a
-		display: inline-block
-		margin: 37px 0 0
-
-.write-comment
-	font-weight: 300
-	padding: 17px 25px 19px
-	color: #000
-	background: #decbd7
-	display: inline-block
 
 .imgs
 	display: flex
@@ -3841,34 +3426,6 @@ img.main-img
 		svg
 			fill: #fff !important
 
-.title-block
-	display: flex
-	justify-content: space-between
-	align-items: center
-	border-bottom: 1px solid #252525
-	padding-bottom: 2rem
-	font-family: "Formular"
-	margin: 0 0 3rem
-	display: none
-
-	&__cont
-		// display: none
-
-		&.show--desktop
-
-			.title-block
-				display: block
-	
-	&__title
-
-		h1, h2
-			font-weight: 400
-			font-size: rem(32)
-			line-height: lh(38, 32)
-
-	&__btn
-		display: none
-
 .vacancy, .vc-one, .v-form
 
 	&__text
@@ -4265,8 +3822,6 @@ img.main-img
 		padding: 0 !important
 		border-radius: 0 !important
 
-.friendDialog .findbox
-
 .photoLabel 
 
 	.img-taglabel
@@ -4380,116 +3935,6 @@ body.adblock-detected:not(.js__adblock-disclemer-hidden)
 		background: #b3c0e2
 		opacity: 0
 
-.ajax--item
-	animation-name: fadeInUp
-	
-	&:not(.animated)
-		visibility: hidden
-
-.search-page
-	
-	&__body
-		display: flex
-		justify-content: space-between
-
-	&__content
-		width: calc(100% - 300px)
-
-		.item
-
-			&__desc
-				padding: 2rem 4rem 1rem 0.875rem
-
-			&__event
-				left: 16px
-
-		.events__one 
-
-			.item__desc
-				padding-right: 5rem
-
-		.city-event
-
-			&__desc
-				padding: 1rem
-
-		.article
-
-			&__desc
-				padding: 2rem
-
-			&__title
-				font-size: rem(30)
-
-	&__sidebar
-		width: 270px
-
-	.search__form
-		max-width: none
-		margin-bottom: 0
-		padding: 1.3rem 0
-		background: #000
-		position: sticky
-		top: 0
-		z-index: 10
-
-		input[type="submit"]
-			top: calc(50% - 22px)
-
-.search-results
-
-	&__item
-
-		&:not(:first-child)
-			margin: 5rem 0 0
-
-		&-title
-			font-size: rem(28)
-			margin-bottom: 1rem
-
-.search-nav
-	position: sticky
-	top: 87px
-
-.search-menu
-	background: #121212
-
-	li
-
-		&:not(:first-child)
-			border-top: 1px solid #333
-
-	&__link
-		display: block
-		padding: 20px 30px
-		transition: background .3s ease
-
-		&:hover, &:focus, &.active
-			background: #333
-
-		&:not([data-count])
-			pointer-events: none
-			color: rgba(#fff, .6)
-
-		&[data-count]
-			position: relative
-			padding-right: 80px
-
-			&:after
-				content: attr(data-count)
-				position: absolute
-				display: flex
-				text-align: center
-				justify-content: center
-				align-items: center
-				color: rgba(#fff, .6)
-				right: 0
-				top: 0
-				height: 100%
-				white-space: nowrap
-				font-size: rem(18)
-				padding-right: 20px
-
 .nav-page_container
 	margin: 2rem 0 0
 
@@ -4537,51 +3982,6 @@ body.adblock-detected:not(.js__adblock-disclemer-hidden)
 
 		&:not(:last-child)
 			margin-right: 6px
-
-.popup-mini
-	position: absolute
-	z-index: 1001
-	width: 364px
-	background: #000
-	border-radius: 3px
-	top: calc(100% + 20px)
-	left: 0
-	padding: 27px
-	box-shadow: 2px 2px 5px 0 rgba(0,0,0,.1)
-	font-weight: 300
-	border: 1px solid #252525
-
-	&__title
-		font-size: 16px
-		margin-bottom: 27px
-		color: #fff
-
-	&__controls
-		display: flex
-		align-items: center
-		justify-content: space-between
-
-		.comment-form__submit
-			margin: 0 !important
-			padding: 18px 22px 20px
-
-		.button
-			background: #7b7b7b
-			color: #fff
-			text-align: center
-			padding: 10px 21px
-			transition: background .3s ease
-			display: inline-block
-
-		.btn-simple
-			color: #fff
-			display: inline-block
-			padding: 18px 19px 20px
-			border: 1px solid #252525
-			transition: background .3s ease
-
-			&:hover, &:focus
-				background: #333
 
 
 
@@ -4694,25 +4094,6 @@ body.adblock-detected:not(.js__adblock-disclemer-hidden)
 .variant-count
 	font-size: 12px
 	margin-left: 10px
-
-.main-content__banner div[id*="item"]
-
-	&:not(:first-child)
-		display: none
-
-	&:first-child
-		opacity: 0
-
-.main-content__banner.js__ready 
-	
-	div[id*="item"]
-
-		&:not(.js__visible)
-			display: none
-
-		&.js__visible
-			opacity: 1
-			display: block
 
 #offer-event
 	width: 100%

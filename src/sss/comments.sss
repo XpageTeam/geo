@@ -1,0 +1,188 @@
+.comments
+
+	&__count
+		font-size: rem(22)
+
+	&__title
+		display: flex
+		justify-content: space-between
+		align-items: center
+		font-weight: 300
+
+	&__top
+		border-bottom: 1px solid #252525
+		padding-bottom: 19px
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-bottom: rem(50)
+
+	&__link
+		flex: none
+		margin-left: 2rem
+
+	&__one
+		margin: 0 -30px
+
+.write-comment-link
+	display: flex
+	align-items: center
+	color: #fff
+	font-weight: 300
+
+	&:before
+		content: ""
+		margin-right: rem(22)
+		size: 17px
+		background: url("../img/ico-write-comment.png") no-repeat
+
+.comment
+
+	&-active
+		background: #191919
+
+	&-body
+
+		p
+			word-break: break-word
+	
+	&__body
+		padding-top: rem(35)
+		padding-bottom: rem(31)
+
+	&__header, &__body, &__footer
+		padding-inline: 30px
+		transition: background .3s ease
+
+	&__header
+		padding-top: rem(24)
+
+	&__footer
+		padding-bottom: rem(24)
+
+		&-reply
+
+			a
+				color: #fff !important
+				border-bottom: 1px solid #fff
+				padding-bottom: 1px
+
+		&-form
+			margin: 20px 0 0
+			display: none
+
+			&.visible
+				display: block
+
+	&__answer
+		margin: 0 30px 0 rem(90)
+
+	&-text
+		font-weight: 300
+		font-size: rem(15)
+		line-height: lh(26, 15)
+
+	&-like
+		display: flex
+		align-items: center
+
+		img
+			cursor: pointer
+
+			&:first-child
+				align-self: flex-end
+				margin: 0 0 3px
+
+			&:last-child
+				align-self: flex-start
+				margin: 3px 0 0
+
+		img, span
+			flex: none
+
+		span
+			display: block
+			margin: 0 12px
+
+.comment-form
+
+	&__text
+		display: block
+		min-width: 100%
+		max-width: 100%
+		min-height: 100px
+		max-height: 300px
+		background: transparent
+		border: 1px solid #252525
+		color: #fff
+		padding: 10px 15px
+
+	&__submit
+		margin: 20px 0 0
+		color: #fff
+		text-decoration: none
+		display: inline-block
+		border: none
+		background: #323232
+		padding: 16px 37px 18px 37px
+		position: relative
+		cursor: pointer
+		white-space: nowrap
+		transition: background .3s ease, color .3s ease
+
+.c-head
+	display: flex
+	align-items: center
+
+	&__counter, &__img
+		flex: none
+
+	&__img
+		margin-right: rem(35)
+
+		img
+			display: block
+			border-radius: 50%
+			size: 52px
+
+	&__from
+		align-self: flex-start
+		margin-left: rem(44)
+
+	&__counter
+		margin-left: auto
+		padding-left: 2rem
+		align-self: flex-start
+
+	&__name
+		font-weight: 300
+
+		&-text
+			font-size: rem(22)
+
+		&-date-time
+			font-size: rem(14)
+			color: rgba(255,255,255, .3)
+			margin: 12px 0 0
+
+.reply-to-link
+	border: 1px solid #252525
+	border-radius: 6px
+	color: #515151
+	padding: 5px 10px 6px 31px
+	cursor: pointer
+	background: url("../img/ico-reply-to.png") center left 8px no-repeat
+
+.comments__btn
+	text-align: center
+
+	a
+		display: inline-block
+		margin: 37px 0 0
+
+.write-comment
+	font-weight: 300
+	padding: 17px 25px 19px
+	color: #000
+	background: #decbd7
+	display: inline-block

@@ -2,6 +2,42 @@ body.white-color
 	background: #fff
 	color: #000
 
+	.comment-active_scroll
+		background: #f3f3f3 !important
+
+	.filter__select 
+		.selectize-dropdown
+			&-content
+				background: #ccc !important
+
+			.option
+				color: #000 !important
+
+		.selectize-input.has-items .item:after
+			background: url("../img/ico-reset-black.svg") center no-repeat, #ccc !important
+			background-size: 10px !important
+
+	.selectize-control.multi 
+		.selectize-input 
+			> div.item
+				background: #ccc !important
+				color: #000 !important
+
+	&.dir-personal
+
+		.head .main-menu__link
+			color: #000 !important
+
+			&:hover, .active
+				color: #000 !important
+
+	.head 
+		.main-menu__link
+			color: #000 !important
+
+			&:hover, &.active
+				color: #000 !important
+
 	.search__form input[type="text"]
 		color: #000
 		

@@ -1,0 +1,36 @@
+@media (min-width: 660px)
+	.title-block
+		display: none
+
+
+@media (max-width: 660px)
+	.title-block
+		display: flex
+		justify-content: space-between
+		align-items: center
+		border-bottom: 1px solid #252525
+		padding-bottom: 2rem
+		font-family: "Formular"
+		margin: 0 0 3rem
+
+		&__cont
+
+			&.show--desktop
+
+				.title-block
+					display: block
+		
+		// &__title
+
+		// 	h1, h2
+		// 		font-weight: 400
+		// 		font-size: rem(32)
+		// 		line-height: lh(38, 32)
+
+		&__btn
+			display: none
+
+		&__title 
+			
+			h1, h2
+				font-size: rem(26)

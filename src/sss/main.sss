@@ -12,15 +12,22 @@
 @import "adblock-detector.sss"
 @import "day-night.sss"
 @import "right-block.sss"
+@import "title-block.sss"
 
 
 @import "main-slider.sss"
 @import "main-nav.sss"
 @import "mainPhotos/main-content.sss"
+@import "main-banner.sss"
 @import "live-slider.sss"
+@import "events.sss"
+
+
+@import "search.sss"
 
 
 @import "filter.sss"
+@import "comments.sss"
 
 //нужно разобраться откуда этот код
 @import "z-item.sss"
@@ -88,6 +95,29 @@
 	display: none
 
 
+.inner-content
+	margin: rem(130) 0 0
+	width: 100%
+	overflow: hidden
+
+
+.ajax--item
+	animation-name: fadeInUp
+	
+	&:not(.animated)
+		visibility: hidden
+
+
+
+
+@media (max-width: 1280px)
+	#mskBan, .stream
+		padding: 53% 0 0
+		height: auto
+		max-width: 1200px
+		width: auto
+		margin: 130px 2rem 0
+
 @media (max-width: 1280px) and (min-width: 1100px)
 	html
 		font-size: 98%
@@ -95,6 +125,10 @@
 @media (max-width: 1100px) and (min-width: 660px)
 	html
 		font-size: 95%
+
+@media (max-width: 1000px) and (min-width: 660px)
+	.inner-content
+		margin: 2.5rem 0 0 !important
 
 @media (max-width: 660px)
 	html
@@ -120,3 +154,6 @@
 		&:before
 			size: 33px
 			top: calc(50% - 17px)
+
+	.inner-content
+		overflow: visible

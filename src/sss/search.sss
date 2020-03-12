@@ -1,0 +1,103 @@
+.search-page
+	
+	&__body
+		display: flex
+		justify-content: space-between
+
+	&__content
+		width: calc(100% - 300px)
+
+		.item
+
+			&__desc
+				padding: 2rem 4rem 1rem 0.875rem
+
+			&__event
+				left: 16px
+
+		.events__one 
+
+			.item__desc
+				padding-right: 5rem
+
+		.city-event
+
+			&__desc
+				padding: 1rem
+
+		.article
+
+			&__desc
+				padding: 2rem
+
+			&__title
+				font-size: rem(30)
+
+	&__sidebar
+		width: 270px
+
+	.search__form
+		max-width: none
+		margin-bottom: 0
+		padding: 1.3rem 0
+		background: #000
+		position: sticky
+		top: 0
+		z-index: 10
+
+		input[type="submit"]
+			top: calc(50% - 22px)
+
+.search-results
+
+	&__item
+
+		&:not(:first-child)
+			margin: 5rem 0 0
+
+		&-title
+			font-size: rem(28)
+			margin-bottom: 1rem
+
+.search-nav
+	position: sticky
+	top: 87px
+
+.search-menu
+	background: #121212
+
+	li
+
+		&:not(:first-child)
+			border-top: 1px solid #333
+
+	&__link
+		display: block
+		padding: 20px 30px
+		transition: background .3s ease
+
+		&:hover, &:focus, &.active
+			background: #333
+
+		&:not([data-count])
+			pointer-events: none
+			color: rgba(255,255,255, .6)
+
+		&[data-count]
+			position: relative
+			padding-right: 80px
+
+			&:after
+				content: attr(data-count)
+				position: absolute
+				display: flex
+				text-align: center
+				justify-content: center
+				align-items: center
+				color: rgba(255,255,255, .6)
+				right: 0
+				top: 0
+				height: 100%
+				white-space: nowrap
+				font-size: rem(18)
+				padding-right: 20px
