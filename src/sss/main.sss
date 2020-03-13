@@ -102,12 +102,15 @@
 
 
 .ajax--item
-	animation-name: fadeInUp
-	
+	transition: transform 1s ease, opacity 1s ease
+	animation: none !important
+
 	&:not(.animated)
-		visibility: hidden
+		opacity: 0
+		transform: translate3d(0,10%,0)
 
-
+.animated
+	animation-duration: 2s !important
 
 
 @media (max-width: 1280px)
